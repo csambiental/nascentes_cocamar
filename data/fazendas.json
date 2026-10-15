@@ -1,0 +1,546 @@
+{
+ "cliente": {
+  "nome": "Programa de Recuperação de Nascentes – Cocamar",
+  "subtitulo": "Propriedades de cooperados e nascentes visitadas · CS Consultoria Ambiental",
+  "selo": null
+ },
+ "atualizado_em": "2026-10-15",
+ "resumo": [
+  {
+   "valor": "32",
+   "rotulo": "propriedades"
+  },
+  {
+   "valor": "2.765",
+   "rotulo": "hectares"
+  },
+  {
+   "valor": "49",
+   "rotulo": "nascentes visitadas"
+  }
+ ],
+ "lista_titulo": "Propriedades dos cooperados",
+ "legenda_agrupada": "Propriedades dos cooperados",
+ "camadas": [
+  {
+   "id": "municipios",
+   "nome": "Limites municipais",
+   "arquivo": "data/municipios.geojson",
+   "tipo": "line",
+   "cor": "#ffffff"
+  },
+  {
+   "id": "nascentes",
+   "nome": "Nascentes",
+   "arquivo": "data/nascentes.geojson",
+   "tipo": "circle",
+   "cor_por": "situacao",
+   "cores": {
+    "Obra realizada": "#2e9e5b",
+    "Obra a confirmar": "#4fc3f7"
+   },
+   "campos": [
+    "Propriedade",
+    "Situação da obra"
+   ],
+   "rotulo": false
+  }
+ ],
+ "fazendas": [
+  {
+   "id": "P01",
+   "arquivo": "data/propriedades/P01.geojson",
+   "nome": "Ana – Astorga",
+   "car": "PR-4102109-D3D56471100A47B089F2D5935811B745",
+   "area_ha": 251.27,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Astorga",
+    "Nascentes visitadas": "1"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P02",
+   "arquivo": "data/propriedades/P02.geojson",
+   "nome": "Antônio – Maringá",
+   "car": "Não informado",
+   "area_ha": 13.32,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Maringá",
+    "Nascentes visitadas": "2"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P03",
+   "arquivo": "data/propriedades/P03.geojson",
+   "nome": "Antonio – Pitangueiras",
+   "car": "PR-4119657-83BD70884F394B829603887F85F5401E",
+   "area_ha": 36.18,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Pitangueiras",
+    "Nascentes visitadas": "1"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P04",
+   "arquivo": "data/propriedades/P04.geojson",
+   "nome": "Cláudio – Maringá",
+   "car": "PR-4115200-29739B9336774DDDA25EEC129482956B",
+   "area_ha": 30.32,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Maringá",
+    "Nascentes visitadas": "3"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P05",
+   "arquivo": "data/propriedades/P05.geojson",
+   "nome": "Clayton – Município não informado",
+   "car": "PR-4102109-1E9606371CAD4D8298D31EA91CD899B2",
+   "area_ha": 8.86,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Município não informado",
+    "Nascentes visitadas": "2"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P06",
+   "arquivo": "data/propriedades/P06.geojson",
+   "nome": "Ergio – Pitangueiras",
+   "car": "PR-4119657-F39E47F725B64C66A172176C90736EE3",
+   "area_ha": 21.95,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Pitangueiras",
+    "Nascentes visitadas": "0"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P07",
+   "arquivo": "data/propriedades/P07.geojson",
+   "nome": "Evaldo – Maringá",
+   "car": "Não informado",
+   "area_ha": 24.35,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Maringá",
+    "Nascentes visitadas": "2"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P08",
+   "arquivo": "data/propriedades/P08.geojson",
+   "nome": "Frederico – Astorga",
+   "car": "PR-4102109-0CE1573F1ECF44BC8FAED42E662D6045",
+   "area_ha": 717.82,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Astorga",
+    "Nascentes visitadas": "2"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P09",
+   "arquivo": "data/propriedades/P09.geojson",
+   "nome": "Gustavo – Maringá",
+   "car": "PR-4115200-8727BD79B1254D70B2A4E45B7AA276D2",
+   "area_ha": 41.16,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Maringá",
+    "Nascentes visitadas": "1"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P10",
+   "arquivo": "data/propriedades/P10.geojson",
+   "nome": "Grevíleas – Município não informado",
+   "car": "Não informado",
+   "area_ha": 3.18,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Município não informado",
+    "Nascentes visitadas": "1"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P11",
+   "arquivo": "data/propriedades/P11.geojson",
+   "nome": "Jairo – Maringá",
+   "car": "Não informado",
+   "area_ha": 8.43,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Maringá",
+    "Nascentes visitadas": "1"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P12",
+   "arquivo": "data/propriedades/P12.geojson",
+   "nome": "João Climaco – Nossa Senhora das Graças",
+   "car": "PR-4116406-18BAD0721D324210A490049445F4E727",
+   "area_ha": 379.52,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Nossa Senhora das Graças",
+    "Nascentes visitadas": "1"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P13",
+   "arquivo": "data/propriedades/P13.geojson",
+   "nome": "Joel – Jaguapitã",
+   "car": "PR-4111902-38E655AE3ABF43C89FC7E0C70C7283C5",
+   "area_ha": 57.79,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Jaguapitã",
+    "Nascentes visitadas": "1"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P14",
+   "arquivo": "data/propriedades/P14.geojson",
+   "nome": "Kazuo Furukita – Floraí",
+   "car": "PR-4107801-4DFC7605DFFB4EB1B54086D8BAA00F8A",
+   "area_ha": 13.04,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Floraí",
+    "Nascentes visitadas": "4"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P15",
+   "arquivo": "data/propriedades/P15.geojson",
+   "nome": "Laércio – Maringá",
+   "car": "Não informado",
+   "area_ha": 24.22,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Maringá",
+    "Nascentes visitadas": "1"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P16",
+   "arquivo": "data/propriedades/P16.geojson",
+   "nome": "Lairtro – Jaguapitã",
+   "car": "PR-4111902-87CC7F4B4D9B4CB4925FC7E657515DB8",
+   "area_ha": 90.47,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Jaguapitã",
+    "Nascentes visitadas": "1"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P17",
+   "arquivo": "data/propriedades/P17.geojson",
+   "nome": "Leandro Sgorlon – Pitangueiras",
+   "car": "PR-4119657-5C054227AA9A4563B06CAF079D69C6B9",
+   "area_ha": 36.38,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Pitangueiras",
+    "Nascentes visitadas": "1"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P18",
+   "arquivo": "data/propriedades/P18.geojson",
+   "nome": "Leonor – Maringá",
+   "car": "PR-4115200-6E0AF97C31B44B9DB35C50E92605C006",
+   "area_ha": 14.2,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Maringá",
+    "Nascentes visitadas": "1"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P19",
+   "arquivo": "data/propriedades/P19.geojson",
+   "nome": "Luiz Carlos – Maringá",
+   "car": "Não informado",
+   "area_ha": 21.15,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Maringá",
+    "Nascentes visitadas": "3"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P20",
+   "arquivo": "data/propriedades/P20.geojson",
+   "nome": "Maria Filomena – Maringá",
+   "car": "Não informado",
+   "area_ha": 48.42,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Maringá",
+    "Nascentes visitadas": "1"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P21",
+   "arquivo": "data/propriedades/P21.geojson",
+   "nome": "Maria Marega – Maringá",
+   "car": "PR-4115200-4E5AE5FE74B841919CF9C04341E89F77",
+   "area_ha": 30.01,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Maringá",
+    "Nascentes visitadas": "2"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P22",
+   "arquivo": "data/propriedades/P22.geojson",
+   "nome": "Mauro – Astorga",
+   "car": "PR-4102109-EDD9D5F700064F4F85AE6A8A9ADF5295",
+   "area_ha": 553.5,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Astorga",
+    "Nascentes visitadas": "2"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P23",
+   "arquivo": "data/propriedades/P23.geojson",
+   "nome": "Nazareno Maróstica – Ourizona",
+   "car": "Não informado",
+   "area_ha": 121.05,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Ourizona",
+    "Nascentes visitadas": "2"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P24",
+   "arquivo": "data/propriedades/P24.geojson",
+   "nome": "Orivaldo – Maringá",
+   "car": "Não informado",
+   "area_ha": 14.53,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Maringá",
+    "Nascentes visitadas": "1"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P25",
+   "arquivo": "data/propriedades/P25.geojson",
+   "nome": "Paulo – Astorga",
+   "car": "PR-4102109-63BFB2980FDE45539221505676935AE1",
+   "area_ha": 27.94,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Astorga",
+    "Nascentes visitadas": "0"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P26",
+   "arquivo": "data/propriedades/P26.geojson",
+   "nome": "Pedro – Maringá",
+   "car": "PR-4115200-E22BA71592244F89BF7C39EBDC6E00A9",
+   "area_ha": 25.28,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Maringá",
+    "Nascentes visitadas": "2"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P27",
+   "arquivo": "data/propriedades/P27.geojson",
+   "nome": "Pedro – Município não informado",
+   "car": "Não informado",
+   "area_ha": 22.3,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Município não informado",
+    "Nascentes visitadas": "1"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P28",
+   "arquivo": "data/propriedades/P28.geojson",
+   "nome": "Tadeus – Maringá",
+   "car": "Não informado",
+   "area_ha": 24.22,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Maringá",
+    "Nascentes visitadas": "1"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P29",
+   "arquivo": "data/propriedades/P29.geojson",
+   "nome": "Valdevino – Maringá",
+   "car": "Não informado",
+   "area_ha": 24.14,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Maringá",
+    "Nascentes visitadas": "1"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P30",
+   "arquivo": "data/propriedades/P30.geojson",
+   "nome": "Alayrton – Maringá",
+   "car": "Não informado",
+   "area_ha": 2.09,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Maringá",
+    "Nascentes visitadas": "5"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P31",
+   "arquivo": "data/propriedades/P31.geojson",
+   "nome": "Inez Bisca – Maringá",
+   "car": "Não informado",
+   "area_ha": 20.15,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Maringá",
+    "Nascentes visitadas": "1"
+   },
+   "adequacoes": []
+  },
+  {
+   "id": "P32",
+   "arquivo": "data/propriedades/P32.geojson",
+   "nome": "Paulo – Astorga",
+   "car": "PR-4102109-F518604D652240EEA73D66CA30CB763B",
+   "area_ha": 57.59,
+   "cor": "#ffd54f",
+   "info": {
+    "Município": "Astorga",
+    "Nascentes visitadas": "1"
+   },
+   "adequacoes": []
+  }
+ ],
+ "programa": {
+  "titulo": "O programa",
+  "texto": "Identificação, diagnóstico e recuperação de nascentes em propriedades de cooperados nas bacias dos rios Ivaí e Pirapó, com a técnica de proteção solo-cimento. A adesão dos produtores é voluntária.",
+  "etapas": [
+   {
+    "nome": "1ª e 2ª etapas",
+    "texto": "– 2024 e 2025 · propriedades mostradas no mapa"
+   },
+   {
+    "nome": "3ª etapa",
+    "texto": "– 2026 · 25 propriedades em 9 municípios (Ivaí 17, Pirapó 8)",
+    "classe": "andamento"
+   }
+  ],
+  "documentos": [
+   {
+    "titulo": "Relatório – Recuperação de Nascentes (2026)",
+    "arquivo": "docs/relatorio_recuperacao_nascentes_cocamar_2026.pdf"
+   }
+  ],
+  "graficos": [
+   {
+    "titulo": "Usos da água – Bacia do Pirapó",
+    "fonte": "Fonte: Comitê das Bacias dos rios Pirapó, Paranapanema 3 e 4 (IAT)",
+    "itens": [
+     {
+      "rotulo": "Agricultura",
+      "pct": 36.15
+     },
+     {
+      "rotulo": "Abastecimento público",
+      "pct": 28.31
+     },
+     {
+      "rotulo": "Indústria",
+      "pct": 21.53
+     },
+     {
+      "rotulo": "Dessedentação animal",
+      "pct": 10.39
+     },
+     {
+      "rotulo": "Comércio e serviços",
+      "pct": 2.01
+     },
+     {
+      "rotulo": "Aquicultura",
+      "pct": 0.92
+     },
+     {
+      "rotulo": "Outros",
+      "pct": 0.7
+     }
+    ]
+   },
+   {
+    "titulo": "Usos da água – Bacia do Alto Ivaí",
+    "fonte": "Fonte: Comitê da Bacia do Alto Ivaí (IAT)",
+    "itens": [
+     {
+      "rotulo": "Abastecimento público",
+      "pct": 31.84
+     },
+     {
+      "rotulo": "Agricultura",
+      "pct": 25.05
+     },
+     {
+      "rotulo": "Dessedentação animal",
+      "pct": 24.21
+     },
+     {
+      "rotulo": "Indústria",
+      "pct": 18.9
+     }
+    ]
+   }
+  ]
+ }
+}

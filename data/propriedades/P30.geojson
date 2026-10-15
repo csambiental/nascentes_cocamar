@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"id": "P30", "nome": "Alayrton – Maringá", "car": "", "area_ha": 2.09}, "geometry": {"type": "MultiPolygon", "coordinates": [[[[-52.02333212, -23.38663581], [-52.02274203, -23.38685245], [-52.02280641, -23.39090953], [-52.02312827, -23.39073228], [-52.02333212, -23.38663581]]]]}}]}

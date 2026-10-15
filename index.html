@@ -1,66 +1,91 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="stylesheet" href="./resources/ol.css">
-        <link rel="stylesheet" href="resources/fontawesome-all.min.css">
-        <link href="resources/photon-geocoder-autocomplete.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
-        <link rel="stylesheet" href="./resources/qgis2web.css">
-        <style>
-        html, body {
-            background-color: #ffffff;
-        }
-        .ol-control > * {
-            background-color: #f8f8f8!important;
-            color: #444444!important;
-            border-radius: 0px;
-        }
-        .ol-attribution a, .gcd-gl-input::placeholder, .search-layer-input-search::placeholder {
-            color: #444444!important;
-        }
-        .search-layer-input-search {
-            background-color: #f8f8f8!important;
-        }
-        .ol-control > *:focus, .ol-control >*:hover {
-            background-color: rgba(248, 248, 248, 0.7)!important;
-        } 
-        .ol-control {
-            background-color: rgba(255,255,255,.4) !important;
-            padding: 2px !important;
-        } 
-        </style>
-
-        <style>
-        html, body, #map {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-        }
-        </style>
-        <title></title>
-    </head>
-    <body>
-        <div id="map">
-            <div id="popup" class="ol-popup">
-                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
-                <div id="popup-content"></div>
-            </div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interativo – CS Consultoria Ambiental</title>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css">
+    <link rel="stylesheet" href="css/style.css?v=202610151106">
+</head>
+<body>
+    <header class="topbar">
+        <img src="logo.png" alt="CS Consultoria Ambiental" class="logo">
+        <div class="topbar-title">
+            <h1 id="clienteNome">Carregando…</h1>
+            <p id="clienteSub"></p>
         </div>
-        <script src="resources/qgis2web_expressions.js"></script>
-        <script src="./resources/functions.js"></script>
-        <script src="./resources/ol.js"></script>
-        <script src="./resources/ol-layerswitcher.js"></script>
-        <script src="resources/photon-geocoder-autocomplete.min.js"></script>
-        <script src="layers/BR_Municipios_2024_1.js"></script><script src="layers/Nascentesnascentes_visitadas_2.js"></script><script src="layers/Propriedadepropriedades_cooperadoscopiar_3.js"></script><script src="layers/Propriedadepropriedades_cooperados_4.js"></script>
-        <script src="styles/BR_Municipios_2024_1_style.js"></script><script src="styles/Nascentesnascentes_visitadas_2_style.js"></script><script src="styles/Propriedadepropriedades_cooperadoscopiar_3_style.js"></script><script src="styles/Propriedadepropriedades_cooperados_4_style.js"></script>
-        <script src="./layers/layers.js" type="text/javascript"></script> 
-        <script src="./resources/Autolinker.min.js"></script>
-        <script src="./resources/qgis2web.js"></script>
-    </body>
+        <button class="panel-toggle" id="panelToggle" aria-expanded="true" aria-controls="sidebar">Painel</button>
+    </header>
+
+    <main class="layout">
+        <aside class="sidebar" id="sidebar">
+            <section class="card">
+                <h2>Resumo geral</h2>
+                <div class="kpis">
+                    <div class="kpi"><span class="kpi-value" id="kpiFazendas">–</span><span class="kpi-label">fazendas</span></div>
+                    <div class="kpi"><span class="kpi-value" id="kpiArea">–</span><span class="kpi-label">hectares</span></div>
+                    <div class="kpi"><span class="kpi-value" id="kpiAdequacoes">–</span><span class="kpi-label">adequações</span></div>
+                </div>
+                <div class="progress-label">
+                    <span>Andamento das adequações</span>
+                    <strong id="kpiPct">0%</strong>
+                </div>
+                <div class="progress" id="progressTotal" aria-label="Andamento das adequações"></div>
+                <div class="status-legend" id="statusLegend"></div>
+            </section>
+
+            <section class="card" id="cardPrograma" hidden></section>
+
+            <section class="card" id="cardPrazos" hidden>
+                <h2>Próximos vencimentos</h2>
+                <p class="hint">Licenças, outorgas e condicionantes por data.</p>
+                <ul id="listaPrazos" class="prazos"></ul>
+                <button type="button" class="btn btn-mini" id="verTodosPrazos" hidden>Ver todos</button>
+            </section>
+
+            <section class="card">
+                <h2 id="listaTitulo">Propriedades</h2>
+                <p class="hint">Clique numa propriedade para localizá-la no mapa e ver os detalhes.</p>
+                <input type="search" id="farmSearch" class="farm-search" placeholder="Buscar por nome ou município" hidden>
+                <div id="farmList" class="farm-list"></div>
+            </section>
+
+            <section class="card">
+                <h2>Mapa</h2>
+                <div class="controls">
+                    <div class="segmented" role="group" aria-label="Estilo do mapa">
+                        <button type="button" data-style="esri" class="active" title="Imagem de satélite mais recente disponível (Esri/Vantor)">Satélite atual</button>
+                        <button type="button" data-style="mapbox" title="Imagem Mapbox (mais antiga, com nomes de estradas)">Satélite Mapbox</button>
+                        <button type="button" data-style="mapa">Mapa</button>
+                    </div>
+                    <label class="switch"><input type="checkbox" id="toggleFill" checked> Preenchimento das propriedades</label>
+                    <button type="button" class="btn" id="centerMap">Ver todas as propriedades</button>
+                </div>
+            </section>
+
+            <p class="footnote">Atualizado em <span id="updatedAt"></span> · CS Consultoria Ambiental</p>
+        </aside>
+
+        <section class="map-wrap">
+            <div id="map"></div>
+            <div id="legend" class="map-legend"></div>
+        </section>
+    </main>
+
+    <dialog id="docDialog" class="doc-dialog" aria-labelledby="docTitle">
+        <header>
+            <h2 id="docTitle">Documento</h2>
+            <button type="button" id="docClose" class="close" aria-label="Fechar">×</button>
+        </header>
+        <iframe id="docFrame" title="Visualização do documento"></iframe>
+        <footer>
+            <a id="docOpen" class="btn" target="_blank" rel="noopener">Abrir em nova aba</a>
+            <a id="docDownload" class="btn btn-solid" download>Baixar PDF</a>
+        </footer>
+    </dialog>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+    <script src="js/app.js?v=202610151106"></script>
+</body>
 </html>

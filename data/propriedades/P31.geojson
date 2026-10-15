@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"id": "P31", "nome": "Inez Bisca – Maringá", "car": "", "area_ha": 20.15}, "geometry": {"type": "MultiPolygon", "coordinates": [[[[-51.89203262, -23.35474599], [-51.89810514, -23.34367435], [-51.89673185, -23.34316212], [-51.89091682, -23.3538201], [-51.89203262, -23.35474599]]]]}}]}

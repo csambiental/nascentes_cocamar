@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa Interativo – CS Consultoria Ambiental</title>
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css">
-    <link rel="stylesheet" href="css/style.css?v=202610151139">
+    <link rel="stylesheet" href="css/style.css?v=202610151200">
 </head>
 <body>
     <header class="topbar">
@@ -46,6 +46,7 @@
             <section class="card">
                 <h2 id="listaTitulo">Propriedades</h2>
                 <p class="hint">Clique numa propriedade para localizá-la no mapa e ver os detalhes.</p>
+                <div class="segmented etapas" id="filtroEtapa" role="group" aria-label="Filtrar por etapa" hidden></div>
                 <input type="search" id="farmSearch" class="farm-search" placeholder="Buscar por nome ou município" hidden>
                 <div id="farmList" class="farm-list"></div>
             </section>
@@ -86,6 +87,6 @@
 
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
-    <script src="js/app.js?v=202610151139"></script>
+    <script src="js/app.js?v=202610151200"></script>
 </body>
 </html>

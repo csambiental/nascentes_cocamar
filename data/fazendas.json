@@ -1,22 +1,22 @@
 {
  "cliente": {
   "nome": "Programa de Recuperação de Nascentes – Cocamar",
-  "subtitulo": "Propriedades de cooperados e nascentes visitadas · CS Consultoria Ambiental",
+  "subtitulo": "Programa de Conservação de Nascentes · etapas 2024, 2025 e 2026 · CS Consultoria Ambiental",
   "selo": null
  },
  "atualizado_em": "2026-10-15",
  "resumo": [
   {
-   "valor": "32",
-   "rotulo": "propriedades visitadas"
+   "valor": "45",
+   "rotulo": "nascentes recuperadas"
   },
   {
-   "valor": "5",
-   "rotulo": "com nascente recuperada"
+   "valor": "27",
+   "rotulo": "propriedades com obra"
   },
   {
-   "valor": "8",
-   "rotulo": "aptas, aguardando execução"
+   "valor": "80",
+   "rotulo": "propriedades acompanhadas"
   }
  ],
  "lista_titulo": "Propriedades dos cooperados",
@@ -35,13 +35,936 @@
    "tipo": "circle",
    "cor_por": "situacao",
    "cores": {
-    "Recuperada (solo-cimento)": "#2e9e5b"
+    "Recuperada (solo-cimento)": "#2e9e5b",
+    "Recuperada – local aproximado": "#9ccc65"
    },
    "campos": [],
    "rotulo": false
   }
  ],
  "fazendas": [
+  {
+   "id": "A01",
+   "nome": "Mauricio Garcia – Querência do Norte",
+   "car": "PR-4121000-F4D0A8B5A8E54623BCC49EDE6A85907B",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "1ª etapa (2024)",
+   "nascentes": 1,
+   "info": {
+    "Etapa": "1ª etapa (2024)",
+    "Município": "Querência do Norte",
+    "Situação": "Nascente recuperada",
+    "Obra": "Cercamento e plantio – 1 nascente (14 a 16/08/2024)",
+    "Localização": "Sem coordenada cadastrada – não aparece no mapa"
+   },
+   "documentos": [],
+   "adequacoes": []
+  },
+  {
+   "id": "A02",
+   "nome": "Ivair Bengozi – Atalaia",
+   "car": "PR-4102208-916224751FF54F09BCAE6F71AEB7B58B",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "1ª etapa (2024)",
+   "nascentes": 1,
+   "info": {
+    "Etapa": "1ª etapa (2024)",
+    "Município": "Atalaia",
+    "Situação": "Nascente recuperada",
+    "Obra": "Solo-cimento – 1 nascente (26/06/2024)",
+    "Localização": "Aproximada – coordenada de cadastro da propriedade"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/A02.geojson"
+  },
+  {
+   "id": "A03",
+   "nome": "Rogério Heber de Oliveira – Nova Esperança",
+   "car": "PR-4116901-CBF14675D7C74F1C9618C9897B9770C6",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "1ª etapa (2024)",
+   "nascentes": 1,
+   "info": {
+    "Etapa": "1ª etapa (2024)",
+    "Município": "Nova Esperança",
+    "Situação": "Nascente recuperada",
+    "Obra": "Solo-cimento – 1 nascente (26/06/2024)",
+    "Observação": "Distrito de Barão de Lucena.",
+    "Localização": "Aproximada – coordenada de cadastro da propriedade"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/A03.geojson"
+  },
+  {
+   "id": "A04",
+   "nome": "Caetano José Rossi – Floraí",
+   "car": "PR-4107801-429EB651241746DCB63C10BBD4F2D644",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "1ª etapa (2024)",
+   "nascentes": 2,
+   "info": {
+    "Etapa": "1ª etapa (2024)",
+    "Município": "Floraí",
+    "Situação": "Nascente recuperada",
+    "Obra": "Solo-cimento – 2 nascentes (31/07/2024)",
+    "Observação": "Área com bastante pedra.",
+    "Localização": "Aproximada – coordenada de cadastro da propriedade"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/A04.geojson"
+  },
+  {
+   "id": "A05",
+   "nome": "Ismael Ibraim Fouani – Ourizona",
+   "car": "PR-4117404-014C346E1FEB4CFAB11458381B63B37E",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "1ª etapa (2024)",
+   "nascentes": 1,
+   "info": {
+    "Etapa": "1ª etapa (2024)",
+    "Município": "Ourizona",
+    "Situação": "Nascente recuperada",
+    "Obra": "Solo-cimento – 1 nascente (06/08/2024)",
+    "Observação": "Fazenda Modelo.",
+    "Localização": "Aproximada – coordenada de cadastro da propriedade"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/A05.geojson"
+  },
+  {
+   "id": "A06",
+   "nome": "João da Silva Amaral – Ourizona",
+   "car": "PR-4117404-A8CBCA9E57D54E86A59B99E5D8510E2F",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "1ª etapa (2024)",
+   "nascentes": 1,
+   "info": {
+    "Etapa": "1ª etapa (2024)",
+    "Município": "Ourizona",
+    "Situação": "Nascente recuperada",
+    "Obra": "Solo-cimento – 1 nascente (07/08/2024)",
+    "Localização": "Aproximada – coordenada de cadastro da propriedade"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/A06.geojson"
+  },
+  {
+   "id": "A07",
+   "nome": "José Carlos Rebuci – Atalaia",
+   "car": "PR-4102208-4F6518823720451295380487AA09DCA3",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "1ª etapa (2024)",
+   "nascentes": 1,
+   "info": {
+    "Etapa": "1ª etapa (2024)",
+    "Município": "Atalaia",
+    "Situação": "Nascente recuperada",
+    "Obra": "Adaptação – 1 nascente (23/07/2024)",
+    "Localização": "Aproximada – coordenada de cadastro da propriedade"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/A07.geojson"
+  },
+  {
+   "id": "A08",
+   "nome": "Ângelo Aparecido Sartori – São Jorge do Ivaí",
+   "car": "PR-4125308-7B846D365A5F4DA7839AF15C2A469EA7",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "1ª etapa (2024)",
+   "nascentes": 1,
+   "info": {
+    "Etapa": "1ª etapa (2024)",
+    "Município": "São Jorge do Ivaí",
+    "Situação": "Nascente recuperada",
+    "Obra": "Solo-cimento – 1 nascente (21/08/2024)",
+    "Observação": "Retirada de bananeiras.",
+    "Localização": "Aproximada – coordenada de cadastro da propriedade"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/A08.geojson"
+  },
+  {
+   "id": "A09",
+   "nome": "Julio Grochoski – São Jorge do Ivaí",
+   "car": "PR-4125308-487B602366A7461CA2C6D5A633A641B0",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "1ª etapa (2024)",
+   "nascentes": 1,
+   "info": {
+    "Etapa": "1ª etapa (2024)",
+    "Município": "São Jorge do Ivaí",
+    "Situação": "Nascente recuperada",
+    "Obra": "Solo-cimento – 1 nascente (01/08/2024)",
+    "Observação": "Área com bastante pedra; caixa de concreto removida.",
+    "Localização": "Aproximada – coordenada de cadastro da propriedade"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/A09.geojson"
+  },
+  {
+   "id": "A10",
+   "nome": "Ilkon Ryzik – São Jorge do Ivaí",
+   "car": "PR-4125308-8C2634F93BC34259946505DFD5D20481",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "1ª etapa (2024)",
+   "nascentes": 1,
+   "info": {
+    "Etapa": "1ª etapa (2024)",
+    "Município": "São Jorge do Ivaí",
+    "Situação": "Nascente recuperada",
+    "Obra": "Solo-cimento – 1 nascente (30/07/2024)",
+    "Observação": "Área com bastante pedra; dreno retirado.",
+    "Localização": "Aproximada – coordenada de cadastro da propriedade"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/A10.geojson"
+  },
+  {
+   "id": "A11",
+   "nome": "José Armando – Floraí",
+   "car": "PR-4125308-A116CF82D9F448FAA5AB0FE7692B034C",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "1ª etapa (2024)",
+   "nascentes": 2,
+   "info": {
+    "Etapa": "1ª etapa (2024)",
+    "Município": "Floraí",
+    "Situação": "Nascente recuperada",
+    "Obra": "Solo-cimento – 2 nascentes (25/07/2024)",
+    "Observação": "Sítio Bela Vista I (divisa Floraí/São Jorge do Ivaí).",
+    "Localização": "Aproximada – coordenada de cadastro da propriedade"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/A11.geojson"
+  },
+  {
+   "id": "A12",
+   "nome": "Luiz Quezini – Atalaia",
+   "car": "PR-4102208-FBBB1383825F48DA84FB12CAE70087DE",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "1ª etapa (2024)",
+   "nascentes": 1,
+   "info": {
+    "Etapa": "1ª etapa (2024)",
+    "Município": "Atalaia",
+    "Situação": "Nascente recuperada",
+    "Obra": "Solo-cimento – 1 nascente (24/07/2024)",
+    "Localização": "Aproximada – coordenada de cadastro da propriedade"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/A12.geojson"
+  },
+  {
+   "id": "A13",
+   "nome": "José Paulo Menotti – Floresta",
+   "car": "PR-4107900-6BDFC2380F344ECAA0098288B6A962A9",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "1ª etapa (2024)",
+   "nascentes": 1,
+   "info": {
+    "Etapa": "1ª etapa (2024)",
+    "Município": "Floresta",
+    "Situação": "Nascente recuperada",
+    "Obra": "Solo-cimento – 1 nascente (24/09/2024)",
+    "Observação": "Com análise de água.",
+    "Localização": "Aproximada – coordenada de cadastro da propriedade"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/A13.geojson"
+  },
+  {
+   "id": "A14",
+   "nome": "César Varaschini (Érico) – Floresta",
+   "car": "PR-4107900-AE9E0AAA7A114DB9A1ED12C75E3FEF55",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "1ª etapa (2024)",
+   "nascentes": 1,
+   "info": {
+    "Etapa": "1ª etapa (2024)",
+    "Município": "Floresta",
+    "Situação": "Nascente recuperada",
+    "Obra": "Solo-cimento – 1 nascente (26/09/2024)",
+    "Localização": "Aproximada – coordenada de cadastro da propriedade"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/A14.geojson"
+  },
+  {
+   "id": "A15",
+   "nome": "João Claudemir Mori – Ivatuba",
+   "car": "PR-4111605-4C80547262084BFFAA20150A2196C3E7",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "1ª etapa (2024)",
+   "nascentes": 1,
+   "info": {
+    "Etapa": "1ª etapa (2024)",
+    "Município": "Ivatuba",
+    "Situação": "Nascente recuperada",
+    "Obra": "Solo-cimento – 1 nascente (27/09/2024)",
+    "Observação": "Com análise de água.",
+    "Localização": "Aproximada – coordenada de cadastro da propriedade"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/A15.geojson"
+  },
+  {
+   "id": "A16",
+   "nome": "José Antônio de Morais – Lobato",
+   "car": "PR-4113601-D779AF6FA90344F7BC54CB2B0CEDE07F",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "1ª etapa (2024)",
+   "nascentes": 1,
+   "info": {
+    "Etapa": "1ª etapa (2024)",
+    "Município": "Lobato",
+    "Situação": "Nascente recuperada",
+    "Obra": "Adaptação – 1 nascente (17/10/2024)",
+    "Observação": "Com análise de água.",
+    "Localização": "Sem coordenada cadastrada – não aparece no mapa"
+   },
+   "documentos": [],
+   "adequacoes": []
+  },
+  {
+   "id": "A17",
+   "nome": "Ângelo Romanin – Lobato",
+   "car": "PR-4113601-1039D67A372C4997B42752FB16FA9BF0",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "1ª etapa (2024)",
+   "nascentes": 3,
+   "info": {
+    "Etapa": "1ª etapa (2024)",
+    "Município": "Lobato",
+    "Situação": "Nascente recuperada",
+    "Obra": "Solo-cimento – 3 nascentes (15/10/2024)",
+    "Localização": "Sem coordenada cadastrada – não aparece no mapa"
+   },
+   "documentos": [],
+   "adequacoes": []
+  },
+  {
+   "id": "A18",
+   "nome": "Ricardo Moreira Só – Lobato",
+   "car": "PR-4113601-87B7B733A1FF48AC938C15097A055DAB",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "1ª etapa (2024)",
+   "nascentes": 1,
+   "info": {
+    "Etapa": "1ª etapa (2024)",
+    "Município": "Lobato",
+    "Situação": "Nascente recuperada",
+    "Obra": "Solo-cimento – 1 nascente (16/10/2024)",
+    "Observação": "Com análise de água.",
+    "Localização": "Sem coordenada cadastrada – não aparece no mapa"
+   },
+   "documentos": [],
+   "adequacoes": []
+  },
+  {
+   "id": "C01",
+   "nome": "Paulo Kallaur – Sítio Kallaur",
+   "car": "PR-4101507-BF6501450C16413DA906A1AAE8E16121",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 2,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Sítio Kallaur",
+    "Situação": "Nascente recuperada",
+    "Nascentes recuperadas": "2",
+    "Andamento": "Visita em 28/05/2026; 2 nascentes executadas em 03/06/2026. Termo de cooperação assinado."
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C01.geojson"
+  },
+  {
+   "id": "C02",
+   "nome": "Carlos Francisco Semião – Sítio Ravazio",
+   "car": "PR-4101507-6B24A81578E241A7AC4200F7A30A2EF4",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 1,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Sítio Ravazio",
+    "Situação": "Nascente recuperada",
+    "Nascentes recuperadas": "1",
+    "Andamento": "Visita em 18/06/2026; 1 nascente executada em 02/07/2026, no Sítio Santa Ana (imóvel do cooperado e do irmão, CAR PR-4101507-21BCB5D639884D59A1BE12A92714D0E5). Termo ainda não assinado."
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C02.geojson",
+   "area_ha": 24.2002
+  },
+  {
+   "id": "C03",
+   "nome": "Valdir Eudes Waldrich – Sítio São Fernando",
+   "car": "PR-4101507-40FD26B1286C4860A11CCFDA72DC0F61",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 1,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Sítio São Fernando",
+    "Situação": "Nascente recuperada",
+    "Nascentes recuperadas": "1",
+    "Andamento": "Visita em 14/05/2026; 1 nascente executada em 16/07/2026 no imóvel vizinho (CAR PR-4101507-4ADDCA70A32B46DB84EA8D0061DE3E79). Termo assinado."
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C03.geojson",
+   "area_ha": 35.784
+  },
+  {
+   "id": "C04",
+   "nome": "Roberto Marchi – Santo Antônio",
+   "car": "PR-4101507-36B3C323604E44889C4ACC06F59FD665",
+   "cor": "#e0a100",
+   "situacao": "Apta – aguardando execução",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Santo Antônio",
+    "Situação": "Apta – aguardando execução",
+    "Andamento": "Visitas em 14/05 e 28/05/2026: apta, porém precisa de preparo da área; ainda não executada."
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C04.geojson",
+   "area_ha": 6.6081
+  },
+  {
+   "id": "C05",
+   "nome": "José Cangussu Dantas – Fazenda Pompeia",
+   "car": "PR-4101507-4280F1AB5CFC49A09AD029DA2A91274D",
+   "cor": "#ab47bc",
+   "situacao": "Visitada – em avaliação",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Fazenda Pompeia",
+    "Situação": "Visitada – em avaliação",
+    "Andamento": "Visita em 18/06/2026."
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C05.geojson"
+  },
+  {
+   "id": "C06",
+   "nome": "Fernando Bononi – Sítio São João",
+   "car": "PR-4101507-25796DD9B4D94D188CA7F3F5B07F9719",
+   "cor": "#ab47bc",
+   "situacao": "Visitada – em avaliação",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Sítio São João",
+    "Situação": "Visitada – em avaliação",
+    "Andamento": "Visita em 02/07; outro CAR informado na visita (PR-4101507-A2FCEA40AC764F2690DB05E1CAF9FACB)."
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C06.geojson"
+  },
+  {
+   "id": "C07",
+   "nome": "César Martins Ribeiro – Sítio Primavera",
+   "car": "PR-4101507-724092AA30774A5CA0B4DB712DFAF600",
+   "cor": "#ab47bc",
+   "situacao": "Visitada – em avaliação",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Sítio Primavera",
+    "Situação": "Visitada – em avaliação",
+    "Andamento": "Visita em 02/07: mina que o cooperado Francisco Stramowski pretende usar e recuperar."
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C07.geojson"
+  },
+  {
+   "id": "C08",
+   "nome": "Emerson Fantin – Sítio Santo Antônio I",
+   "car": "PR-4101507-269EF14D652945A6B4639239EDB8EDE0",
+   "cor": "#ab47bc",
+   "situacao": "Visitada – em avaliação",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Sítio Santo Antônio I",
+    "Situação": "Visitada – em avaliação",
+    "Andamento": "Visita em 02/07."
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C08.geojson",
+   "area_ha": 9.5085
+  },
+  {
+   "id": "C09",
+   "nome": "Orlando Salim Zaitum Obici / Carlos Nene Nunes da Silva – Sítio Vovó Emília",
+   "car": "PR-4101507-E380BC845E7045D585B352A7D83A558D",
+   "cor": "#9aa0a6",
+   "situacao": "Não apta ao solo-cimento",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Sítio Vovó Emília",
+    "Situação": "Não apta ao solo-cimento",
+    "Andamento": "Visita em 28/05/2026: não apta ao solo-cimento – indicado PRAD."
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C09.geojson"
+  },
+  {
+   "id": "C10",
+   "nome": "Francisco Stramowski – Sítio São Jorge",
+   "car": "PR-4101507-B1FC5DDA0C2745EFA90896322BEB3164",
+   "cor": "#8d6e63",
+   "situacao": "Sem nascente na propriedade",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Sítio São Jorge",
+    "Situação": "Sem nascente na propriedade",
+    "Andamento": "Não há nascente nesta propriedade; a nascente usada é a do Sítio Primavera (César Martins Ribeiro)."
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C10.geojson"
+  },
+  {
+   "id": "C11",
+   "nome": "João Carlos Vicente Barradas – Sítio Santa Terezinha",
+   "car": "PR-4101507-DAEB63BD002D4FA89CAD22CD92D1CF3B",
+   "cor": "#8d6e63",
+   "situacao": "Sem nascente na propriedade",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Sítio Santa Terezinha",
+    "Situação": "Sem nascente na propriedade",
+    "Andamento": "Visita em 14/05/2026: não possui nascente na propriedade."
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C11.geojson"
+  },
+  {
+   "id": "C12",
+   "nome": "Eugênio Crosatti – Sítio Santa Laura",
+   "car": "PR-4101507-5DE0436961EE4A8B8E0E43C8A8D0417A",
+   "cor": "#a5d6a7",
+   "situacao": "Já recuperada por terceiros",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Sítio Santa Laura",
+    "Situação": "Já recuperada por terceiros",
+    "Andamento": "Informou por ligação que a nascente já foi recuperada pela Prefeitura."
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C12.geojson",
+   "area_ha": 38.8572
+  },
+  {
+   "id": "C13",
+   "nome": "Paulo Paucic – Sítio Santa Ana",
+   "car": "PR-4101507-59BF6AFDEC2B42D9A9D395192300513F",
+   "cor": "#ab47bc",
+   "situacao": "Visitada – em avaliação",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Sítio Santa Ana",
+    "Situação": "Visitada – em avaliação",
+    "Andamento": "Mesma propriedade de Carlos Semião (Sítio Santa Ana), onde 1 nascente foi executada em 02/07/2026."
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C13.geojson",
+   "area_ha": 28.8353
+  },
+  {
+   "id": "C14",
+   "nome": "Alison Volpato – Sítio Santa Luzia (Lourenço 2)",
+   "car": "PR-4101507-E1EB897D7C6D44E586D3F4BDCEBF01C5",
+   "cor": "#ff8a65",
+   "situacao": "Selecionada – visita a agendar",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Sítio Santa Luzia (Lourenço 2)",
+    "Situação": "Selecionada – visita a agendar",
+    "Andamento": "Pediu para fazer a visita mais adiante (contato em 07/07)."
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C14.geojson"
+  },
+  {
+   "id": "C15",
+   "nome": "Adriano Baleana – Chácara Renascer",
+   "car": "PR-4101507-D26CF06A8D01491F94D5CBDD81657503",
+   "cor": "#ff8a65",
+   "situacao": "Selecionada – visita a agendar",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Chácara Renascer",
+    "Situação": "Selecionada – visita a agendar",
+    "Andamento": "Agendar visita."
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C15.geojson"
+  },
+  {
+   "id": "C16",
+   "nome": "Daniel Leonel – Sítio Bocaiúva",
+   "car": "PR-4101507-7ED2B269BF3F4DF289183DB4BF90DEC8",
+   "cor": "#ff8a65",
+   "situacao": "Selecionada – visita a agendar",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Sítio Bocaiúva",
+    "Situação": "Selecionada – visita a agendar"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C16.geojson",
+   "area_ha": 129.949
+  },
+  {
+   "id": "C17",
+   "nome": "Daniel Leonel – Sítio Paraíso",
+   "car": "PR-4101507-9EE4F555CF044B6F92E11F5418FB3674",
+   "cor": "#ff8a65",
+   "situacao": "Selecionada – visita a agendar",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Sítio Paraíso",
+    "Situação": "Selecionada – visita a agendar"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C17.geojson",
+   "area_ha": 24.2097
+  },
+  {
+   "id": "C18",
+   "nome": "Daniel Leonel – Estância Caturete",
+   "car": "PR-4101507-D382B7FE85634626AF93AF2BEE7D3667",
+   "cor": "#ff8a65",
+   "situacao": "Selecionada – visita a agendar",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Estância Caturete",
+    "Situação": "Selecionada – visita a agendar",
+    "Andamento": "CAR informado é da propriedade ao lado."
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C18.geojson"
+  },
+  {
+   "id": "C19",
+   "nome": "Claudeci Ferreira dos Santos – Sítio Bom Jesus",
+   "car": "PR-4101507-D04763B95414466E858277EDEBCDAEAE",
+   "cor": "#ff8a65",
+   "situacao": "Selecionada – visita a agendar",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Sítio Bom Jesus",
+    "Situação": "Selecionada – visita a agendar"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C19.geojson"
+  },
+  {
+   "id": "C20",
+   "nome": "Dirceu Fernandes – Sítio São João",
+   "car": "PR-4113700-C39B0D4B19884BCE9F50DD259112F48D",
+   "cor": "#ff8a65",
+   "situacao": "Selecionada – visita a agendar",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Londrina",
+    "Propriedade": "Sítio São João",
+    "Situação": "Selecionada – visita a agendar"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C20.geojson"
+  },
+  {
+   "id": "C21",
+   "nome": "Dirceu Fernandes – Sítio São Francisco",
+   "car": "PR-4113700-2FB35B855DEF4599B6566E5531E9AF75",
+   "cor": "#ff8a65",
+   "situacao": "Selecionada – visita a agendar",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Londrina",
+    "Propriedade": "Sítio São Francisco",
+    "Situação": "Selecionada – visita a agendar"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C21.geojson"
+  },
+  {
+   "id": "C22",
+   "nome": "Alcides Tessaro – Sítio Santo Antônio III",
+   "car": "PR-4101507-2D32ADB2A14747AEB16FB12BF0150285",
+   "cor": "#ff8a65",
+   "situacao": "Selecionada – visita a agendar",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Sítio Santo Antônio III",
+    "Situação": "Selecionada – visita a agendar"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C22.geojson",
+   "area_ha": 4.1917
+  },
+  {
+   "id": "C23",
+   "nome": "Geraldo Soares – Sítio Soares",
+   "car": "PR-4101507-93B32950BB00459AB605ADE4C4E23BC5",
+   "cor": "#ff8a65",
+   "situacao": "Selecionada – visita a agendar",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Sítio Soares",
+    "Situação": "Selecionada – visita a agendar"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C23.geojson",
+   "area_ha": 11.5526
+  },
+  {
+   "id": "C24",
+   "nome": "João Waldrich – Sítio Araxá",
+   "car": "PR-4101507-F5A1E15F5EDA4886836790CA9BFAE291",
+   "cor": "#ff8a65",
+   "situacao": "Selecionada – visita a agendar",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Sítio Araxá",
+    "Situação": "Selecionada – visita a agendar"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C24.geojson"
+  },
+  {
+   "id": "C25",
+   "nome": "José Aparecido Bisca – Agrobis",
+   "car": "PR-4101507-65D5551799B1400FAAAF1F7A5186D915",
+   "cor": "#ff8a65",
+   "situacao": "Selecionada – visita a agendar",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Agrobis",
+    "Situação": "Selecionada – visita a agendar"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C25.geojson",
+   "area_ha": 24.1946
+  },
+  {
+   "id": "C26",
+   "nome": "Luiz Carlos Rosa – Jatobá",
+   "car": "PR-4101507-FAB58BB6EFB647C18C05FA61AA3DC998",
+   "cor": "#ff8a65",
+   "situacao": "Selecionada – visita a agendar",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Jatobá",
+    "Situação": "Selecionada – visita a agendar"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C26.geojson"
+  },
+  {
+   "id": "C27",
+   "nome": "Sandro Piveta – Sítio Santa Luzia",
+   "car": "PR-4101507-BD69A7C6250841228E2251AEF6E75640",
+   "cor": "#ff8a65",
+   "situacao": "Selecionada – visita a agendar",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Sítio Santa Luzia",
+    "Situação": "Selecionada – visita a agendar"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C27.geojson"
+  },
+  {
+   "id": "C28",
+   "nome": "Sebastião Soares – Fazenda Boa Esperança",
+   "car": "PR-4113700-A9A647221D614945AFB447158061454F",
+   "cor": "#ff8a65",
+   "situacao": "Selecionada – visita a agendar",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Londrina",
+    "Propriedade": "Fazenda Boa Esperança",
+    "Situação": "Selecionada – visita a agendar"
+   },
+   "documentos": [],
+   "adequacoes": [],
+   "arquivo": "data/propriedades/C28.geojson"
+  },
+  {
+   "id": "C29",
+   "nome": "Alcides Gouvea Ancioto – Fazenda Araucária",
+   "car": "PR-4113700-2959332330CE64B8E93229A2AA46E34B0",
+   "cor": "#2e9e5b",
+   "situacao": "Nascente recuperada",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 2,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Londrina",
+    "Propriedade": "Fazenda Araucária",
+    "Situação": "Nascente recuperada",
+    "Nascentes recuperadas": "2",
+    "Andamento": "Visita em 03/06/2026; 2 nascentes executadas em 18/06/2026. Termo assinado.",
+    "Localização": "Perímetro do CAR ainda não recebido – não aparece no mapa"
+   },
+   "documentos": [],
+   "adequacoes": []
+  },
+  {
+   "id": "C30",
+   "nome": "Jaime Osti / Edson Violado – Rancho J.O",
+   "car": "PR-4101507-BAFBFCA57EEA4C5B93817461858D9875",
+   "cor": "#e0a100",
+   "situacao": "Apta – aguardando execução",
+   "etapa": "3ª etapa (2026)",
+   "nascentes": 0,
+   "info": {
+    "Etapa": "3ª etapa (2026)",
+    "Município": "Arapongas",
+    "Propriedade": "Rancho J.O",
+    "Situação": "Apta – aguardando execução",
+    "Andamento": "Visita em 14/05/2026: apta para execução – precisa de mão de obra.",
+    "Localização": "Perímetro do CAR ainda não recebido – não aparece no mapa"
+   },
+   "documentos": [],
+   "adequacoes": []
+  },
   {
    "id": "P01",
    "arquivo": "data/propriedades/P01.geojson",
@@ -50,6 +973,7 @@
    "area_ha": 251.27,
    "cor": "#9aa0a6",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Astorga",
     "Situação": "Não apta ao solo-cimento",
     "Resultado da visita": "Solo-cimento não é suficiente; recomendado barramento (fora do escopo)."
@@ -61,7 +985,8 @@
      "arquivo": "docs/relatorios/ana_cristina_londero_benetti.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P02",
@@ -71,6 +996,7 @@
    "area_ha": 13.32,
    "cor": "#9aa0a6",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Maringá",
     "Situação": "Não apta ao solo-cimento",
     "Resultado da visita": "Duas nascentes: uma difusa com assoreamento e outra com muitas raízes (visita 08/05/2025)."
@@ -82,7 +1008,8 @@
      "arquivo": "docs/relatorios/antonio_marcos_casarotto.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P03",
@@ -92,6 +1019,7 @@
    "area_ha": 36.18,
    "cor": "#e0a100",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Pitangueiras",
     "Situação": "Apta – aguardando execução",
     "Resultado da visita": "Duas nascentes aptas ao solo-cimento; segue para aprovação."
@@ -103,7 +1031,8 @@
      "arquivo": "docs/relatorios/antonio_navarro_sanches.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P04",
@@ -113,6 +1042,7 @@
    "area_ha": 30.32,
    "cor": "#42a5f5",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Maringá",
     "Situação": "Nova visita necessária",
     "Resultado da visita": "Uma nascente com proteção parcial; nova visita com o proprietário."
@@ -124,7 +1054,8 @@
      "arquivo": "docs/relatorios/claudio_balan.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P05",
@@ -134,6 +1065,7 @@
    "area_ha": 8.86,
    "cor": "#9aa0a6",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Município não informado",
     "Situação": "Não apta ao solo-cimento",
     "Resultado da visita": "Duas nascentes com assoreamento avançado junto à estrada."
@@ -145,7 +1077,8 @@
      "arquivo": "docs/relatorios/clayton_tondato_de_carli.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P06",
@@ -155,6 +1088,7 @@
    "area_ha": 21.95,
    "cor": "#e0a100",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Pitangueiras",
     "Situação": "Apta – aguardando execução",
     "Resultado da visita": "Uma nascente apta ao solo-cimento; segue para aprovação."
@@ -166,7 +1100,8 @@
      "arquivo": "docs/relatorios/ergio_messias_dos_santos.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P07",
@@ -176,6 +1111,7 @@
    "area_ha": 24.35,
    "cor": "#2e9e5b",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Maringá",
     "Situação": "Nascente recuperada",
     "Resultado da visita": "Solo-cimento executado em 1 das 2 nascentes, em 03/07/2025."
@@ -187,7 +1123,8 @@
      "arquivo": "docs/relatorios/evaldo_alfredo_bartmann.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P08",
@@ -197,6 +1134,7 @@
    "area_ha": 717.82,
    "cor": "#e0a100",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Astorga",
     "Situação": "Apta – aguardando execução",
     "Resultado da visita": "Duas nascentes aptas ao solo-cimento; segue para aprovação."
@@ -208,7 +1146,8 @@
      "arquivo": "docs/relatorios/frederico_camargo_anchieta.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P09",
@@ -218,6 +1157,7 @@
    "area_ha": 41.16,
    "cor": "#9aa0a6",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Maringá",
     "Situação": "Não apta ao solo-cimento",
     "Resultado da visita": "Nascente difusa na rocha; APP preservada (visita 24/04/2025)."
@@ -229,7 +1169,8 @@
      "arquivo": "docs/relatorios/gustavo_galvani_de_lima.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P10",
@@ -239,6 +1180,7 @@
    "area_ha": 3.18,
    "cor": "#2e9e5b",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Município não informado",
     "Situação": "Nascente recuperada",
     "Resultado da visita": "7 nascentes, 6 protegidas com solo-cimento; APP preservada (visita 18/09/2025)."
@@ -250,7 +1192,8 @@
      "arquivo": "docs/relatorios/horta_comunitaria_grevileas.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P11",
@@ -260,6 +1203,7 @@
    "area_ha": 8.43,
    "cor": "#9aa0a6",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Maringá",
     "Situação": "Não apta ao solo-cimento",
     "Resultado da visita": "Nascentes com erosão e raízes; APP preservada (visita 08/05/2025)."
@@ -271,7 +1215,8 @@
      "arquivo": "docs/relatorios/jairo_alexandre_rosseto.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P12",
@@ -281,6 +1226,7 @@
    "area_ha": 379.52,
    "cor": "#9aa0a6",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Nossa Senhora das Graças",
     "Situação": "Não apta ao solo-cimento",
     "Resultado da visita": "Nascente difusa em área de banhado."
@@ -292,7 +1238,8 @@
      "arquivo": "docs/relatorios/joao_climaco.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P13",
@@ -302,6 +1249,7 @@
    "area_ha": 57.79,
    "cor": "#9aa0a6",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Jaguapitã",
     "Situação": "Não apta ao solo-cimento",
     "Resultado da visita": "Nascente difusa em área de banhado."
@@ -313,7 +1261,8 @@
      "arquivo": "docs/relatorios/joel_brito_tomaz.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P14",
@@ -323,6 +1272,7 @@
    "area_ha": 13.04,
    "cor": "#e0a100",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Floraí",
     "Situação": "Apta – aguardando execução",
     "Resultado da visita": "Plano de Recuperação de Área Degradada (PRAD) da APP, com cercamento."
@@ -334,7 +1284,8 @@
      "arquivo": "docs/relatorios/kazuo_furukita.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P15",
@@ -344,6 +1295,7 @@
    "area_ha": 24.22,
    "cor": "#9aa0a6",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Maringá",
     "Situação": "Não apta ao solo-cimento",
     "Resultado da visita": "Uma nascente com estrutura de concreto e outra difusa."
@@ -355,7 +1307,8 @@
      "arquivo": "docs/relatorios/laercio_bortolo.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P16",
@@ -365,6 +1318,7 @@
    "area_ha": 90.47,
    "cor": "#42a5f5",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Jaguapitã",
     "Situação": "Nova visita necessária",
     "Resultado da visita": "Ponto de afloramento não identificado; produtor fará limpeza para nova visita."
@@ -376,7 +1330,8 @@
      "arquivo": "docs/relatorios/lairtro_tonini_bortolassi.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P17",
@@ -386,6 +1341,7 @@
    "area_ha": 36.38,
    "cor": "#e0a100",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Pitangueiras",
     "Situação": "Apta – aguardando execução",
     "Resultado da visita": "Revitalização da estrutura de concreto existente (limpeza, desassoreamento e tampa)."
@@ -397,7 +1353,8 @@
      "arquivo": "docs/relatorios/leandro_sgorlon.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P18",
@@ -407,6 +1364,7 @@
    "area_ha": 14.2,
    "cor": "#e0a100",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Maringá",
     "Situação": "Apta – aguardando execução",
     "Resultado da visita": "Nascente de alta vazão apta ao solo-cimento (visita 08/05/2025)."
@@ -418,7 +1376,8 @@
      "arquivo": "docs/relatorios/leonor_galuch.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P19",
@@ -428,6 +1387,7 @@
    "area_ha": 21.15,
    "cor": "#9aa0a6",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Maringá",
     "Situação": "Não apta ao solo-cimento",
     "Resultado da visita": "Uma nascente difusa e outra já protegida por estrutura existente."
@@ -439,7 +1399,8 @@
      "arquivo": "docs/relatorios/luis_carlos_balan.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P20",
@@ -449,6 +1410,7 @@
    "area_ha": 48.42,
    "cor": "#e0a100",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Maringá",
     "Situação": "Apta – aguardando execução",
     "Resultado da visita": "Nascente apta ao solo-cimento; segue para aprovação."
@@ -460,7 +1422,8 @@
      "arquivo": "docs/relatorios/maria_filomena_perin_de_lima.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P21",
@@ -470,6 +1433,7 @@
    "area_ha": 30.01,
    "cor": "#e0a100",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Maringá",
     "Situação": "Apta – aguardando execução",
     "Resultado da visita": "Nascente apta ao solo-cimento; segue para aprovação."
@@ -481,7 +1445,8 @@
      "arquivo": "docs/relatorios/maria_aparecida_marega.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P22",
@@ -491,6 +1456,7 @@
    "area_ha": 553.5,
    "cor": "#9aa0a6",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Astorga",
     "Situação": "Não apta ao solo-cimento",
     "Resultado da visita": "Nascentes já protegidas por estruturas antigas; limpar o reservatório."
@@ -502,7 +1468,8 @@
      "arquivo": "docs/relatorios/mauro_sergio_poeiras_de_assuncao.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P23",
@@ -512,6 +1479,7 @@
    "area_ha": 121.05,
    "cor": "#2e9e5b",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Ourizona",
     "Situação": "Nascente recuperada",
     "Resultado da visita": "Solo-cimento executado nas 2 nascentes (visita 14/08/2025)."
@@ -523,7 +1491,8 @@
      "arquivo": "docs/relatorios/nazareno_marostica.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P24",
@@ -533,6 +1502,7 @@
    "area_ha": 14.53,
    "cor": "#9aa0a6",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Maringá",
     "Situação": "Não apta ao solo-cimento",
     "Resultado da visita": "Nascente difusa (visita 17/07/2025)."
@@ -544,7 +1514,8 @@
      "arquivo": "docs/relatorios/orivaldo_sbrana.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P25",
@@ -554,11 +1525,13 @@
    "area_ha": 27.94,
    "cor": "#ffffff",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Astorga",
     "Situação": "Relatório não localizado"
    },
    "situacao": "Sem relatório",
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P26",
@@ -568,6 +1541,7 @@
    "area_ha": 25.28,
    "cor": "#9aa0a6",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Maringá",
     "Situação": "Não apta ao solo-cimento",
     "Resultado da visita": "Olho d’água com caixa de proteção existente (visita 24/07/2025)."
@@ -579,7 +1553,8 @@
      "arquivo": "docs/relatorios/pedro_pereira_da_conceicao_silva.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P27",
@@ -589,6 +1564,7 @@
    "area_ha": 22.3,
    "cor": "#9aa0a6",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Município não informado",
     "Situação": "Não apta ao solo-cimento",
     "Resultado da visita": "Segunda propriedade visitada em 24/07/2025."
@@ -600,7 +1576,8 @@
      "arquivo": "docs/relatorios/pedro_pereira_da_conceicao_silva.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P28",
@@ -610,6 +1587,7 @@
    "area_ha": 24.22,
    "cor": "#2e9e5b",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Maringá",
     "Situação": "Nascente recuperada",
     "Resultado da visita": "Solo-cimento executado nas nascentes 1 e 2 (visita 07/08/2025); APP pede restauração."
@@ -621,7 +1599,8 @@
      "arquivo": "docs/relatorios/tadeus_francisco_bastiani.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P29",
@@ -631,6 +1610,7 @@
    "area_ha": 24.14,
    "cor": "#9aa0a6",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Maringá",
     "Situação": "Não apta ao solo-cimento",
     "Resultado da visita": "Ponto de afloramento não identificado em área de banhado."
@@ -642,7 +1622,8 @@
      "arquivo": "docs/relatorios/valdevino_moreira_guedes.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P30",
@@ -652,6 +1633,7 @@
    "area_ha": 2.09,
    "cor": "#2e9e5b",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Maringá",
     "Situação": "Nascente recuperada",
     "Resultado da visita": "3 propriedades e 8 nascentes visitadas; solo-cimento aplicado em 6."
@@ -663,7 +1645,8 @@
      "arquivo": "docs/relatorios/alayrton_rodrigues_de_lima.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P31",
@@ -673,6 +1656,7 @@
    "area_ha": 20.15,
    "cor": "#9aa0a6",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Maringá",
     "Situação": "Não apta ao solo-cimento",
     "Resultado da visita": "Olho d’água com caixa de proteção existente (visita 24/07/2025)."
@@ -684,7 +1668,8 @@
      "arquivo": "docs/relatorios/inez_bisca_miguel.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   },
   {
    "id": "P32",
@@ -694,6 +1679,7 @@
    "area_ha": 57.59,
    "cor": "#42a5f5",
    "info": {
+    "Etapa": "2ª etapa (2025)",
     "Município": "Astorga",
     "Situação": "Nova visita necessária",
     "Resultado da visita": "Curso d’água canalizado; após remoção do encanamento, nova visita."
@@ -705,27 +1691,40 @@
      "arquivo": "docs/relatorios/paulo_afonso_furchini.pdf"
     }
    ],
-   "adequacoes": []
+   "adequacoes": [],
+   "etapa": "2ª etapa (2025)"
   }
  ],
  "programa": {
   "titulo": "O programa",
-  "texto": "Identificação, diagnóstico e recuperação de nascentes em propriedades de cooperados nas bacias dos rios Ivaí e Pirapó, com a técnica de proteção solo-cimento. A adesão dos produtores é voluntária.",
+  "texto": "Iniciativa da Cocamar, iniciada em 2022 com um piloto em Atalaia, para proteger nascentes em propriedades de cooperados nas bacias dos rios Pirapó e Ivaí com a técnica de solo-cimento e, quando ela não é indicada, com PRAD simplificado (cercamento e plantio de nativas com mudas do Programa Cultivar). O levantamento de 2023 identificou cerca de 1.600 nascentes aptas a participar. A adesão é voluntária.",
   "etapas": [
    {
-    "nome": "2ª etapa (2025)",
-    "texto": "– 31 relatórios de visita: 5 propriedades com nascentes recuperadas, 8 aptas aguardando execução, 3 com nova visita e 15 não aptas ao método."
+    "nome": "1ª etapa (2024)",
+    "texto": "– 35 visitas; 22 nascentes recuperadas em 18 propriedades (Atalaia, Floraí, Nova Esperança, Ourizona, São Jorge do Ivaí, Floresta, Ivatuba, Lobato e Querência do Norte)."
    },
    {
-    "nome": "3ª etapa",
-    "texto": "– 2026 · 25 propriedades em 9 municípios (Ivaí 17, Pirapó 8)",
+    "nome": "2ª etapa (2025)",
+    "texto": "– 31 relatórios de visita: 5 propriedades com nascentes recuperadas (17 nascentes), 8 aptas aguardando execução, 3 com nova visita e 15 não aptas ao método."
+   },
+   {
+    "nome": "3ª etapa (2026)",
+    "texto": "– Arapongas e Londrina: 30 cooperados selecionados, 16 visitas e 6 nascentes recuperadas em 4 propriedades (jun–jul/2026).",
     "classe": "andamento"
    }
   ],
   "documentos": [
    {
+    "titulo": "Relatório técnico do programa (jun/2026)",
+    "arquivo": "docs/programa_conservacao_nascentes_relatorio_tecnico_2026.pdf"
+   },
+   {
     "titulo": "Relatório – Recuperação de Nascentes (2026)",
     "arquivo": "docs/relatorio_recuperacao_nascentes_cocamar_2026.pdf"
+   },
+   {
+    "titulo": "Anexo V – Estudo das bacias hidrográficas",
+    "arquivo": "docs/anexo_v_estudo_bacias_2026.pdf"
    }
   ],
   "graficos": [
@@ -794,8 +1793,25 @@
    "Nascente recuperada": "#2e9e5b",
    "Apta – aguardando execução": "#e0a100",
    "Nova visita necessária": "#42a5f5",
+   "Visitada – em avaliação": "#ab47bc",
    "Não apta ao solo-cimento": "#9aa0a6",
+   "Sem nascente na propriedade": "#8d6e63",
+   "Já recuperada por terceiros": "#a5d6a7",
+   "Selecionada – visita a agendar": "#ff8a65",
    "Sem relatório": "#ffffff"
   }
+ },
+ "filtro_etapa": {
+  "campo": "etapa",
+  "opcoes": [
+   "1ª etapa (2024)",
+   "2ª etapa (2025)",
+   "3ª etapa (2026)"
+  ],
+  "rotulos": [
+   "2024",
+   "2025",
+   "2026"
+  ]
  }
 }

@@ -371,3 +371,8 @@ table.ind tr.pos td { color: #1d6b3e; font-weight: 600; }
 .lg-filtro.ativo { background: #e3f4ea; font-weight: 700; }
 .farm-body dd { word-break: normal; overflow-wrap: anywhere; }
 .farm-body dd.mono { word-break: break-all; }
+
+/* ---------- filtro por etapa ---------- */
+.etapas { margin-bottom: 8px; }
+.etapas button { font-size: .8rem; padding: 6px 4px; }
+.etapas[hidden] { display: none; }

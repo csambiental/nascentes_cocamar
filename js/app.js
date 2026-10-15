@@ -113,6 +113,48 @@ function renderResumo() {
 
 let filtroFazendas = '';
 let filtroGrupo = '';
+let filtroEtapa = '';
+const ehPonto = (id) => geojsons[id]?.features?.[0]?.geometry?.type === 'Point';
+function naEtapa(f) {
+    const cfg = dadosGerais.filtro_etapa;
+    return !cfg || !filtroEtapa || f[cfg.campo] === filtroEtapa;
+}
+function renderFiltroEtapa() {
+    const cfg = dadosGerais.filtro_etapa;
+    const el = document.getElementById('filtroEtapa');
+    if (!cfg || !el) return;
+    const rot = cfg.rotulos || cfg.opcoes;
+    el.innerHTML = `<button type="button" data-etapa="" class="active">Todas</button>` +
+        cfg.opcoes.map((o, i) => `<button type="button" data-etapa="${esc(o)}" title="${esc(o)}">${esc(rot[i])}</button>`).join('');
+    el.hidden = false;
+    el.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+        el.querySelectorAll('button').forEach(o => o.classList.toggle('active', o === b));
+        filtroEtapa = b.dataset.etapa;
+        if (selecionada && !naEtapa(fazendas.find(f => f.id === selecionada))) selecionada = null;
+        renderFazendas();
+        renderLegenda();
+        aplicarFiltroMapa();
+        enquadrarTodas();
+    }));
+}
+function aplicarFiltroMapa() {
+    if (!map.isStyleLoaded()) return;
+    fazendas.forEach(f => {
+        const vis = naEtapa(f);
+        ['fill', 'halo', 'line'].forEach(t => {
+            const id = `${f.id}-${t}`;
+            if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', vis && (t !== 'fill' || mostrarPreenchimento) ? 'visible' : 'none');
+        });
+    });
+    const cfg = dadosGerais.filtro_etapa;
+    if (!cfg) return;
+    const filtro = filtroEtapa ? ['==', ['get', cfg.campo], filtroEtapa] : null;
+    camadas.forEach(c => ['', '-label', '-line'].forEach(suf => {
+        const id = `cam-${c.id}${suf}`;
+        if (map.getLayer(id) && (camadasData[c.id]?.features || []).some(x => x.properties[cfg.campo])) map.setFilter(id, filtro);
+    }));
+    if (map.getLayer('rotulos')) map.setFilter('rotulos', filtro);
+}
 const semAcento = (t) => String(t).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 function renderFazendas() {
     const el = document.getElementById('farmList');
@@ -120,6 +162,7 @@ function renderFazendas() {
     if (busca) busca.hidden = fazendas.length <= 8;
     const campoGrupo = dadosGerais.agrupar_por?.campo;
     el.innerHTML = fazendas
+        .filter(f => naEtapa(f))
         .filter(f => !filtroGrupo || f[campoGrupo] === filtroGrupo)
         .filter(f => !filtroFazendas || semAcento(f.nome + ' ' + Object.values(f.info || {}).join(' ')).includes(filtroFazendas)).map(f => {
         const cont = contarStatus(f.adequacoes);
@@ -140,13 +183,13 @@ function renderFazendas() {
             <button class="farm-head" type="button" aria-expanded="${aberta}">
                 <span class="swatch" style="background:${f.cor}"></span>
                 <span class="farm-name">${esc(f.nome)}</span>
-                <span class="farm-meta">${fmt(f.area_ha, 1)} ha${f.adequacoes.length ? ` · ${cont['Concluída']}/${f.adequacoes.length}` : ''}</span>
+                <span class="farm-meta">${f.area_ha ? `${fmt(f.area_ha, 1)} ha` : (f.nascentes ? `${f.nascentes} nasc.` : '')}${f.adequacoes.length ? ` · ${cont['Concluída']}/${f.adequacoes.length}` : ''}</span>
             </button>
             ${f.adequacoes.length ? `<div class="mini-progress">${barraProgresso(cont, f.adequacoes.length)}</div>` : ''}
             <div class="farm-body">
                 <dl>
                     <dt>CAR</dt><dd class="mono">${esc(f.car)}</dd>
-                    <dt>Área declarada</dt><dd>${fmt(f.area_ha, 2)} ha</dd>
+                    ${f.area_ha ? `<dt>Área declarada</dt><dd>${fmt(f.area_ha, 2)} ha</dd>` : ''}
                     ${f.situacao_car ? `<dt>Situação do CAR</dt><dd>${esc(f.situacao_car)}</dd>` : ''}
                     ${Object.entries(f.info || {}).map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}
                 </dl>
@@ -220,7 +263,7 @@ function renderLegenda() {
         const g = dadosGerais.agrupar_por;
         itens.push(`<div class="lg-group">${esc(g.titulo)}</div>`);
         Object.entries(g.cores).forEach(([k, cor]) => {
-            const n = fazendas.filter(f => f[g.campo] === k).length;
+            const n = fazendas.filter(f => naEtapa(f) && f[g.campo] === k).length;
             if (n) itens.push(`<button type="button" class="lg-item lg-filtro" data-grupo="${esc(k)}"><i class="lg-area" style="border-color:${cor};background:${cor}55"></i>${esc(k)} (${n})</button>`);
         });
     } else if (dadosGerais.legenda_agrupada) {
@@ -233,7 +276,8 @@ function renderLegenda() {
         if (c.cor_por && c.cores) {
             const feats = (camadasData[c.id] || {}).features || [];
             const sub = Object.entries(c.cores).map(([k, cor]) => {
-                const grupo = feats.filter(f => f.properties[c.cor_por] === k);
+                const ce = dadosGerais.filtro_etapa?.campo;
+                const grupo = feats.filter(f => f.properties[c.cor_por] === k && (!filtroEtapa || !ce || !f.properties[ce] || f.properties[ce] === filtroEtapa));
                 if (!grupo.length) return '';
                 const lista = c.listar ? grupo.map(f => f.properties.doc_arquivo
                     ? `<button type="button" class="lg-item lg-doc lg-leaf" data-titulo="${esc(f.properties.nome)} – ${esc(f.properties.Portaria || '')}" data-arquivo="${esc(f.properties.doc_arquivo)}">${esc(f.properties.nome)} 📄</button>`
@@ -339,7 +383,7 @@ function renderPrazos(prazos) {
 function adicionarCamadas() {
     fazendas.forEach(f => {
         const g = geojsons[f.id];
-        if (!g || map.getSource(f.id)) return;
+        if (!g || map.getSource(f.id) || ehPonto(f.id)) return;
         map.addSource(f.id, { type: 'geojson', data: g });
         map.addLayer({
             id: `${f.id}-fill`, type: 'fill', source: f.id,
@@ -414,9 +458,9 @@ function adicionarCamadas() {
             type: 'geojson',
             data: {
                 type: 'FeatureCollection',
-                features: fazendas.filter(f => geojsons[f.id]).map(f => ({
+                features: fazendas.filter(f => geojsons[f.id] && !ehPonto(f.id)).map(f => ({
                     type: 'Feature',
-                    properties: { nome: f.nome.replace('Fazenda ', '') },
+                    properties: { nome: f.nome.replace('Fazenda ', ''), ...(dadosGerais.filtro_etapa ? { [dadosGerais.filtro_etapa.campo]: f[dadosGerais.filtro_etapa.campo] } : {}) },
                     geometry: turf.pointOnFeature(geojsons[f.id]).geometry
                 }))
             }
@@ -430,6 +474,7 @@ function adicionarCamadas() {
         console.warn('Rótulos não disponíveis neste estilo de mapa', err);
     }
     destacarSelecionada();
+    aplicarFiltroMapa();
 }
 
 function destacarSelecionada() {
@@ -444,8 +489,8 @@ function destacarSelecionada() {
 }
 
 function enquadrarTodas() {
-    const todas = { type: 'FeatureCollection', features: Object.values(geojsons).flatMap(g => g.features) };
-    if (todas.features.length) map.fitBounds(boundsDe(todas), { padding: 50, duration: 800 });
+    const todas = { type: 'FeatureCollection', features: fazendas.filter(f => geojsons[f.id] && naEtapa(f)).flatMap(f => geojsons[f.id].features) };
+    if (todas.features.length) map.fitBounds(boundsDe(todas), { padding: 50, duration: 800, maxZoom: 14 });
 }
 
 function selecionarFazenda(id, voar) {
@@ -453,7 +498,7 @@ function selecionarFazenda(id, voar) {
     renderFazendas();
     destacarSelecionada();
     if (id && voar && geojsons[id]) {
-        map.fitBounds(boundsDe(geojsons[id]), { padding: 60, duration: 900 });
+        map.fitBounds(boundsDe(geojsons[id]), { padding: 60, duration: 900, maxZoom: 15 });
     }
     if (id) {
         const card = document.querySelector(`.farm[data-id="${id}"]`);
@@ -517,7 +562,7 @@ map.on('click', (e) => {
     let id = hits.length ? hits[0].properties.id : null;
     if (!id) {
         const pt = turf.point([e.lngLat.lng, e.lngLat.lat]);
-        const f = fazendas.find(f => geojsons[f.id] && turf.booleanPointInPolygon(pt, geojsons[f.id].features[0]));
+        const f = fazendas.find(f => geojsons[f.id] && !ehPonto(f.id) && naEtapa(f) && turf.booleanPointInPolygon(pt, geojsons[f.id].features[0]));
         id = f ? f.id : null;
     }
     if (!id) return;
@@ -547,7 +592,7 @@ document.querySelectorAll('.segmented button').forEach(btn => {
 document.getElementById('toggleFill').addEventListener('change', (e) => {
     mostrarPreenchimento = e.target.checked;
     fazendas.forEach(f => {
-        if (map.getLayer(`${f.id}-fill`)) map.setLayoutProperty(`${f.id}-fill`, 'visibility', mostrarPreenchimento ? 'visible' : 'none');
+        if (map.getLayer(`${f.id}-fill`)) map.setLayoutProperty(`${f.id}-fill`, 'visibility', mostrarPreenchimento && naEtapa(f) ? 'visible' : 'none');
     });
 });
 document.getElementById('centerMap').addEventListener('click', () => { selecionarFazenda(null, false); enquadrarTodas(); });
@@ -583,6 +628,7 @@ async function iniciar() {
         document.getElementById('updatedAt').textContent = `${d}/${m}/${a}`;
     }
     await Promise.all(fazendas.map(async f => {
+        if (!f.arquivo) return;
         try {
             const r = await fetch(f.arquivo, { cache: 'no-cache' });
             geojsons[f.id] = await r.json();
@@ -601,6 +647,7 @@ async function iniciar() {
         catch (err) { console.error(`Não foi possível carregar ${c.arquivo}`, err); }
     }));
     renderResumo();
+    renderFiltroEtapa();
     renderFazendas();
     renderLegenda();
     renderPrazos(dados.prazos);

@@ -308,6 +308,7 @@ function renderFazendas() {
                     ${f.situacao_car ? `<dt>Situação do CAR</dt><dd>${esc(f.situacao_car)}</dd>` : ''}
                     ${Object.entries(f.info || {}).map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}
                 </dl>
+                ${fichaHtml(f)}
                 ${indicadoresHtml(f)}
                 ${f.adequacoes.length ? `<h3>Adequações (${f.adequacoes.length})</h3><ul class="adeq-list">${itens}</ul>` : ''}
                 ${(f.documentos || []).map(d => `<button type="button" class="doc-btn" data-arquivo="${esc(d.arquivo)}" data-titulo="${esc(d.titulo)}">📄 ${esc(d.titulo)}</button>`).join('')}
@@ -351,6 +352,71 @@ function documentosDa(f) {
 }
 
 // Indicadores do CAR (ha). "Saldo" negativo = déficit
+// ---------- ficha da propriedade: dados do CAR, relato da visita e fotos ----------
+function galeriaHtml(f, max) {
+    const fotos = f.fotos || [];
+    if (!fotos.length) return '';
+    const mostrar = max ? fotos.slice(0, max) : fotos;
+    const resto = fotos.length - mostrar.length;
+    return `<div class="galeria">${mostrar.map((ft, i) =>
+        `<button type="button" class="foto-mini${ft.tipo === 'mapa' ? ' mapa' : ''}" data-fazenda="${esc(f.id)}" data-idx="${i}" title="${esc(ft.legenda)}">
+            <img src="${esc(ft.mini)}" alt="${esc(ft.legenda)}" loading="lazy">${i === mostrar.length - 1 && resto > 0 ? `<span class="foto-mais">+${resto}</span>` : ''}</button>`).join('')}</div>`;
+}
+function fichaHtml(f) {
+    let h = '';
+    if (f.data_visita) h += `<p class="ficha-linha"><strong>Visita técnica:</strong> ${esc(f.data_visita)}</p>`;
+    const cad = f.cadastro || [];
+    if (cad.length) {
+        h += `<h3>Dados cadastrais (CAR)</h3>` + cad.map((im, i) => `${cad.length > 1 ? `<p class="ficha-sub">Imóvel ${i + 1}</p>` : ''}
+            <dl class="ficha-dl">${Object.entries(im).filter(([k, v]) => !(k === 'CAR' && cad.length === 1 && v === f.car)).map(([k, v]) => `<dt>${esc(k)}</dt><dd${k === 'CAR' ? ' class="mono"' : ''}>${esc(v)}</dd>`).join('')}</dl>`).join('');
+    }
+    const rel = f.relato || {};
+    const chaves = Object.keys(rel);
+    if (chaves.length) h += `<h3>Relatório da visita</h3>` + chaves.map((k, i) =>
+        `<details class="relato"${i === 0 ? ' open' : ''}><summary>${esc(k)}</summary><p>${esc(rel[k])}</p></details>`).join('');
+    if ((f.fotos || []).length) h += `<h3>Fotos e mapas (${f.fotos.length})</h3>${galeriaHtml(f)}`;
+    return h;
+}
+// visualizador de fotos
+let fotoAtual = { f: null, i: 0 };
+function abrirFoto(id, idx) {
+    const f = fazendas.find(x => x.id === id);
+    if (!f || !(f.fotos || []).length) return;
+    fotoAtual = { f, i: idx };
+    mostrarFoto();
+    const dlg = document.getElementById('fotoDialog');
+    if (!dlg.open) dlg.showModal();
+}
+function mostrarFoto() {
+    const { f, i } = fotoAtual, ft = f.fotos[i];
+    document.getElementById('fotoImg').src = ft.arquivo;
+    document.getElementById('fotoImg').alt = ft.legenda;
+    document.getElementById('fotoLegenda').textContent = ft.legenda;
+    document.getElementById('fotoTitulo').textContent = f.nome;
+    document.getElementById('fotoContador').textContent = `${i + 1} / ${f.fotos.length}`;
+    document.getElementById('fotoAbrir').href = ft.arquivo;
+}
+function passarFoto(d) {
+    const n = fotoAtual.f.fotos.length;
+    fotoAtual.i = (fotoAtual.i + d + n) % n;
+    mostrarFoto();
+}
+document.addEventListener('click', (e) => {
+    const b = e.target.closest('.foto-mini');
+    if (b) { e.preventDefault(); abrirFoto(b.dataset.fazenda, Number(b.dataset.idx)); }
+    const v = e.target.closest('.ver-ficha');
+    if (v) { selecionarFazenda(v.dataset.fazenda, false); document.body.classList.remove('panel-closed'); }
+});
+(function prepararFotoDialog() {
+    const dlg = document.getElementById('fotoDialog');
+    if (!dlg) return;
+    document.getElementById('fotoFechar').onclick = () => dlg.close();
+    document.getElementById('fotoAnt').onclick = () => passarFoto(-1);
+    document.getElementById('fotoProx').onclick = () => passarFoto(1);
+    dlg.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') passarFoto(-1); if (e.key === 'ArrowRight') passarFoto(1); });
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+})();
+
 function indicadoresHtml(f) {
     if (!f.indicadores) return '';
     const linhas = Object.entries(f.indicadores).map(([k, v]) => {
@@ -655,15 +721,20 @@ function selecionarFazenda(id, voar) {
 
 function popupHtml(f) {
     const cont = contarStatus(f.adequacoes);
+    const inf = f.info || {};
     return `<div class="popup">
         <h3><span class="swatch" style="background:${f.cor}"></span>${esc(f.nome)}</h3>
-        <p><strong>Área declarada:</strong> ${fmt(f.area_ha, 2)} ha</p>
-        <p><strong>CAR:</strong> <span class="mono">${esc(f.car)}</span></p>
-        <p><strong>Adequações:</strong> ${f.adequacoes.length}
+        ${f.situacao ? `<span class="status-badge" style="background:${f.cor}">${esc(f.situacao)}</span>` : ''}
+        ${inf['Etapa'] ? `<p><strong>Etapa:</strong> ${esc(inf['Etapa'])}${f.data_visita ? ` · visita em ${esc(f.data_visita)}` : ''}</p>` : ''}
+        ${f.area_ha ? `<p><strong>Área declarada:</strong> ${fmt(f.area_ha, 2)} ha</p>` : ''}
+        ${f.car ? `<p><strong>CAR:</strong> <span class="mono">${esc(f.car)}</span></p>` : ''}
+        ${(inf['Resultado da visita'] || inf['Andamento'] || inf['Obra']) ? `<p>${esc(inf['Resultado da visita'] || inf['Andamento'] || inf['Obra'])}</p>` : ''}
+        ${galeriaHtml(f, 4)}
+        ${f.adequacoes.length ? `<p><strong>Adequações:</strong> ${f.adequacoes.length}
            (${cont['Concluída']} concluídas, ${cont['Em andamento']} em andamento, ${cont['Pendente']} pendentes)</p>
-        <div class="mini-progress">${barraProgresso(cont, f.adequacoes.length)}</div>
+        <div class="mini-progress">${barraProgresso(cont, f.adequacoes.length)}</div>` : ''}
         ${documentosDa(f).map(d => `<button type="button" class="doc-btn" onclick="abrirDocumento('${esc(d.titulo)}', '${esc(d.arquivo)}')">📄 ${esc(d.titulo)}</button>`).join('')}
-        <p class="popup-hint">Veja a lista completa no painel ao lado.</p>
+        <button type="button" class="btn btn-mini ver-ficha" data-fazenda="${esc(f.id)}">Ver ficha completa no painel</button>
     </div>`;
 }
 
@@ -699,6 +770,7 @@ map.on('click', (e) => {
                     ${resumo}
                     ${p.descricao ? `<p>${esc(p.descricao)}</p>` : ''}
                     ${tabela ? `<dl class="popup-dl">${tabela}</dl>` : ''}
+                    ${(() => { const fz = p.doc_arquivo && fazendas.find(x => (x.documentos || []).some(d => d.arquivo === p.doc_arquivo)); return fz ? galeriaHtml(fz, 4) : ''; })()}
                     ${docBotao(p.doc_titulo, p.doc_arquivo)}${docBotao(p.hist_titulo, p.hist_arquivo)}</div>`).addTo(map);
             return;
         }

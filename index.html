@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa Interativo – CS Consultoria Ambiental</title>
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css">
-    <link rel="stylesheet" href="css/style.css?v=20261015125351">
+    <link rel="stylesheet" href="css/style.css?v=20261015131220">
 </head>
 <body>
     <header class="topbar">
@@ -79,6 +79,20 @@
         </section>
     </main>
 
+    <dialog id="fotoDialog" class="foto-dialog" aria-labelledby="fotoTitulo">
+        <header>
+            <h2 id="fotoTitulo">Foto</h2>
+            <span id="fotoContador" class="foto-contador"></span>
+            <button type="button" id="fotoFechar" class="close" aria-label="Fechar">×</button>
+        </header>
+        <div class="foto-palco">
+            <button type="button" id="fotoAnt" class="foto-nav" aria-label="Foto anterior">‹</button>
+            <img id="fotoImg" alt="">
+            <button type="button" id="fotoProx" class="foto-nav" aria-label="Próxima foto">›</button>
+        </div>
+        <footer><span id="fotoLegenda"></span><a id="fotoAbrir" class="btn" target="_blank" rel="noopener">Abrir em tamanho original</a></footer>
+    </dialog>
+
     <dialog id="docDialog" class="doc-dialog" aria-labelledby="docTitle">
         <header>
             <h2 id="docTitle">Documento</h2>
@@ -93,6 +107,6 @@
 
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
-    <script src="js/app.js?v=20261015125351"></script>
+    <script src="js/app.js?v=20261015131220"></script>
 </body>
 </html>

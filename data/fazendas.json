@@ -1085,13 +1085,42 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Astorga",
-   "cor_municipio": "#ffd54f"
+   "cor_municipio": "#ffd54f",
+   "cadastro": [
+    {
+     "CAR": "PR-4102109-D3D56471100A47B089F2D5935811B745",
+     "Coordenada": "ASTORGA – PR, 51°43'1,112\"O e 23°11'55,776\"S",
+     "Área total (CAR)": "251,46 ha",
+     "Módulos fiscais": "15,72",
+     "Reserva Legal (CAR)": "13,87",
+     "Vegetação nativa (CAR)": "13,87 ha",
+     "Área consolidada (CAR)": "3,93 ha",
+     "APP da nascente": "Não preservada"
+    }
+   ],
+   "relato": {
+    "Proposta": "Durante a visita à propriedade, verificou-se que o método solo-cimento não será suficiente para a recuperação da nascente e de seu respectivo curso d’água. Recomenda-se, portanto, a realização de uma obra de barramento no local; no entanto, essa obra sairia do escopo do presente trabalho. Para futuros andamentos seria necessário entrar em contato novamente com o produtor."
+   },
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/ana_cristina_londero_benetti/01.jpg",
+     "mini": "docs/fotos/ana_cristina_londero_benetti/t_01.jpg",
+     "legenda": "Foto da visita",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/ana_cristina_londero_benetti/02.jpg",
+     "mini": "docs/fotos/ana_cristina_londero_benetti/t_02.jpg",
+     "legenda": "Foto da visita",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P02",
    "arquivo": "data/propriedades/P02.geojson",
    "nome": "Antonio Marcos Casarotto – Maringá",
-   "car": "Não informado",
+   "car": "PR-4115200-6CD01D7A2DF04616A695528CC9AB5A6E",
    "area_ha": 13.32,
    "cor": "#9aa0a6",
    "info": {
@@ -1110,7 +1139,49 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Maringá",
-   "cor_municipio": "#4fc3f7"
+   "cor_municipio": "#4fc3f7",
+   "cadastro": [
+    {
+     "CAR": "PR-4115200-6CD01D7A2DF04616A695528CC9AB5A6E",
+     "Coordenada": "Maringá - PR",
+     "Área total (CAR)": "13,31 ha",
+     "Módulos fiscais": "0,95",
+     "Reserva Legal (CAR)": "0,02 ha",
+     "Área consolidada (CAR)": "12,76 ha",
+     "APP da nascente": "Parcial"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "Em 08/05/2025, foi realizada uma visita técnica em Maringá, PR, para avaliar duas nascentes. A nascente 1, localizada nas coordenadas -23.377716, -52.074576, é caracterizada como difusa e apresenta princípios de assoreamento, devido à sua posição em uma área de drenagem do terreno. Já a nascente 2, situada nas coordenadas -23.377168, -52.074294, exibe pouco fluxo de água, não se encontra em barranco e possui grande quantidade de raízes no entorno. A Área de Preservação Permanente (APP) está preservada, mas atende apenas parcialmente à faixa de largura exigida pela legislação.",
+    "Conclusão": "Conclui-se que o método solo-cimento não é adequado para a conservação dessas nascentes, devido às características específicas de cada uma, como o assoreamento inicial na nascente 1 e a presença de raízes extensas na nascente 2, que demandam técnicas alternativas de manejo e recuperação para garantir sua preservação."
+   },
+   "data_visita": "08/05/2025",
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/antonio_marcos_casarotto/01.jpg",
+     "mini": "docs/fotos/antonio_marcos_casarotto/t_01.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/antonio_marcos_casarotto/02.jpg",
+     "mini": "docs/fotos/antonio_marcos_casarotto/t_02.jpg",
+     "legenda": "Nascente Casarotto 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/antonio_marcos_casarotto/03.jpg",
+     "mini": "docs/fotos/antonio_marcos_casarotto/t_03.jpg",
+     "legenda": "Nascente Casarotto 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/antonio_marcos_casarotto/04.jpg",
+     "mini": "docs/fotos/antonio_marcos_casarotto/t_04.jpg",
+     "legenda": "Nascente Casarotto 2",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P03",
@@ -1135,7 +1206,49 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Pitangueiras",
-   "cor_municipio": "#ffb74d"
+   "cor_municipio": "#ffb74d",
+   "cadastro": [
+    {
+     "CAR": "PR-4119657-83BD70884F394B829603887F85F5401E",
+     "Área total (CAR)": "36,32 ha",
+     "Módulos fiscais": "3,03",
+     "Reserva Legal (CAR)": "0,00 ha",
+     "Área consolidada (CAR)": "31,78 ha",
+     "APP da nascente": "Preservada"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "Durante visita in loco, realizada no dia 08/01/2025 com acompanhamento do Marcos (filho do Antônio) foram identificadas duas nascentes na propriedade, essas possuem potencial para a realização da conservação solo/cimento de imediato, considerando que ambas possuem uma boa vazão e são de interesse do proprietário a realização da proteção de ambas. Umas das nascentes fica numa região mais alta e a mesma forma um reservatório com a água que nasce, sendo favorecida pelo relevo. A mesma é encaminhada para uma roda d’água através de uma tubulação e é responsável por impulsionar o sistema. A outra nascente origina-se de um ponto mais baixo e mais próximo da roda d’água, que é encaminhado para a bomba que puxa essa água e leva até uma região mais elevada da propriedade armazenando-a em uma caixa d'água de 15000 L. Abaixo, seguem as fotos das constatações feitas in loco.",
+    "Proposta": "Foram identificadas duas nascentes na propriedade, as duas poderão ser recuperadas pelo método solo/cimento e para isso serão utilizados os seguintes",
+    "Conclusão": "Diante disso, é imprescindível realizar um planejamento mais detalhado para garantir a eficiência na execução dos trabalhos. Portanto, segue para aprovação e posteriores andamentos."
+   },
+   "data_visita": "08/01/2025",
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/antonio_navarro_sanches/01.jpg",
+     "mini": "docs/fotos/antonio_navarro_sanches/t_01.jpg",
+     "legenda": "Nascente Antônio Navarro 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/antonio_navarro_sanches/02.jpg",
+     "mini": "docs/fotos/antonio_navarro_sanches/t_02.jpg",
+     "legenda": "Nascente Antônio Navarro 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/antonio_navarro_sanches/03.jpg",
+     "mini": "docs/fotos/antonio_navarro_sanches/t_03.jpg",
+     "legenda": "Foto da visita",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/antonio_navarro_sanches/04.jpg",
+     "mini": "docs/fotos/antonio_navarro_sanches/t_04.jpg",
+     "legenda": "Foto da visita",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P04",
@@ -1160,7 +1273,30 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Maringá",
-   "cor_municipio": "#4fc3f7"
+   "cor_municipio": "#4fc3f7",
+   "cadastro": [
+    {
+     "CAR": "PR-4115200-29739B9336774DDDA25EEC129482956B",
+     "Coordenada": "Lat: 23°24'06,39\" S Long: 52°03'11,04\" O Long: 52°03'11,04\" O",
+     "Área total (CAR)": "31,30 ha",
+     "Módulos fiscais": "2,16",
+     "Reserva Legal (CAR)": "0 ha",
+     "Vegetação nativa (CAR)": "2,45 ha",
+     "Área consolidada (CAR)": "27,79 ha",
+     "APP da nascente": "Parcial"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "Visita in loco acompanhada pelo LAÉRCIO BORTOLO (conhecido), onde foi identificada uma nascente apenas, essa que possui um início de preservação, com umas pedras já protegendo a área e uma espécie de plástico. O que protege parcialmente a entrada de detritos e folhas. Existe a necessidade de uma nova visita na propriedade com o acompanhamento do proprietário, visando a identificação de outros pontos de nascente na propriedade e o registro fotográfico da nascente anteriormente visitada."
+   },
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/claudio_balan/01.jpg",
+     "mini": "docs/fotos/claudio_balan/t_01.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    }
+   ]
   },
   {
    "id": "P05",
@@ -1185,7 +1321,35 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Astorga",
-   "cor_municipio": "#ffd54f"
+   "cor_municipio": "#ffd54f",
+   "cadastro": [
+    {
+     "CAR": "PR-4102109-1E9606371CAD4D8298D31EA91CD899B2",
+     "Coordenada": "ASTORGA – PR, 51°40'50,007\"O e 23°13'16,911\"S",
+     "Área total (CAR)": "11,34 ha",
+     "Módulos fiscais": "0,71",
+     "Vegetação nativa (CAR)": "2,00 ha",
+     "Área consolidada (CAR)": "8,85 ha",
+     "APP da nascente": "Não preservada"
+    }
+   ],
+   "relato": {
+    "Proposta": "A visita à propriedade confirmou a presença de duas nascentes; entretanto, elas não se encontravam em boas condições. A Área de Preservação Permanente (APP) dessas nascentes não está em bom estado de conservação, exceto pela área localizada dentro da propriedade. Além disso, foi observado um estágio avançado de assoreamento, que tem se intensificado devido à proximidade das nascentes com a estrada. Esses fatores tornam muito difícil a recuperação das nascentes e, por esse motivo, decidiu-se não prosseguir com a proposta nesta propriedade."
+   },
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/clayton_tondato_de_carli/01.jpg",
+     "mini": "docs/fotos/clayton_tondato_de_carli/t_01.jpg",
+     "legenda": "Foto da visita",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/clayton_tondato_de_carli/02.jpg",
+     "mini": "docs/fotos/clayton_tondato_de_carli/t_02.jpg",
+     "legenda": "Foto da visita",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P06",
@@ -1210,13 +1374,43 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Pitangueiras",
-   "cor_municipio": "#ffb74d"
+   "cor_municipio": "#ffb74d",
+   "cadastro": [
+    {
+     "CAR": "PR-4119657-F39E47F725B64C66A172176C90736EE3",
+     "Área total (CAR)": "21,93 ha",
+     "Módulos fiscais": "1,83",
+     "Reserva Legal (CAR)": "0,00 ha",
+     "Área consolidada (CAR)": "21,53 ha",
+     "APP da nascente": "Parcial"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "Durante visita in loco, realizada no dia 08/01/2025 com acompanhamento do Ergio, foram identificadas duas nascentes na propriedade, uma dentro de uma estrutura de concreto e outra exatamente ao lado da estrutura, porém, apenas uma demonstrou aptidão para desenvolvimento do projeto. A nascente selecionada brota da parede da calha do curso hídrico e a mesma desemboca no córrego, que possui uma vazão bem baixa. Diante dessa situação, por a nascente estar na parede da calha do curso hídrico, requer uma atenção maior, para que em casos de cheia venha afetar a obra da conservação. Originando assim, a idéia de desassorear essa região do corpo hídrico limpando o canal de drenagem e melhorando a regularidade da passagem da água. Já a nascente que nasce dentro da estrutura de concreto não possibilita fazer a conservação, justamente por conta da estrutura reter a água e empoçar todo o fluxo. Necessitando assim de destruir essa estrutura para entender o comportamento da nascente. Abaixo, seguem as fotos das constatações feitas in loco.",
+    "Proposta": "Foi identificada uma nascente na propriedade apta a ser recuperada pelo método solo/cimento e para isso serão utilizados os seguintes materiais: - Cimento, com a quantidade variando conforme o tamanho da nascente e o tipo do solo no local; - 0,6 m³ de pedras rachão; - 60 cm de cano PVC 100 mm com duas (2) tampas; - 60 cm de cano PVC 3/4\"; - 1,8 m de cano PVC 50 mm; - 50 cm² de tela de mosquito.",
+    "Conclusão": "Diante disso, é imprescindível realizar um planejamento mais detalhado para garantir a eficiência na execução dos trabalhos. Portanto, segue para aprovação e posteriores andamentos."
+   },
+   "data_visita": "08/01/2025",
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/ergio_messias_dos_santos/01.jpg",
+     "mini": "docs/fotos/ergio_messias_dos_santos/t_01.jpg",
+     "legenda": "Nascente Ergio Messias 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/ergio_messias_dos_santos/02.jpg",
+     "mini": "docs/fotos/ergio_messias_dos_santos/t_02.jpg",
+     "legenda": "Nascente Ergio Messias 1",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P07",
    "arquivo": "data/propriedades/P07.geojson",
    "nome": "Evaldo Alfredo Bartmann – Maringá",
-   "car": "Não informado",
+   "car": "PR-4115200-CA9CEC17EBFB4A10AEB50C839BF922BB",
    "area_ha": 24.35,
    "cor": "#2e9e5b",
    "info": {
@@ -1235,7 +1429,51 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Maringá",
-   "cor_municipio": "#4fc3f7"
+   "cor_municipio": "#4fc3f7",
+   "cadastro": [
+    {
+     "CAR": "PR-4115200-CA9CEC17EBFB4A10AEB50C839BF922BB",
+     "Coordenada": "Lat: 23°24'15,1\" S Long: 51°50'46,72\" O Long: 51°50'46,72\" O",
+     "Área total (CAR)": "24,34 ha",
+     "Módulos fiscais": "1,74",
+     "Reserva Legal (CAR)": "2,98 ha",
+     "Vegetação nativa (CAR)": "2,98 ha",
+     "Área consolidada (CAR)": "21,36 ha",
+     "APP da nascente": "Parcial"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "A visita foi realizada no dia 03/07/2025, em Maringá, na propriedade do Sr. Evaldo Alfredo Bartmann, e, no local, foram identificadas duas nascentes. As nascentes apresentam um fluxo de água consistente e estável, contribuindo diretamente para uma área de banhado localizada a jusante, o que destaca sua relevância ecológica para a manutenção do equilíbrio hídrico e da biodiversidade local. Com a verificação técnica foi possível avaliar cada uma delas e constatar que uma das nascentes está apta para receber a metodologia de conservação tipo solo-cimento.",
+    "Proposta": "Foi identificada uma nascente na propriedade apta a ser recuperada pelo método solo-cimento e para isso serão utilizados os seguintes materiais: - ½ saco de cimento; - 0,1 m³ de pedras rachão; - 30 cm de cano PVC 100 mm com duas (2) tampas; - 30 cm de cano PVC 3/4\"; - 30 cm de cano PVC 50 mm; - 50 cm² de tela de mosquito.",
+    "Conclusão": "Após avaliação técnica detalhada do local, aprovação da equipe responsável e consentimento do filho do proprietário rural, a implementação do método solo-cimento foi realizada com sucesso em uma das nascentes da propriedade em Maringá, Paraná, no dia 03 de julho de 2025. A execução foi concluída no mesmo dia, garantindo a proteção da nascente e a preservação do recurso hídrico."
+   },
+   "data_visita": "03/07/2025",
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/evaldo_alfredo_bartmann/01.jpg",
+     "mini": "docs/fotos/evaldo_alfredo_bartmann/t_01.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/evaldo_alfredo_bartmann/02.jpg",
+     "mini": "docs/fotos/evaldo_alfredo_bartmann/t_02.jpg",
+     "legenda": "Nascente Evaldo 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/evaldo_alfredo_bartmann/03.jpg",
+     "mini": "docs/fotos/evaldo_alfredo_bartmann/t_03.jpg",
+     "legenda": "Nascente Evaldo 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/evaldo_alfredo_bartmann/04.jpg",
+     "mini": "docs/fotos/evaldo_alfredo_bartmann/t_04.jpg",
+     "legenda": "Nascente Evaldo 2 - Método solo-cimento",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P08",
@@ -1260,7 +1498,36 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Astorga",
-   "cor_municipio": "#ffd54f"
+   "cor_municipio": "#ffd54f",
+   "cadastro": [
+    {
+     "CAR": "PR-4102109-0CE1573F1ECF44BC8FAED42E662D6045",
+     "Área total (CAR)": "717,3210 ha",
+     "Módulos fiscais": "44,8326",
+     "Reserva Legal (CAR)": "142,65 ha",
+     "Área consolidada (CAR)": "610,23 ha",
+     "APP da nascente": "Parcial"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "Foram identificadas mais de uma nascente na propriedade do Frederico que possuem potencial para a realização da conservação solo/cimento de imediato, considerando que uma delas possui uma vazão boa e a água nasce de um ponto na parede do canal o que favorece para a colocação das pedras filtrantes. A outra nascente origina-se de pontos difusos de água, dos quais três foram identificados, obras desse tipo necessitam de maior atenção, a água que brota de pontos não identificados pode acabar sedendo a barragem de contenção e desestabilizando a proteção, isso também indica a necessidade de uma obra de maior porte, exigindo mais material do que o habitual. Abaixo, seguem as fotos da constatação dos pontos, durante visita in loco.",
+    "Proposta": "Foram identificadas duas nascentes na propriedade, as duas poderão ser recuperadas pelo método solo/cimento e para isso serão utilizados os seguintes",
+    "Conclusão": "Diante disso, é imprescindível realizar um planejamento mais detalhado para garantir a eficiência na execução dos trabalhos. Portanto, segue para aprovação e posteriores andamentos."
+   },
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/frederico_camargo_anchieta/01.jpg",
+     "mini": "docs/fotos/frederico_camargo_anchieta/t_01.jpg",
+     "legenda": "Foto da visita",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/frederico_camargo_anchieta/02.jpg",
+     "mini": "docs/fotos/frederico_camargo_anchieta/t_02.jpg",
+     "legenda": "Foto da visita",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P09",
@@ -1285,7 +1552,43 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Maringá",
-   "cor_municipio": "#4fc3f7"
+   "cor_municipio": "#4fc3f7",
+   "cadastro": [
+    {
+     "CAR": "PR-4115200-8727BD79B1254D70B2A4E45B7AA276D2",
+     "Coordenada": "Lat: 23°23'31,31\" S Long: 52°03'09,05\" O",
+     "Área total (CAR)": "41,14 ha",
+     "Módulos fiscais": "2,94",
+     "Vegetação nativa (CAR)": "5,07 ha",
+     "Área consolidada (CAR)": "35,77 ha",
+     "APP da nascente": "Preservada"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "Em 24/04/2025, a visita técnica avaliou a nascente (-23.392800, -52.054527) em Maringá, PR. A nascente ocorre em barranco, de forma difusa e diretamente na rocha, com APP preservada e faixa de largura conforme a legislação.",
+    "Conclusão": "A nascente não é viável para recuperação com o método solo-cimento devido à sua natureza difusa e à presença de rocha. A APP preservada assegura a proteção ambiental da área."
+   },
+   "data_visita": "24/04/2025",
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/gustavo_galvani_de_lima/01.jpg",
+     "mini": "docs/fotos/gustavo_galvani_de_lima/t_01.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/gustavo_galvani_de_lima/02.jpg",
+     "mini": "docs/fotos/gustavo_galvani_de_lima/t_02.jpg",
+     "legenda": "Nascente Gustavo Galvani 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/gustavo_galvani_de_lima/03.jpg",
+     "mini": "docs/fotos/gustavo_galvani_de_lima/t_03.jpg",
+     "legenda": "Nascente Gustavo Galvani 1",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P10",
@@ -1310,7 +1613,69 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Maringá",
-   "cor_municipio": "#4fc3f7"
+   "cor_municipio": "#4fc3f7",
+   "cadastro": [
+    {
+     "CAR": "LOTEURBANO",
+     "Coordenada": "Lat: 23°22'27.37\"S Long: 51°55'49.77\"O",
+     "APP da nascente": "Preservada"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "No dia 18 de setembro de 2025, foi realizada uma visita técnica à nascente situada nas coordenadas geográficas Latitude: 23°22'27.37\"S, Longitude: 51°55'49.77\"O, com o objetivo de avaliar suas condições e verificar a viabilidade de implementação do Programa de Conservação de Nascentes pelo método solocimento. Durante a vistoria da propriedade da HORTA COMUNITÁRIA GREVÍLEAS, constatou-se que se trata de um 7 NASCENTES, sendo que 6 delas foi utilizado o método solo-cimento para proteção da mesma. A Área de Preservação Permanente (APP) ao redor da nascente foi avaliada como preservada, apresentando uma boa conservação de vegetação nativa ao entorno da nascente Foram coletadas amostras de água para realização de análises microbiológicas e químicas, com o objetivo de determinar a qualidade da água (ANEXOS). No dia 18 de setembro de 2025, foi realizada uma visita técnica à nascente situada nas coordenadas geográficas Latitude: 23°22'27.37\"S, Longitude: 51°55'49.77\"O, com o objetivo de avaliar suas condições e verificar a viabilidade de implementação do Programa de Conservação de Nascentes pelo método solocimento. Durante a vistoria da propriedade da HORTA COMUNITÁRIA GREVÍLEAS, constatou-se que se trata de um 7 NASCENTES, sendo que 6 delas foi utilizado o método solo-cimento para proteção da mesma. A Área de Preservação Permanente (APP) ao redor da nascente foi avaliada como preservada, apresentando uma boa conservação de vegetação nativa ao entorno da nascente Foram coletadas amostras de água para realização de análises microbiológicas e químicas, com o objetivo de determinar a qualidade da água (ANEXOS).",
+    "Conclusão": "A visita técnica realizada em 18/09/2025 permitiu constatar que a propriedade da Horta Comunitária Grevíleas apresenta boas condições de conservação ambiental. Das sete nascentes identificadas, seis já se encontram protegidas pelo método solocimento, demonstrando ações efetivas de manejo e preservação. A Área de Preservação Permanente (APP) está bem conservada, com vegetação nativa no entorno, garantindo proteção hídrica e ambiental. Conclui-se que há viabilidade para a implementação do Programa de Conservação de Nascentes também na nascente remanescente, potencializando a proteção e a sustentabilidade do recurso hídrico local. HORTA COMUNITÁRIA GREVÍLEAS HORTA COMUNITÁRIA GREVÍLEAS A visita técnica realizada em 18/09/2025 permitiu constatar que a propriedade da Horta Comunitária Grevíleas apresenta boas condições de conservação ambiental. Das sete nascentes identificadas, seis já se encontram protegidas pelo método solocimento, demonstrando ações efetivas de manejo e preservação. A Área de Preservação Permanente (APP) está bem conservada, com vegetação nativa no entorno, garantindo proteção hídrica e ambiental. Conclui-se que há viabilidade para a implementação do Programa de Conservação de Nascentes também na nascente remanescente, potencializando a proteção e a sustentabilidade do recurso hídrico local."
+   },
+   "data_visita": "18 de setembro de 2025",
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/horta_comunitaria_grevileas/01.jpg",
+     "mini": "docs/fotos/horta_comunitaria_grevileas/t_01.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/horta_comunitaria_grevileas/02.jpg",
+     "mini": "docs/fotos/horta_comunitaria_grevileas/t_02.jpg",
+     "legenda": "Nascente Horta Grevíleas 1 – Método solo-cimento (dia 1)",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/horta_comunitaria_grevileas/03.jpg",
+     "mini": "docs/fotos/horta_comunitaria_grevileas/t_03.jpg",
+     "legenda": "Nascente Horta Grevíleas 1 – Método solo-cimento (dia 1)",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/horta_comunitaria_grevileas/04.jpg",
+     "mini": "docs/fotos/horta_comunitaria_grevileas/t_04.jpg",
+     "legenda": "Foto da visita",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/horta_comunitaria_grevileas/05.jpg",
+     "mini": "docs/fotos/horta_comunitaria_grevileas/t_05.jpg",
+     "legenda": "Foto da visita",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/horta_comunitaria_grevileas/06.jpg",
+     "mini": "docs/fotos/horta_comunitaria_grevileas/t_06.jpg",
+     "legenda": "Nascente Horta Grevíleas 2 – Método solo-cimento",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/horta_comunitaria_grevileas/07.jpg",
+     "mini": "docs/fotos/horta_comunitaria_grevileas/t_07.jpg",
+     "legenda": "Nascente Horta Grevíleas 2 – Método solo-cimento",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/horta_comunitaria_grevileas/08.jpg",
+     "mini": "docs/fotos/horta_comunitaria_grevileas/t_08.jpg",
+     "legenda": "Foto da visita",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P11",
@@ -1335,7 +1700,41 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Maringá",
-   "cor_municipio": "#4fc3f7"
+   "cor_municipio": "#4fc3f7",
+   "cadastro": [
+    {
+     "CAR": "PR-4115200-985E86B4D87D4221BBD51F4C61F75BD9",
+     "Coordenada": "Lat: 23°22'34,06\" S Long: 52°04'13,07\" O",
+     "Área total (CAR)": "8,42 ha",
+     "Módulos fiscais": "0,60",
+     "APP da nascente": "Parcial"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "Em 08/05/2025, a visita técnica avaliou duas nascentes (-23.375417, - 52.073120) em Maringá, PR, ambas localizadas em barranco. A nascente 1, situada em área de drenagem, apresenta solo severamente erodido. A nascente 2, também em área de drenagem, é obstruída por raízes extensas. A APP permanece preservada, com largura parcialmente adequada, conforme a legislação.",
+    "Conclusão": "As nascentes não são viáveis para o método solo-cimento devido à erosão e drenagem (nascente 1) e à presença de raízes (nascente 2). A APP preservada assegura a proteção ambiental da área."
+   },
+   "data_visita": "08/05/2025",
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/jairo_alexandre_rosseto/01.jpg",
+     "mini": "docs/fotos/jairo_alexandre_rosseto/t_01.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/jairo_alexandre_rosseto/02.jpg",
+     "mini": "docs/fotos/jairo_alexandre_rosseto/t_02.jpg",
+     "legenda": "Nascente Jairo 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/jairo_alexandre_rosseto/03.jpg",
+     "mini": "docs/fotos/jairo_alexandre_rosseto/t_03.jpg",
+     "legenda": "Nascente Jairo 2",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P12",
@@ -1360,7 +1759,35 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Nossa Senhora das Graças",
-   "cor_municipio": "#a1887f"
+   "cor_municipio": "#a1887f",
+   "cadastro": [
+    {
+     "CAR": "PR-4116406-18BAD0721D324210A490049445F4E727",
+     "Coordenada": "Lat: 22°53'35,09\" S Long: 51°45'31,67\" O Long: 51°45'31,67\" O",
+     "Área total (CAR)": "380,83 ha",
+     "Módulos fiscais": "23,80",
+     "Reserva Legal (CAR)": "76,50 ha",
+     "Vegetação nativa (CAR)": "59,30 ha",
+     "Área consolidada (CAR)": "315,52 ha"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "Durante a visita in loco, verificou-se que o método solo-cimento não é aplicável para a recuperação da nascente na propriedade, pelo fato da nascente analisada se dar de forma difusa numa área caracterizada como banhado."
+   },
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/joao_climaco/01.jpg",
+     "mini": "docs/fotos/joao_climaco/t_01.jpg",
+     "legenda": "Nascente João Climaco 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/joao_climaco/02.jpg",
+     "mini": "docs/fotos/joao_climaco/t_02.jpg",
+     "legenda": "Nascente João Climaco 1",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P13",
@@ -1385,7 +1812,42 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Jaguapitã",
-   "cor_municipio": "#aed581"
+   "cor_municipio": "#aed581",
+   "cadastro": [
+    {
+     "CAR": "PR-4111902-38E655AE3ABF43C89FC7E0C70C7283C5",
+     "Coordenada": "Lat: 23°03'09,8\" S Long: 51°33'44,68\" O Long: 51°33'44,68\" O",
+     "Área total (CAR)": "57,75 ha",
+     "Módulos fiscais": "3,61",
+     "Reserva Legal (CAR)": "2,62 ha",
+     "Vegetação nativa (CAR)": "2,62 ha",
+     "Área consolidada (CAR)": "55,10 ha",
+     "APP da nascente": "Preservada"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "Durante a visita in loco, verificou-se que o método solo-cimento não é aplicável para a recuperação da nascente na propriedade, pelo fato da nascente analisada se dar de forma difusa numa área caracterizada como banhado."
+   },
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/joel_brito_tomaz/01.jpg",
+     "mini": "docs/fotos/joel_brito_tomaz/t_01.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/joel_brito_tomaz/02.jpg",
+     "mini": "docs/fotos/joel_brito_tomaz/t_02.jpg",
+     "legenda": "Nascente Joel Brito 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/joel_brito_tomaz/03.jpg",
+     "mini": "docs/fotos/joel_brito_tomaz/t_03.jpg",
+     "legenda": "Nascente Joel Brito 1",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P14",
@@ -1410,7 +1872,53 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Floraí",
-   "cor_municipio": "#ba68c8"
+   "cor_municipio": "#ba68c8",
+   "cadastro": [
+    {
+     "CAR": "PR-4107801-4DFC7605DFFB4EB1B54086D8BAA00F8A",
+     "Coordenada": "ESTRADA ESTÂNCIA PIRES DE LEMOS, FLORAÍ - PR",
+     "Área total (CAR)": "13,03 ha",
+     "Módulos fiscais": "0,81",
+     "Área consolidada (CAR)": "8,60 ha",
+     "APP da nascente": "Parcial"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "Foram identificadas mais de uma nascente na propriedade de Kazuo Furukita, porém os pontos de água não possuem um potencial para a realização da conservação solo/cimento de imediato, considerando que o fato da posição onde a água nasce (do chão), não favorece para a colocação das pedras filtrantes, podendo impossibilitar a saída de água, além de possuir baixa vazão. A área afetada possui uma cobertura vegetal remanescente composta por espécies nativas em estágio de regeneração natural e fragmentos degradados. O solo apresenta sinais de compactação e erosão, comprometendo a capacidade de retenção de água e a fertilidade.",
+    "Proposta": "A adoção de um plano de recuperação adequado para a área pode ser uma alternativa viável, desde que bem dimensionada, uma vez que o objetivo principal do plano de recuperação é promover a restauração ambiental, reestabelecendo os serviços ecossistêmicos, como melhorias significativas no volume dos recursos hídricos e uma garantia da sustentabilidade da área. Para a recuperação da vegetação, as etapas a serem implementadas são as seguintes: • Controle de Espécies Invasoras: Retirada manual ou mecanizada de espécies exóticas que comprometem o desenvolvimento da vegetação nativa. • Preparo do Solo: Técnicas de descompactação, correção de acidez e adubação orgânica serão empregadas para melhorar as condições do solo. • Plantio de Espécies Nativas: Seleção de mudas adaptadas às condições locais, priorizando espécies pioneiras para acelerar a regeneração e espécies clímax para garantir a diversidade. • Monitoramento e Manutenção: Acompanhamento periódico do desenvolvimento das plantas, controle de pragas, irrigação e adubação complementar, se necessário. KAZUO FURUKITA PLANO DE RECUPERAÇÃO DE ÁREAS DEGRADADAS SIMPLIFICADO"
+   },
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/kazuo_furukita/01.jpg",
+     "mini": "docs/fotos/kazuo_furukita/t_01.jpg",
+     "legenda": "Nascente Kazuo Furukita 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/kazuo_furukita/02.jpg",
+     "mini": "docs/fotos/kazuo_furukita/t_02.jpg",
+     "legenda": "Foto da visita",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/kazuo_furukita/03.jpg",
+     "mini": "docs/fotos/kazuo_furukita/t_03.jpg",
+     "legenda": "Foto da visita",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/kazuo_furukita/04.jpg",
+     "mini": "docs/fotos/kazuo_furukita/t_04.jpg",
+     "legenda": "Figura 8 - Área do Imóvel",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/kazuo_furukita/05.jpg",
+     "mini": "docs/fotos/kazuo_furukita/t_05.jpg",
+     "legenda": "Figura 9 – Delimitação da Área que Será Recuperada",
+     "tipo": "mapa"
+    }
+   ]
   },
   {
    "id": "P15",
@@ -1435,7 +1943,43 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Maringá",
-   "cor_municipio": "#4fc3f7"
+   "cor_municipio": "#4fc3f7",
+   "cadastro": [
+    {
+     "CAR": "PR-4115200-4DFE9543A81F4769A720B2E5278BFF88",
+     "Coordenada": "Lat: 23°22'04,05\" S Long: 52°01'22,79\" O Long: 52°01'22,79\" O",
+     "Área total (CAR)": "24,20 ha",
+     "Módulos fiscais": "1,73",
+     "Reserva Legal (CAR)": "1,39 ha",
+     "Vegetação nativa (CAR)": "0 ha",
+     "Área consolidada (CAR)": "22,91 ha",
+     "APP da nascente": "Parcial"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "Foram Identificada duas nascentes. Uma possui a estrutura de concreto com no local onde provavelmente nasce a água e uma outra que brota do barranco, mas que necessita de uma limpeza previa ao redor para identificação do ponto de onde nasce a água.",
+    "Conclusão": "Durante a visita in loco, verificou-se que o método solo-cimento não é aplicável para a recuperação da nascente 2 da propriedade, pelo fato da nascente analisada se apresentar de forma difusa."
+   },
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/laercio_bortolo/01.jpg",
+     "mini": "docs/fotos/laercio_bortolo/t_01.jpg",
+     "legenda": "Nascente Laércio Bortolo 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/laercio_bortolo/02.jpg",
+     "mini": "docs/fotos/laercio_bortolo/t_02.jpg",
+     "legenda": "Foto da visita",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/laercio_bortolo/03.jpg",
+     "mini": "docs/fotos/laercio_bortolo/t_03.jpg",
+     "legenda": "Nascente Laércio Bortolo 2",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P16",
@@ -1460,7 +2004,42 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Jaguapitã",
-   "cor_municipio": "#aed581"
+   "cor_municipio": "#aed581",
+   "cadastro": [
+    {
+     "CAR": "PR-4111902-87CC7F4B4D9B4CB4925FC7E657515DB8",
+     "Coordenada": "Lat: 23°10'18,74\" S Long: 51°31'31,83\" O Long: 51°31'31,83\" O",
+     "Área total (CAR)": "90,40 ha",
+     "Módulos fiscais": "5,66",
+     "Reserva Legal (CAR)": "18,08 ha",
+     "Vegetação nativa (CAR)": "12,29 ha",
+     "Área consolidada (CAR)": "78,08 ha",
+     "APP da nascente": "Parcial"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "Durante a visita in loco, o produtor nos direcionou até a nascente, mas não conseguimos identificar o ponto de onde nasce a água, apenas o caminho por onde ela corre. A partir disso, o produtor ficou de fazer uma limpeza na área para uma posterior visita."
+   },
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/lairtro_tonini_bortolassi/01.jpg",
+     "mini": "docs/fotos/lairtro_tonini_bortolassi/t_01.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/lairtro_tonini_bortolassi/02.jpg",
+     "mini": "docs/fotos/lairtro_tonini_bortolassi/t_02.jpg",
+     "legenda": "Nascente Lairtro Tonini 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/lairtro_tonini_bortolassi/03.jpg",
+     "mini": "docs/fotos/lairtro_tonini_bortolassi/t_03.jpg",
+     "legenda": "Nascente Lairtro Tonini 1",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P17",
@@ -1485,7 +2064,37 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Pitangueiras",
-   "cor_municipio": "#ffb74d"
+   "cor_municipio": "#ffb74d",
+   "cadastro": [
+    {
+     "CAR": "PR-4119657-5C054227AA9A4563B06CAF079D69C6B9",
+     "Área total (CAR)": "36,3552 ha",
+     "Módulos fiscais": "3,0296",
+     "Reserva Legal (CAR)": "0,00 ha",
+     "Área consolidada (CAR)": "33,28 ha",
+     "APP da nascente": "Preservada"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "Durante visita in loco, realizada no dia 25/02/2025 com acompanhamento do proprietário, foi identificada uma nascentes na propriedade, dentro de uma estrutura de concreto, porém, a mesma não demonstrou aptidão para desenvolvimento do projeto por brotar do chão. A nascente selecionada brota dentro da estrutura de concreto e possui uma vazão considerável. Diante dessa situação, pensamos em algo viável para executar, afim de proporcionar a conservação do recurso hídrico. Abaixo, seguem as fotos das constatações feitas in loco.",
+    "Proposta": "Foi identificada uma nascente na propriedade que necessita de revitalização e posterior proteção contra a ação de animais e resíduos que contaminam o recurso hídrico, portanto, originou-se a ideia de fazer uma limpeza ao redor da estrutura (remoção de galhos e folhas), desassorear dentro da estrutura de concreto e desobstruir o canal de drenagem, além de construir uma tampa de concreto, com intuito de proteger a estrutura que represa a água no local, impactando em melhorias na regularidade da passagem da água. Serão necessários os seguintes materiais para execução da obra: - 1 saco de cimento; - 1 barra de ferro; - 2 sacos de pedra brita; - 60 cm de cano PVC 100 mm.",
+    "Conclusão": "Diante disso, é imprescindível realizar um planejamento mais detalhado para garantir a eficiência na execução dos trabalhos. Portanto, segue para aprovação e posteriores andamentos, sugere-se que seja feito novo contato com o cooperado, para explicar a proposta e entender o interesse na realização da obra."
+   },
+   "data_visita": "25/02/2025",
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/leandro_sgorlon/01.jpg",
+     "mini": "docs/fotos/leandro_sgorlon/t_01.jpg",
+     "legenda": "Nascente Leandro Sgorlon 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/leandro_sgorlon/02.jpg",
+     "mini": "docs/fotos/leandro_sgorlon/t_02.jpg",
+     "legenda": "Nascente Leandro Sgorlon 1",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P18",
@@ -1510,7 +2119,36 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Maringá",
-   "cor_municipio": "#4fc3f7"
+   "cor_municipio": "#4fc3f7",
+   "cadastro": [
+    {
+     "CAR": "PR-4115200-6E0AF97C31B44B9DB35C50E92605C006",
+     "Coordenada": "Lat.: 23°22'40,01\" S Long.: 52°04'10,89\" O",
+     "Área total (CAR)": "14,19 ha",
+     "Módulos fiscais": "1,01",
+     "APP da nascente": "Preservada"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "Em 08/05/2025, a visita técnica avaliou a nascente (-23.376944, -52.074216) em Maringá, PR. A nascente apresenta vazão elevada, com posição favorável ao método solo-cimento, apesar de não estar em barranco. A APP é preservada, com boa arborização e faixa de largura adequada à legislação.",
+    "Proposta": "Foi identificada uma nascente na propriedade apta a ser recuperada pelo método solo/cimento e para isso serão utilizados os seguintes materiais: - ½ saco de cimento; - 0,1 m³ de pedras rachão; - 60 cm de cano PVC 100 mm com duas (2) tampas; - 60 cm de cano PVC 3/4\"; - 1,8 m de cano PVC 50 mm; - 50 cm² de tela de mosquito.",
+    "Conclusão": "A nascente é apta para recuperação com o método solo-cimento e intervenção protegerá a nascente, preservará a alta vazão e manterá a integridade da APP, contribuindo para a sustentabilidade hídrica e ambiental da propriedade."
+   },
+   "data_visita": "08/05/2025",
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/leonor_galuch/01.jpg",
+     "mini": "docs/fotos/leonor_galuch/t_01.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/leonor_galuch/02.jpg",
+     "mini": "docs/fotos/leonor_galuch/t_02.jpg",
+     "legenda": "Nascente Leonor Galuch 1",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P19",
@@ -1535,13 +2173,61 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Maringá",
-   "cor_municipio": "#4fc3f7"
+   "cor_municipio": "#4fc3f7",
+   "cadastro": [
+    {
+     "CAR": "PR-4115200-A584E8615E9C4148B511DD2425F4BE46",
+     "Coordenada": "Lat: 23°21'40,28\" S Long: 52°02'08,07\" O",
+     "Área total (CAR)": "21,14 ha",
+     "Módulos fiscais": "1,51",
+     "Vegetação nativa (CAR)": "4,06 ha",
+     "Área consolidada (CAR)": "17,03 ha",
+     "APP da nascente": "Preservada"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "Em 08/04/2025, a visita técnica avaliou duas nascentes na propriedade. A nascente 1 (-23.363829, -52.032456) é difusa, sem formação em barranco, com fluxo disperso e presença de muitas raízes na área. A nascente 2 (-23.363019, -52.031443) possui proteção pré-existente, com estrutura funcional e fluxo hídrico estável.",
+    "Conclusão": "A nascente 1 não atende aos critérios para recuperação com solo-cimento devido à sua natureza difusa. A nascente 2, já protegida, contribui para a conservação hídrica e preservação da APP na propriedade."
+   },
+   "data_visita": "08/04/2025",
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/luis_carlos_balan/01.jpg",
+     "mini": "docs/fotos/luis_carlos_balan/t_01.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/luis_carlos_balan/02.jpg",
+     "mini": "docs/fotos/luis_carlos_balan/t_02.jpg",
+     "legenda": "Nascente Luis Carlos Balan 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/luis_carlos_balan/03.jpg",
+     "mini": "docs/fotos/luis_carlos_balan/t_03.jpg",
+     "legenda": "Nascente Luis Carlos Balan 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/luis_carlos_balan/04.jpg",
+     "mini": "docs/fotos/luis_carlos_balan/t_04.jpg",
+     "legenda": "Nascente Luis Carlos Balan 2",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/luis_carlos_balan/05.jpg",
+     "mini": "docs/fotos/luis_carlos_balan/t_05.jpg",
+     "legenda": "Nascente Luis Carlos Balan 2",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P20",
    "arquivo": "data/propriedades/P20.geojson",
    "nome": "Maria Filomena Perin de Lima – Maringá",
-   "car": "Não informado",
+   "car": "PR-4115200-D30CD8604A1341D7B0C528D75B7FDA6A",
    "area_ha": 48.42,
    "cor": "#e0a100",
    "info": {
@@ -1560,7 +2246,43 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Maringá",
-   "cor_municipio": "#4fc3f7"
+   "cor_municipio": "#4fc3f7",
+   "cadastro": [
+    {
+     "CAR": "PR-4115200-D30CD8604A1341D7B0C528D75B7FDA6A",
+     "Coordenada": "Lat: 23°24'07,87\" S Long: 52°02'13,99\" O",
+     "Área total (CAR)": "48,39 ha",
+     "Módulos fiscais": "3,46",
+     "Área consolidada (CAR)": "46,91 ha",
+     "APP da nascente": "Preservada"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "Durante uma visita in loco realizada no dia 26/03/2025, acompanhada por técnicos representantes da Secretaria de Meio Ambiente de Maringá-PR, foram identificadas mais de uma nascente na propriedade. Contudo, devido à presença de mato alto, o único ponto considerado apto para intervenção foi aquele destacado nas imagens abaixo. Posteriormente, em uma nova visita realizada no dia 08/04/2025, com a participação do colaborador responsável pela recuperação da nascente, foi possível confirmar que o trabalho na nascente pode ser realizado. Além disso, constatou-se a necessidade de verificar uma maneira eficiente de transportar as pedras rachão para o mais próximo possível da nascente, medida essencial para viabilizar a execução do serviço de forma prática e eficaz.",
+    "Proposta": "Foi identificada uma nascente na propriedade apta a ser recuperada pelo método solo/cimento e para isso serão utilizados os seguintes materiais: - ½ saco de cimento; - 0,6 m³ de pedras rachão; - 60 cm de cano PVC 100 mm com duas (2) tampas; - 60 cm de cano PVC 3/4\"; - 1,8 m de cano PVC 50 mm; - 50 cm² de tela de mosquito.",
+    "Conclusão": "Diante disso, é imprescindível realizar um planejamento mais detalhado para garantir a eficiência na execução dos trabalhos. Portanto, segue para aprovação e posteriores andamentos."
+   },
+   "data_visita": "26/03/2025",
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/maria_filomena_perin_de_lima/01.jpg",
+     "mini": "docs/fotos/maria_filomena_perin_de_lima/t_01.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/maria_filomena_perin_de_lima/02.jpg",
+     "mini": "docs/fotos/maria_filomena_perin_de_lima/t_02.jpg",
+     "legenda": "Nascente Maria Filomena 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/maria_filomena_perin_de_lima/03.jpg",
+     "mini": "docs/fotos/maria_filomena_perin_de_lima/t_03.jpg",
+     "legenda": "Nascente Maria Filomena 1",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P21",
@@ -1585,7 +2307,50 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Maringá",
-   "cor_municipio": "#4fc3f7"
+   "cor_municipio": "#4fc3f7",
+   "cadastro": [
+    {
+     "CAR": "PR-4115200-4E5AE5FE74B841919CF9C04341E89F77",
+     "Coordenada": "Lat: 23°23'46,89\" S Long: 52°02'02,18\" O Long: 52°02'02,18\" O",
+     "Área total (CAR)": "29,99 ha",
+     "Módulos fiscais": "2,14",
+     "Reserva Legal (CAR)": "0,36 ha",
+     "Área consolidada (CAR)": "23,97 ha",
+     "APP da nascente": "Parcial"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "Durante uma visita in loco realizada no dia 26/03/2025, acompanhada por técnicos representantes da Secretaria de Meio Ambiente de Maringá-PR, foram identificadas mais de uma nascente na propriedade. Contudo, devido à presença de mato alto, o único ponto considerado apto para intervenção foi aquele destacado nas imagens abaixo. Posteriormente, em uma nova visita realizada no dia 08/04/2025, com a participação do colaborador responsável pela recuperação da nascente, foi possível confirmar que o trabalho na nascente pode ser realizado. Além disso, constatou-se a necessidade de verificar uma maneira eficiente de transportar as pedras rachão para o mais próximo possível da nascente, medida essencial para viabilizar a execução do serviço de forma prática e eficaz.",
+    "Proposta": "Foi identificada uma nascente na propriedade apta a ser recuperada pelo método solo/cimento e para isso serão utilizados os seguintes materiais: - ½ saco de cimento; - 0,6 m³ de pedras rachão; - 60 cm de cano PVC 100 mm com duas (2) tampas; - 60 cm de cano PVC 3/4\"; - 1,8 m de cano PVC 50 mm; - 50 cm² de tela de mosquito.",
+    "Conclusão": "Diante disso, é imprescindível realizar um planejamento mais detalhado para garantir a eficiência na execução dos trabalhos. Portanto, segue para aprovação e posteriores andamentos."
+   },
+   "data_visita": "26/03/2025",
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/maria_aparecida_marega/01.jpg",
+     "mini": "docs/fotos/maria_aparecida_marega/t_01.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/maria_aparecida_marega/02.jpg",
+     "mini": "docs/fotos/maria_aparecida_marega/t_02.jpg",
+     "legenda": "Nascente Maria Aparecida Merega 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/maria_aparecida_marega/03.jpg",
+     "mini": "docs/fotos/maria_aparecida_marega/t_03.jpg",
+     "legenda": "Nascente Maria Aparecida Merega 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/maria_aparecida_marega/04.jpg",
+     "mini": "docs/fotos/maria_aparecida_marega/t_04.jpg",
+     "legenda": "Foto da visita",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P22",
@@ -1610,7 +2375,36 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Astorga",
-   "cor_municipio": "#ffd54f"
+   "cor_municipio": "#ffd54f",
+   "cadastro": [
+    {
+     "CAR": "PR-4102109-EDD9D5F700064F4F85AE6A8A9ADF5295",
+     "Coordenada": "ASTORGA – PR, 51°37'17,425\"O e 23°16'59,965\"S",
+     "Área total (CAR)": "553,11 ha",
+     "Módulos fiscais": "34,57",
+     "Reserva Legal (CAR)": "18,09 ha",
+     "Vegetação nativa (CAR)": "12,24 ha",
+     "Área consolidada (CAR)": "526,65 ha",
+     "APP da nascente": "Preservada"
+    }
+   ],
+   "relato": {
+    "Proposta": "Verificou-se a existência de duas nascentes a uma distância de aproximadamente 100 metros entre si. O cliente construiu estruturas que as protegem há cerca de 40 anos, tornando inviável a utilização do método solo-cimento, uma vez que isso exigiria a remoção de toda a estrutura já instalada. Adicionalmente, há a necessidade de limpeza do reservatório de acumulação."
+   },
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/mauro_sergio_poeiras_de_assuncao/01.jpg",
+     "mini": "docs/fotos/mauro_sergio_poeiras_de_assuncao/t_01.jpg",
+     "legenda": "Foto da visita",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/mauro_sergio_poeiras_de_assuncao/02.jpg",
+     "mini": "docs/fotos/mauro_sergio_poeiras_de_assuncao/t_02.jpg",
+     "legenda": "Foto da visita",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P23",
@@ -1635,7 +2429,57 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Ourizona",
-   "cor_municipio": "#f48fb1"
+   "cor_municipio": "#f48fb1",
+   "cadastro": [
+    {
+     "CAR": "PR-4117404-1377D074B0514D28A37CC78CB0737697",
+     "Coordenada": "Lat: 23°32'08,88\" S Long: 52°15'27,38\" O",
+     "Área total (CAR)": "121,00 ha",
+     "Módulos fiscais": "7,56",
+     "Reserva Legal (CAR)": "2,21 ha",
+     "Vegetação nativa (CAR)": "6,11 ha",
+     "Área consolidada (CAR)": "114,84 ha",
+     "APP da nascente": "Parcial"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "Durante a visita técnica realizada no dia 14 de agosto de 2025 à propriedade localizada em Ourizona, Paraná, nas coordenadas -23.53617980753135, -52.24341690852537, foi avaliado o estado de conservação de duas nascentes no âmbito do Programa de Conservação de Nascentes da Cocamar. As nascentes, localizadas nas coordenadas -23.541024, -52.250455 (Nascente 1) e -23.542520, -52.250449 (Nascente 2), apresentam condições não críticas, mas requerem intervenções para garantir sua preservação a longo prazo. Ambas foram consideradas aptas para a aplicação do método solo-cimento, visando a estabilização do solo e a proteção dos recursos hídricos. A Área de Preservação Permanente (APP) associada às nascentes encontrase parcialmente conservada, com sinais de intervenção antrópica e necessidade de ações para restauração da vegetação nativa",
+    "Proposta": "Foram identificadas duas nascentes na propriedade aptas a serem recuperadas pelo método solo/cimento e para isso serão utilizados os seguintes materiais: - ½ saco de cimento; - 0,1 m³ de pedras rachão; - 15 cm de cano PVC 100 mm com duas (2) tampas; - 15 cm de cano PVC 3/4\"; - 15 cm de cano PVC 50 mm; - 50 cm² de tela de mosquito.",
+    "Conclusão": "A avaliação técnica confirmou a viabilidade de implementação do método solocimento nas nascentes 1 e 2, ao qual foi efetivado a aplicação com o objetivo de mitigar riscos de erosão e assegurar a qualidade da água. A condição parcialmente conservada da APP indica a necessidade de medidas complementares, como o reflorestamento com espécies nativas e o controle de atividades degradantes, para fortalecer a proteção ambiental da área. Recomenda-se o monitoramento contínuo das nascentes intervencionadas e a elaboração de um plano de recuperação da APP, alinhado aos objetivos do Programa de Conservação de Nascentes da Cocamar, para promover a sustentabilidade hídrica e a resiliência ecológica do ecossistema local."
+   },
+   "data_visita": "14 de agosto de 2025",
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/nazareno_marostica/01.jpg",
+     "mini": "docs/fotos/nazareno_marostica/t_01.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/nazareno_marostica/02.jpg",
+     "mini": "docs/fotos/nazareno_marostica/t_02.jpg",
+     "legenda": "Nascente Nazareno Maróstica 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/nazareno_marostica/03.jpg",
+     "mini": "docs/fotos/nazareno_marostica/t_03.jpg",
+     "legenda": "Nascente Nazareno Maróstica 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/nazareno_marostica/04.jpg",
+     "mini": "docs/fotos/nazareno_marostica/t_04.jpg",
+     "legenda": "Nascente Nazareno Maróstica 2",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/nazareno_marostica/05.jpg",
+     "mini": "docs/fotos/nazareno_marostica/t_05.jpg",
+     "legenda": "Nascente Nazareno Maróstica 2",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P24",
@@ -1660,7 +2504,44 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Maringá",
-   "cor_municipio": "#4fc3f7"
+   "cor_municipio": "#4fc3f7",
+   "cadastro": [
+    {
+     "CAR": "PR-4115200-B9889C90978D4C96BBD86CF1B928224B",
+     "Coordenada": "Lat: 23°19'12,99\" S Long: 51°54'35,72\" O",
+     "Área total (CAR)": "14,52 ha",
+     "Módulos fiscais": "1,04",
+     "Reserva Legal (CAR)": "2,90 ha",
+     "Vegetação nativa (CAR)": "4,05 ha",
+     "Área consolidada (CAR)": "0,02 ha",
+     "APP da nascente": "Parcial"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "No dia 17 de julho de 2025, foi realizada uma visita técnica à nascente situada nas coordenadas geográficas -23.320163, -51.908315, com o objetivo de avaliar suas condições e verificar a viabilidade de implementação do Programa de Conservação de Nascentes pelo método solo-cimento. Durante a vistoria, constatou-se que a nascente é do tipo difusa, caracterizada por múltiplos pontos de insurgência da água em uma área ampla, sem um ponto específico de afloramento. Essa característica torna inviável a aplicação do método solo-cimento, que é adequado para nascentes puntiformes com fluxo concentrado, permitindo a construção de estruturas específicas para proteção e canalização. A Área de Preservação Permanente (APP) ao redor da nascente foi avaliada como parcialmente conservada, apresentando vegetação nativa em algumas áreas, mas também sinais de intervenção antrópica, como desmatamento parcial, o que pode comprometer a recarga hídrica e a proteção natural da nascente.",
+    "Conclusão": "Diante disso, não é possível realizar o Projeto de Conservação de Nascentes com o método solo-cimento na nascente da propriedade do cooperado, sr. Orivaldo Sbrana."
+   },
+   "data_visita": "17 de julho de 2025",
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/orivaldo_sbrana/01.jpg",
+     "mini": "docs/fotos/orivaldo_sbrana/t_01.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/orivaldo_sbrana/02.jpg",
+     "mini": "docs/fotos/orivaldo_sbrana/t_02.jpg",
+     "legenda": "Nascente Orivaldo Sbrana 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/orivaldo_sbrana/03.jpg",
+     "mini": "docs/fotos/orivaldo_sbrana/t_03.jpg",
+     "legenda": "Nascente Orivaldo Sbrana 1",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P25",
@@ -1703,13 +2584,56 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Maringá",
-   "cor_municipio": "#4fc3f7"
+   "cor_municipio": "#4fc3f7",
+   "cadastro": [
+    {
+     "CAR": "PR-4115200-E22BA71592244F89BF7C39EBDC6E00A9",
+     "Coordenada": "Lat: 23°20'20,86\" S Long: 51°55'13,39\" O",
+     "Área total (CAR)": "25,889 ha",
+     "Módulos fiscais": "1,05",
+     "Reserva Legal (CAR)": "0,00 ha",
+     "Vegetação nativa (CAR)": "8,27 ha",
+     "Área consolidada (CAR)": "16,98 ha",
+     "APP da nascente": "Parcial"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "No dia 24 de julho de 2025, foi realizada uma visita técnica à nascente situada nas coordenadas geográficas Latitude: 23°20'20,86\" S, Longitude: 51°55'13,39\" O e também nas coordenadas: 23°19'25.0\" S, 51°54'34.2\" O com o objetivo de avaliar suas condições e verificar a viabilidade de implementação do Programa de Conservação de Nascentes pelo método solo-cimento. Durante a vistoria da primeira propriedade do Sr. Pedro Pereira da Conceição Silva, no primeiro ponto constatou-se que se trata de um Olho d’água que contém uma caixa de proteção ao entorno ao qual faz a proteção da nascente, entretanto, não foi possível identificar onde surge o Olho d’água, pois, a caixa estava cheia e isso tornou inviável a aplicação do método solo-cimento. No segundo ponto, foi entrado uma área alagada à qual não foi possível identificar a localização exata da nascente, não sendo possível fazer a caracterização desta nascente. A Área de Preservação Permanente (APP) ao redor da nascente foi avaliada como parcialmente preservada, apresentando uma boa conservação de vegetação nativa ao entorno da nascente. Na segunda propriedade, foi identificado um curso d’água intermitente. Embora o leito estivesse seco no momento da vistoria, foi possível reconhecer seu traçado físico, ainda que não houvesse sinal de fluxo hídrico ou presença de nascente visível.",
+    "Conclusão": "Diante disso, não é possível realizar o Projeto de Conservação de Nascentes com o método solo-cimento na nascente da propriedade do cooperado, sr. Pedro Pereira da Conceição Silva."
+   },
+   "data_visita": "24 de julho de 2025",
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/pedro_pereira_da_conceicao_silva/01.jpg",
+     "mini": "docs/fotos/pedro_pereira_da_conceicao_silva/t_01.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/pedro_pereira_da_conceicao_silva/02.jpg",
+     "mini": "docs/fotos/pedro_pereira_da_conceicao_silva/t_02.jpg",
+     "legenda": "Figura 7 - PROPRIEDADE 2",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/pedro_pereira_da_conceicao_silva/03.jpg",
+     "mini": "docs/fotos/pedro_pereira_da_conceicao_silva/t_03.jpg",
+     "legenda": "Nascente Pedro Pereira 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/pedro_pereira_da_conceicao_silva/04.jpg",
+     "mini": "docs/fotos/pedro_pereira_da_conceicao_silva/t_04.jpg",
+     "legenda": "Nascente Pedro Pereira 1",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P27",
    "arquivo": "data/propriedades/P27.geojson",
    "nome": "Pedro Pereira da Conceição Silva",
-   "car": "Não informado",
+   "car": "PR-4115200-E22BA71592244F89BF7C39EBDC6E00A9",
    "area_ha": 22.3,
    "cor": "#9aa0a6",
    "info": {
@@ -1728,7 +2652,50 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Maringá",
-   "cor_municipio": "#4fc3f7"
+   "cor_municipio": "#4fc3f7",
+   "cadastro": [
+    {
+     "CAR": "PR-4115200-E22BA71592244F89BF7C39EBDC6E00A9",
+     "Coordenada": "Lat: 23°20'20,86\" S Long: 51°55'13,39\" O",
+     "Área total (CAR)": "25,889 ha",
+     "Módulos fiscais": "1,05",
+     "Reserva Legal (CAR)": "0,00 ha",
+     "Vegetação nativa (CAR)": "8,27 ha",
+     "Área consolidada (CAR)": "16,98 ha",
+     "APP da nascente": "Parcial"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "No dia 24 de julho de 2025, foi realizada uma visita técnica à nascente situada nas coordenadas geográficas Latitude: 23°20'20,86\" S, Longitude: 51°55'13,39\" O e também nas coordenadas: 23°19'25.0\" S, 51°54'34.2\" O com o objetivo de avaliar suas condições e verificar a viabilidade de implementação do Programa de Conservação de Nascentes pelo método solo-cimento. Durante a vistoria da primeira propriedade do Sr. Pedro Pereira da Conceição Silva, no primeiro ponto constatou-se que se trata de um Olho d’água que contém uma caixa de proteção ao entorno ao qual faz a proteção da nascente, entretanto, não foi possível identificar onde surge o Olho d’água, pois, a caixa estava cheia e isso tornou inviável a aplicação do método solo-cimento. No segundo ponto, foi entrado uma área alagada à qual não foi possível identificar a localização exata da nascente, não sendo possível fazer a caracterização desta nascente. A Área de Preservação Permanente (APP) ao redor da nascente foi avaliada como parcialmente preservada, apresentando uma boa conservação de vegetação nativa ao entorno da nascente. Na segunda propriedade, foi identificado um curso d’água intermitente. Embora o leito estivesse seco no momento da vistoria, foi possível reconhecer seu traçado físico, ainda que não houvesse sinal de fluxo hídrico ou presença de nascente visível.",
+    "Conclusão": "Diante disso, não é possível realizar o Projeto de Conservação de Nascentes com o método solo-cimento na nascente da propriedade do cooperado, sr. Pedro Pereira da Conceição Silva."
+   },
+   "data_visita": "24 de julho de 2025",
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/pedro_pereira_da_conceicao_silva/01.jpg",
+     "mini": "docs/fotos/pedro_pereira_da_conceicao_silva/t_01.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/pedro_pereira_da_conceicao_silva/02.jpg",
+     "mini": "docs/fotos/pedro_pereira_da_conceicao_silva/t_02.jpg",
+     "legenda": "Figura 7 - PROPRIEDADE 2",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/pedro_pereira_da_conceicao_silva/03.jpg",
+     "mini": "docs/fotos/pedro_pereira_da_conceicao_silva/t_03.jpg",
+     "legenda": "Nascente Pedro Pereira 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/pedro_pereira_da_conceicao_silva/04.jpg",
+     "mini": "docs/fotos/pedro_pereira_da_conceicao_silva/t_04.jpg",
+     "legenda": "Nascente Pedro Pereira 1",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P28",
@@ -1753,7 +2720,68 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Maringá",
-   "cor_municipio": "#4fc3f7"
+   "cor_municipio": "#4fc3f7",
+   "cadastro": [
+    {
+     "CAR": "PR-4115200-25D93C37C3864D808940C7EA5FEBCEB7",
+     "Coordenada": "Lat: 23°18'45,72\" S Long: 51°57'19,12\" O",
+     "Área total (CAR)": "24,20 ha",
+     "Módulos fiscais": "1,73",
+     "Vegetação nativa (CAR)": "1,68 ha",
+     "Área consolidada (CAR)": "22,42 ha",
+     "APP da nascente": "Parcial"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "Durante a visita técnica realizada no dia 07 de agosto de 2025 à propriedade do cooperado Tadeus Francisco Bastiani, localizada em Maringá, Paraná, foi avaliado o estado de conservação de nascentes no contexto do Programa de Conservação de Nascentes da Cocamar. A propriedade abrange uma extensa área de banhado, onde foram identificadas várias nascentes. Duas delas, localizadas nas coordenadas - 23.315280, -51.951894 (Nascente 1) e -23.315277, -51.951890 (Nascente 2), apresentaram condições viáveis para a implementação de ações de conservação, utilizando o método solo-cimento. A Área de Preservação Permanente (APP) associada às nascentes encontra-se pouco preservada, com evidências de antropização significativa, incluindo áreas degradadas e baixa integridade de espécies nativas, o que compromete a funcionalidade ecológica do entorno.",
+    "Proposta": "Para cada Nascente executada, foram utilizados os seguintes materiais e quantidades: - 1/4 saco de cimento; - 0,2 m³ de pedras rachão; - 30 cm de cano PVC 100 mm com duas (2) tampas; - 30 cm de cano PVC 3/4\"; - 40 cm de cano PVC 50 mm; - 50 cm² de tela de mosquito.",
+    "Conclusão": "A visita técnica constatou a viabilidade de intervenções de conservação nas nascentes 1 e 2, que foram contempladas com o método solo-cimento, visando proteger os recursos hídricos e mitigar processos erosivos. A condição degradada da APP destaca a necessidade de ações complementares de restauração ecológica, como o plantio de espécies nativas e o controle de atividades antrópicas, para recuperar a integridade ambiental da área. Recomenda-se o monitoramento contínuo das nascentes intervencionadas e a elaboração de um plano de recuperação da APP, alinhado aos objetivos do Programa de Conservação de Nascentes da Cocamar, para garantir a sustentabilidade hídrica e a preservação do ecossistema local."
+   },
+   "data_visita": "07 de agosto de 2025",
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/tadeus_francisco_bastiani/01.jpg",
+     "mini": "docs/fotos/tadeus_francisco_bastiani/t_01.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/tadeus_francisco_bastiani/02.jpg",
+     "mini": "docs/fotos/tadeus_francisco_bastiani/t_02.jpg",
+     "legenda": "Nascente Tadeus Francisco Bastiani 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/tadeus_francisco_bastiani/03.jpg",
+     "mini": "docs/fotos/tadeus_francisco_bastiani/t_03.jpg",
+     "legenda": "Nascente Tadeus Francisco Bastiani 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/tadeus_francisco_bastiani/04.jpg",
+     "mini": "docs/fotos/tadeus_francisco_bastiani/t_04.jpg",
+     "legenda": "Foto da visita",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/tadeus_francisco_bastiani/05.jpg",
+     "mini": "docs/fotos/tadeus_francisco_bastiani/t_05.jpg",
+     "legenda": "Nascente Tadeus Francisco Bastiani 2",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/tadeus_francisco_bastiani/06.jpg",
+     "mini": "docs/fotos/tadeus_francisco_bastiani/t_06.jpg",
+     "legenda": "Nascente Tadeus Francisco Bastiani 2",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/tadeus_francisco_bastiani/07.jpg",
+     "mini": "docs/fotos/tadeus_francisco_bastiani/t_07.jpg",
+     "legenda": "Foto da visita",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P29",
@@ -1778,7 +2806,42 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Maringá",
-   "cor_municipio": "#4fc3f7"
+   "cor_municipio": "#4fc3f7",
+   "cadastro": [
+    {
+     "CAR": "PR-4115200-EB3D92BD130E474F9D78849A303DBE9C",
+     "Coordenada": "Lat: 23°19'50,12\" S Long: 51°54'33,78\" O Long: 51°54'33,78\" O",
+     "Área total (CAR)": "48,25 ha",
+     "Módulos fiscais": "3,45",
+     "Vegetação nativa (CAR)": "5,18 ha",
+     "APP da nascente": "Parcial"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "Durante uma visita in loco realizada no dia 26/03/2025, acompanhada por técnicos representantes da Secretaria de Meio Ambiente de Maringá-PR, foi identificada uma nascente na propriedade. Contudo, devido à presença de mato alto e uma área de banhado não foi possível identificar o ponto exato em que mina água, o que é um fator limitante. Dessa forma, a nascente não está apta para receber o método de conservação solo cimento.",
+    "Conclusão": "Diante disso, a nascente não está apta para receber a metodologia do projeto de conservação de nascentes."
+   },
+   "data_visita": "26/03/2025",
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/valdevino_moreira_guedes/01.jpg",
+     "mini": "docs/fotos/valdevino_moreira_guedes/t_01.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/valdevino_moreira_guedes/02.jpg",
+     "mini": "docs/fotos/valdevino_moreira_guedes/t_02.jpg",
+     "legenda": "Nascente Valdevino 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/valdevino_moreira_guedes/03.jpg",
+     "mini": "docs/fotos/valdevino_moreira_guedes/t_03.jpg",
+     "legenda": "Nascente Valdevino 1",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P30",
@@ -1803,7 +2866,113 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Maringá",
-   "cor_municipio": "#4fc3f7"
+   "cor_municipio": "#4fc3f7",
+   "cadastro": [
+    {
+     "CAR": "PR-4115200-E56B86F6541E4FC38D9EE76F98F65AC7",
+     "Coordenada": "Lat: 23º23’37,57” Long: 52º01’59,57”",
+     "Área total (CAR)": "16,94 ha",
+     "Módulos fiscais": "1,21",
+     "Vegetação nativa (CAR)": "3,90 ha",
+     "Área consolidada (CAR)": "12,64 ha",
+     "APP da nascente": "Preservada"
+    },
+    {
+     "CAR": "PR-4115200-9399751E04694A31B76BE5A602169EF9",
+     "Coordenada": "Lat: 23°23'18,9\" S Long: 52°01'22,82\" O",
+     "Área total (CAR)": "2,09 ha",
+     "Módulos fiscais": "0,15",
+     "Área consolidada (CAR)": "1,96 ha",
+     "APP da nascente": "Não preservada"
+    },
+    {
+     "CAR": "PR-4115200-66C04530FC64450D948646BF49C54CF8",
+     "Coordenada": "Lat: 23°23'20.82\"S Long: 52° 2'7.63\"O",
+     "Área total (CAR)": "14,53 ha",
+     "Módulos fiscais": "1,04",
+     "Vegetação nativa (CAR)": "1,75 ha",
+     "Área consolidada (CAR)": "12,73 ha",
+     "APP da nascente": "Preservada"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "Propriedade 1 Coordenadas: Latitude 23º23’37,57” S, Longitude 52º01’59,57” O Foram avaliadas duas nascentes. Uma apresentou condições adequadas para a implementação do Programa de Conservação de Nascentes com o método solocimento. A outra nascente não era apta devido à presença de muitas raízes no entorno, o que poderia comprometer a estrutura de proteção. A Área de Preservação Permanente (APP) está preservada e respeita a faixa de largura exigida pela legislação ambiental. Propriedade 2 Coordenadas: Latitude 23º23’18,9” S, Longitude 52º01’22,82” O Foram vistoriadas três nascentes, sendo uma considerada apta para a aplicação do método solo-cimento no Programa de Conservação de Nascentes. As demais não apresentavam localização favorável à execução do método. A Área de Preservação Permanente (APP) não está preservada e não atende à faixa de largura mínima exigida para nascentes e hidrografia, conforme a legislação vigente. Propriedade 3 Coordenadas: Latitude: 23°23'18,9\" S, Longitude: 52°01'22,82\" O Foram vistoriadas três nascentes, sendo as três considerada aptas para a aplicação do método solo-cimento no Programa de Conservação de Nascentes. A Área de Preservação Permanente (APP) está preservada e atende à faixa de largura mínima exigida para nascentes e hidrografia, conforme a legislação vigente.",
+    "Conclusão": "Primeiramente foram visitadas 3 propriedades das quais totalizam 8 nascentes, destas oito foram aplicados método solo cimento em 6 nascentes. Na Propriedade 1, a conformidade da APP e a viabilidade de uma nascente para o método solo-cimento indicam um cenário favorável à conservação. Já na Propriedade 2, a ausência de preservação da APP e a inadequação locacional de duas nascentes dificultam a aplicação do método, destacando a necessidade de ações corretivas para adequação ambiental. A propriedade 3 também tem condições favoráveis e conformes com APP. A execução da nascente apta, mesmo com a inexistente integridade de APP, promove a proteção e conservação da nascente em questão."
+   },
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/alayrton_rodrigues_de_lima/01.jpg",
+     "mini": "docs/fotos/alayrton_rodrigues_de_lima/t_01.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/alayrton_rodrigues_de_lima/02.jpg",
+     "mini": "docs/fotos/alayrton_rodrigues_de_lima/t_02.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/alayrton_rodrigues_de_lima/03.jpg",
+     "mini": "docs/fotos/alayrton_rodrigues_de_lima/t_03.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/alayrton_rodrigues_de_lima/04.jpg",
+     "mini": "docs/fotos/alayrton_rodrigues_de_lima/t_04.jpg",
+     "legenda": "Nascente Alayryon Rodrigues 1",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/alayrton_rodrigues_de_lima/05.jpg",
+     "mini": "docs/fotos/alayrton_rodrigues_de_lima/t_05.jpg",
+     "legenda": "Nascente Alayryon Rodrigues 2",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/alayrton_rodrigues_de_lima/06.jpg",
+     "mini": "docs/fotos/alayrton_rodrigues_de_lima/t_06.jpg",
+     "legenda": "Nascente Alayryon Rodrigues 3",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/alayrton_rodrigues_de_lima/07.jpg",
+     "mini": "docs/fotos/alayrton_rodrigues_de_lima/t_07.jpg",
+     "legenda": "Nascente Alayryon Rodrigues 4",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/alayrton_rodrigues_de_lima/08.jpg",
+     "mini": "docs/fotos/alayrton_rodrigues_de_lima/t_08.jpg",
+     "legenda": "Nascente Alayryon Rodrigues 5",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/alayrton_rodrigues_de_lima/09.jpg",
+     "mini": "docs/fotos/alayrton_rodrigues_de_lima/t_09.jpg",
+     "legenda": "Nascente Alayryon Rodrigues 6",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/alayrton_rodrigues_de_lima/10.jpg",
+     "mini": "docs/fotos/alayrton_rodrigues_de_lima/t_10.jpg",
+     "legenda": "Nascente Alayryon Rodrigues 7",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/alayrton_rodrigues_de_lima/11.jpg",
+     "mini": "docs/fotos/alayrton_rodrigues_de_lima/t_11.jpg",
+     "legenda": "Nascente Alayryon Rodrigues 8",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/alayrton_rodrigues_de_lima/12.jpg",
+     "mini": "docs/fotos/alayrton_rodrigues_de_lima/t_12.jpg",
+     "legenda": "Nascente Alayryon Rodrigues 9",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P31",
@@ -1828,7 +2997,44 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Maringá",
-   "cor_municipio": "#4fc3f7"
+   "cor_municipio": "#4fc3f7",
+   "cadastro": [
+    {
+     "CAR": "PR-4115200-DFEF7229137345FF9B7F50139339CAD3",
+     "Coordenada": "Lat: 23°20'55,81\" S Long: 51°53'40,06\" O",
+     "Área total (CAR)": "20,14 ha",
+     "Módulos fiscais": "1,44",
+     "Reserva Legal (CAR)": "0,00 ha",
+     "Vegetação nativa (CAR)": "0,00 ha",
+     "Área consolidada (CAR)": "0,00 ha",
+     "APP da nascente": "Preservada"
+    }
+   ],
+   "relato": {
+    "Diagnóstico da visita": "No dia 24 de julho de 2025, foi realizada uma visita técnica à nascente situada nas coordenadas geográficas Latitude: 23°20'55,81\" S, Longitude: 51°53'40,06\" O, com o objetivo de avaliar suas condições e verificar a viabilidade de implementação do Programa de Conservação de Nascentes pelo método solo-cimento. Durante a vistoria da propriedade da Srª. Inez Bisca Miguel, constatou-se que se trata de um Olho d’água que contém uma caixa de proteção ao entorno ao qual faz a proteção da nascente, entretanto, não foi possível identificar onde surge o Olho d’água, pois, a caixa estava cheia e isso tornou inviável a aplicação do método solo-cimento. A Área de Preservação Permanente (APP) ao redor da nascente foi avaliada como preservada, apresentando uma boa conservação de vegetação nativa ao entorno da nascente.",
+    "Conclusão": "Diante disso, não é possível realizar o Projeto de Conservação de Nascentes com o método solo-cimento na nascente da propriedade do cooperado, Srª. Inez Bisca Miguel."
+   },
+   "data_visita": "24 de julho de 2025",
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/inez_bisca_miguel/01.jpg",
+     "mini": "docs/fotos/inez_bisca_miguel/t_01.jpg",
+     "legenda": "Localização da propriedade",
+     "tipo": "mapa"
+    },
+    {
+     "arquivo": "docs/fotos/inez_bisca_miguel/02.jpg",
+     "mini": "docs/fotos/inez_bisca_miguel/t_02.jpg",
+     "legenda": "Figura 4 – Caixa (Nascente)",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/inez_bisca_miguel/03.jpg",
+     "mini": "docs/fotos/inez_bisca_miguel/t_03.jpg",
+     "legenda": "Figura 4 – Caixa (Nascente)",
+     "tipo": "foto"
+    }
+   ]
   },
   {
    "id": "P32",
@@ -1853,7 +3059,32 @@
    "adequacoes": [],
    "etapa": "2ª etapa (2025)",
    "municipio_mapa": "Astorga",
-   "cor_municipio": "#ffd54f"
+   "cor_municipio": "#ffd54f",
+   "cadastro": [
+    {
+     "CAR": "PR-4102109-F518604D652240EEA73D66CA30CB763B",
+     "Coordenada": "ASTORGA – PR, 51°42'57,445\"O e 23°11'54,826\"S",
+     "Área total (CAR)": "27,92 ha",
+     "Módulos fiscais": "1,74"
+    }
+   ],
+   "relato": {
+    "Proposta": "Durante a visita, observou-se que o curso d'água da nascente foi canalizado. Após análise junto ao produtor, decidiu-se que ele realizará a remoção do encanamento, e então será efetuada uma segunda visita para avaliar a possibilidade de execução do método solo-cimento na nascente."
+   },
+   "fotos": [
+    {
+     "arquivo": "docs/fotos/paulo_afonso_furchini/01.jpg",
+     "mini": "docs/fotos/paulo_afonso_furchini/t_01.jpg",
+     "legenda": "Foto da visita",
+     "tipo": "foto"
+    },
+    {
+     "arquivo": "docs/fotos/paulo_afonso_furchini/02.jpg",
+     "mini": "docs/fotos/paulo_afonso_furchini/t_02.jpg",
+     "legenda": "Foto da visita",
+     "tipo": "foto"
+    }
+   ]
   }
  ],
  "programa": {

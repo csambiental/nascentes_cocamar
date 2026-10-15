@@ -425,3 +425,35 @@ table.ind tr.pos td { color: #1d6b3e; font-weight: 600; }
 .card.fechado .card-titulo { margin-bottom: 0; }
 .card.fechado .card-titulo::after { transform: rotate(-90deg); }
 .card.fechado > :not(.card-titulo) { display: none !important; }
+
+/* ---------- ficha da propriedade: CAR, relato e fotos ---------- */
+.ficha-linha { font-size: .8rem; margin: 0 0 8px; }
+.ficha-sub { font-size: .76rem; font-weight: 600; color: var(--verde-escuro); margin: 6px 0 2px; }
+.ficha-dl { display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; font-size: .78rem; margin: 0 0 8px; }
+.ficha-dl dt { color: var(--texto-suave); }
+.ficha-dl dd { margin: 0; word-break: break-word; }
+.relato { border: 1px solid var(--borda); border-radius: 8px; padding: 6px 10px; margin-bottom: 6px; font-size: .8rem; }
+.relato summary { cursor: pointer; font-weight: 600; color: var(--verde-escuro); }
+.relato p { margin: 6px 0 2px; line-height: 1.45; }
+.galeria { display: grid; grid-template-columns: repeat(auto-fill, minmax(72px, 1fr)); gap: 6px; margin: 6px 0 10px; }
+.foto-mini { position: relative; padding: 0; border: 0; border-radius: 6px; overflow: hidden; cursor: zoom-in; aspect-ratio: 1; background: #e9ecea; }
+.foto-mini img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .2s; }
+.foto-mini:hover img { transform: scale(1.06); }
+.foto-mini.mapa img { object-fit: contain; background: #fff; }
+.foto-mais { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,.5); color: #fff; font-weight: 700; }
+.popup .galeria { grid-template-columns: repeat(4, 1fr); gap: 4px; }
+.popup .btn-mini, .ver-ficha { margin-top: 6px; font-size: .78rem; padding: 5px 10px; }
+.foto-dialog { width: min(1100px, 96vw); height: min(92vh, 900px); padding: 0; border: 0; border-radius: 12px; display: none; flex-direction: column; overflow: hidden; background: #111; color: #fff; }
+.foto-dialog[open] { display: flex; }
+.foto-dialog::backdrop { background: rgba(0,0,0,.75); }
+.foto-dialog header, .foto-dialog footer { display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: #1b1f1c; }
+.foto-dialog h2 { flex: 1; margin: 0; font-size: .95rem; }
+.foto-dialog .close { border: 0; background: none; color: #fff; font-size: 1.6rem; cursor: pointer; }
+.foto-contador { font-size: .8rem; opacity: .8; }
+.foto-palco { flex: 1; display: flex; align-items: center; justify-content: center; position: relative; min-height: 0; }
+.foto-palco img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.foto-nav { position: absolute; top: 50%; transform: translateY(-50%); border: 0; background: rgba(255,255,255,.15); color: #fff; font-size: 2rem; width: 44px; height: 64px; border-radius: 8px; cursor: pointer; }
+.foto-nav:hover { background: rgba(255,255,255,.3); }
+#fotoAnt { left: 10px; } #fotoProx { right: 10px; }
+.foto-dialog footer { justify-content: space-between; font-size: .85rem; }
+.foto-dialog footer .btn { color: #fff; border-color: #fff; background: transparent; text-decoration: none; padding: 6px 10px; }

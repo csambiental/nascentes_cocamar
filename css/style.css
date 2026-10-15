@@ -383,3 +383,10 @@ table.ind tr.pos td { color: #1d6b3e; font-weight: 600; }
 .lg-mun { cursor: pointer; border: 0; background: none; font: inherit; text-align: left; padding: 2px 4px; border-radius: 4px; display: flex; justify-content: space-between; gap: 6px; }
 .lg-mun:hover { background: #f1f8f3; }
 .lg-n { color: var(--texto-suave); font-size: .72rem; }
+.cores-modo[hidden] { display: none; }
+.lg-mun .lg-area { flex: 0 0 auto; margin-right: 4px; }
+.lg-mun-nome { flex: 1; }
+.lg-muns { grid-template-columns: 1fr; max-height: 180px; }
+.lg-mun { align-items: center; }
+.lg-mun .lg-area { width: 14px; height: 10px; }
+.lg-mun-nome { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

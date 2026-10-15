@@ -60,7 +60,9 @@
     "Localização": "Sem coordenada cadastrada – não aparece no mapa"
    },
    "documentos": [],
-   "adequacoes": []
+   "adequacoes": [],
+   "municipio_mapa": "Querência do Norte",
+   "cor_municipio": "#90a4ae"
   },
   {
    "id": "A02",
@@ -79,7 +81,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/A02.geojson"
+   "arquivo": "data/propriedades/A02.geojson",
+   "municipio_mapa": "Atalaia",
+   "cor_municipio": "#f06292"
   },
   {
    "id": "A03",
@@ -99,7 +103,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/A03.geojson"
+   "arquivo": "data/propriedades/A03.geojson",
+   "municipio_mapa": "Nova Esperança",
+   "cor_municipio": "#9575cd"
   },
   {
    "id": "A04",
@@ -119,7 +125,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/A04.geojson"
+   "arquivo": "data/propriedades/A04.geojson",
+   "municipio_mapa": "Floraí",
+   "cor_municipio": "#ba68c8"
   },
   {
    "id": "A05",
@@ -139,7 +147,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/A05.geojson"
+   "arquivo": "data/propriedades/A05.geojson",
+   "municipio_mapa": "Ourizona",
+   "cor_municipio": "#f48fb1"
   },
   {
    "id": "A06",
@@ -158,7 +168,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/A06.geojson"
+   "arquivo": "data/propriedades/A06.geojson",
+   "municipio_mapa": "Ourizona",
+   "cor_municipio": "#f48fb1"
   },
   {
    "id": "A07",
@@ -177,7 +189,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/A07.geojson"
+   "arquivo": "data/propriedades/A07.geojson",
+   "municipio_mapa": "Atalaia",
+   "cor_municipio": "#f06292"
   },
   {
    "id": "A08",
@@ -197,7 +211,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/A08.geojson"
+   "arquivo": "data/propriedades/A08.geojson",
+   "municipio_mapa": "São Jorge do Ivaí",
+   "cor_municipio": "#64b5f6"
   },
   {
    "id": "A09",
@@ -217,7 +233,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/A09.geojson"
+   "arquivo": "data/propriedades/A09.geojson",
+   "municipio_mapa": "São Jorge do Ivaí",
+   "cor_municipio": "#64b5f6"
   },
   {
    "id": "A10",
@@ -237,7 +255,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/A10.geojson"
+   "arquivo": "data/propriedades/A10.geojson",
+   "municipio_mapa": "São Jorge do Ivaí",
+   "cor_municipio": "#64b5f6"
   },
   {
    "id": "A11",
@@ -257,7 +277,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/A11.geojson"
+   "arquivo": "data/propriedades/A11.geojson",
+   "municipio_mapa": "São Jorge do Ivaí",
+   "cor_municipio": "#64b5f6"
   },
   {
    "id": "A12",
@@ -276,7 +298,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/A12.geojson"
+   "arquivo": "data/propriedades/A12.geojson",
+   "municipio_mapa": "Atalaia",
+   "cor_municipio": "#f06292"
   },
   {
    "id": "A13",
@@ -296,7 +320,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/A13.geojson"
+   "arquivo": "data/propriedades/A13.geojson",
+   "municipio_mapa": "Floresta",
+   "cor_municipio": "#ff8a65"
   },
   {
    "id": "A14",
@@ -315,7 +341,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/A14.geojson"
+   "arquivo": "data/propriedades/A14.geojson",
+   "municipio_mapa": "Floresta",
+   "cor_municipio": "#ff8a65"
   },
   {
    "id": "A15",
@@ -335,7 +363,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/A15.geojson"
+   "arquivo": "data/propriedades/A15.geojson",
+   "municipio_mapa": "Ivatuba",
+   "cor_municipio": "#4db6ac"
   },
   {
    "id": "A16",
@@ -354,7 +384,9 @@
     "Localização": "Sem coordenada cadastrada – não aparece no mapa"
    },
    "documentos": [],
-   "adequacoes": []
+   "adequacoes": [],
+   "municipio_mapa": "Lobato",
+   "cor_municipio": "#80deea"
   },
   {
    "id": "A17",
@@ -372,7 +404,9 @@
     "Localização": "Sem coordenada cadastrada – não aparece no mapa"
    },
    "documentos": [],
-   "adequacoes": []
+   "adequacoes": [],
+   "municipio_mapa": "Lobato",
+   "cor_municipio": "#80deea"
   },
   {
    "id": "A18",
@@ -391,7 +425,9 @@
     "Localização": "Sem coordenada cadastrada – não aparece no mapa"
    },
    "documentos": [],
-   "adequacoes": []
+   "adequacoes": [],
+   "municipio_mapa": "Lobato",
+   "cor_municipio": "#80deea"
   },
   {
    "id": "C01",
@@ -411,7 +447,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/C01.geojson"
+   "arquivo": "data/propriedades/C01.geojson",
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C02",
@@ -432,7 +470,9 @@
    "documentos": [],
    "adequacoes": [],
    "arquivo": "data/propriedades/C02.geojson",
-   "area_ha": 24.2002
+   "area_ha": 24.2002,
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C03",
@@ -453,7 +493,9 @@
    "documentos": [],
    "adequacoes": [],
    "arquivo": "data/propriedades/C03.geojson",
-   "area_ha": 35.784
+   "area_ha": 35.784,
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C04",
@@ -473,7 +515,9 @@
    "documentos": [],
    "adequacoes": [],
    "arquivo": "data/propriedades/C04.geojson",
-   "area_ha": 6.6081
+   "area_ha": 6.6081,
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C05",
@@ -492,7 +536,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/C05.geojson"
+   "arquivo": "data/propriedades/C05.geojson",
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C06",
@@ -511,7 +557,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/C06.geojson"
+   "arquivo": "data/propriedades/C06.geojson",
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C07",
@@ -530,7 +578,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/C07.geojson"
+   "arquivo": "data/propriedades/C07.geojson",
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C08",
@@ -550,7 +600,9 @@
    "documentos": [],
    "adequacoes": [],
    "arquivo": "data/propriedades/C08.geojson",
-   "area_ha": 9.5085
+   "area_ha": 9.5085,
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C09",
@@ -569,7 +621,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/C09.geojson"
+   "arquivo": "data/propriedades/C09.geojson",
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C10",
@@ -588,7 +642,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/C10.geojson"
+   "arquivo": "data/propriedades/C10.geojson",
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C11",
@@ -607,7 +663,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/C11.geojson"
+   "arquivo": "data/propriedades/C11.geojson",
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C12",
@@ -627,7 +685,9 @@
    "documentos": [],
    "adequacoes": [],
    "arquivo": "data/propriedades/C12.geojson",
-   "area_ha": 38.8572
+   "area_ha": 38.8572,
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C13",
@@ -647,7 +707,9 @@
    "documentos": [],
    "adequacoes": [],
    "arquivo": "data/propriedades/C13.geojson",
-   "area_ha": 28.8353
+   "area_ha": 28.8353,
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C14",
@@ -666,7 +728,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/C14.geojson"
+   "arquivo": "data/propriedades/C14.geojson",
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C15",
@@ -685,7 +749,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/C15.geojson"
+   "arquivo": "data/propriedades/C15.geojson",
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C16",
@@ -704,7 +770,9 @@
    "documentos": [],
    "adequacoes": [],
    "arquivo": "data/propriedades/C16.geojson",
-   "area_ha": 129.949
+   "area_ha": 129.949,
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C17",
@@ -723,7 +791,9 @@
    "documentos": [],
    "adequacoes": [],
    "arquivo": "data/propriedades/C17.geojson",
-   "area_ha": 24.2097
+   "area_ha": 24.2097,
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C18",
@@ -742,7 +812,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/C18.geojson"
+   "arquivo": "data/propriedades/C18.geojson",
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C19",
@@ -760,7 +832,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/C19.geojson"
+   "arquivo": "data/propriedades/C19.geojson",
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C20",
@@ -778,7 +852,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/C20.geojson"
+   "arquivo": "data/propriedades/C20.geojson",
+   "municipio_mapa": "Londrina",
+   "cor_municipio": "#dce775"
   },
   {
    "id": "C21",
@@ -796,7 +872,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/C21.geojson"
+   "arquivo": "data/propriedades/C21.geojson",
+   "municipio_mapa": "Londrina",
+   "cor_municipio": "#dce775"
   },
   {
    "id": "C22",
@@ -815,7 +893,9 @@
    "documentos": [],
    "adequacoes": [],
    "arquivo": "data/propriedades/C22.geojson",
-   "area_ha": 4.1917
+   "area_ha": 4.1917,
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C23",
@@ -834,7 +914,9 @@
    "documentos": [],
    "adequacoes": [],
    "arquivo": "data/propriedades/C23.geojson",
-   "area_ha": 11.5526
+   "area_ha": 11.5526,
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C24",
@@ -852,7 +934,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/C24.geojson"
+   "arquivo": "data/propriedades/C24.geojson",
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C25",
@@ -871,7 +955,9 @@
    "documentos": [],
    "adequacoes": [],
    "arquivo": "data/propriedades/C25.geojson",
-   "area_ha": 24.1946
+   "area_ha": 24.1946,
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C26",
@@ -889,7 +975,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/C26.geojson"
+   "arquivo": "data/propriedades/C26.geojson",
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C27",
@@ -907,7 +995,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/C27.geojson"
+   "arquivo": "data/propriedades/C27.geojson",
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "C28",
@@ -925,7 +1015,9 @@
    },
    "documentos": [],
    "adequacoes": [],
-   "arquivo": "data/propriedades/C28.geojson"
+   "arquivo": "data/propriedades/C28.geojson",
+   "municipio_mapa": "Londrina",
+   "cor_municipio": "#dce775"
   },
   {
    "id": "C29",
@@ -945,7 +1037,9 @@
     "Localização": "Perímetro do CAR ainda não recebido – não aparece no mapa"
    },
    "documentos": [],
-   "adequacoes": []
+   "adequacoes": [],
+   "municipio_mapa": "Londrina",
+   "cor_municipio": "#dce775"
   },
   {
    "id": "C30",
@@ -964,7 +1058,9 @@
     "Localização": "Perímetro do CAR ainda não recebido – não aparece no mapa"
    },
    "documentos": [],
-   "adequacoes": []
+   "adequacoes": [],
+   "municipio_mapa": "Arapongas",
+   "cor_municipio": "#e57373"
   },
   {
    "id": "P01",
@@ -987,7 +1083,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Astorga",
+   "cor_municipio": "#ffd54f"
   },
   {
    "id": "P02",
@@ -1010,7 +1108,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Maringá",
+   "cor_municipio": "#4fc3f7"
   },
   {
    "id": "P03",
@@ -1033,7 +1133,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Pitangueiras",
+   "cor_municipio": "#ffb74d"
   },
   {
    "id": "P04",
@@ -1056,7 +1158,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Maringá",
+   "cor_municipio": "#4fc3f7"
   },
   {
    "id": "P05",
@@ -1079,7 +1183,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Astorga",
+   "cor_municipio": "#ffd54f"
   },
   {
    "id": "P06",
@@ -1102,7 +1208,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Pitangueiras",
+   "cor_municipio": "#ffb74d"
   },
   {
    "id": "P07",
@@ -1125,7 +1233,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Maringá",
+   "cor_municipio": "#4fc3f7"
   },
   {
    "id": "P08",
@@ -1148,7 +1258,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Astorga",
+   "cor_municipio": "#ffd54f"
   },
   {
    "id": "P09",
@@ -1171,7 +1283,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Maringá",
+   "cor_municipio": "#4fc3f7"
   },
   {
    "id": "P10",
@@ -1194,7 +1308,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Maringá",
+   "cor_municipio": "#4fc3f7"
   },
   {
    "id": "P11",
@@ -1217,7 +1333,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Maringá",
+   "cor_municipio": "#4fc3f7"
   },
   {
    "id": "P12",
@@ -1240,7 +1358,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Nossa Senhora das Graças",
+   "cor_municipio": "#a1887f"
   },
   {
    "id": "P13",
@@ -1263,7 +1383,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Jaguapitã",
+   "cor_municipio": "#aed581"
   },
   {
    "id": "P14",
@@ -1286,7 +1408,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Floraí",
+   "cor_municipio": "#ba68c8"
   },
   {
    "id": "P15",
@@ -1309,7 +1433,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Maringá",
+   "cor_municipio": "#4fc3f7"
   },
   {
    "id": "P16",
@@ -1332,7 +1458,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Jaguapitã",
+   "cor_municipio": "#aed581"
   },
   {
    "id": "P17",
@@ -1355,7 +1483,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Pitangueiras",
+   "cor_municipio": "#ffb74d"
   },
   {
    "id": "P18",
@@ -1378,7 +1508,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Maringá",
+   "cor_municipio": "#4fc3f7"
   },
   {
    "id": "P19",
@@ -1401,7 +1533,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Maringá",
+   "cor_municipio": "#4fc3f7"
   },
   {
    "id": "P20",
@@ -1424,7 +1558,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Maringá",
+   "cor_municipio": "#4fc3f7"
   },
   {
    "id": "P21",
@@ -1447,7 +1583,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Maringá",
+   "cor_municipio": "#4fc3f7"
   },
   {
    "id": "P22",
@@ -1470,7 +1608,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Astorga",
+   "cor_municipio": "#ffd54f"
   },
   {
    "id": "P23",
@@ -1493,7 +1633,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Ourizona",
+   "cor_municipio": "#f48fb1"
   },
   {
    "id": "P24",
@@ -1516,7 +1658,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Maringá",
+   "cor_municipio": "#4fc3f7"
   },
   {
    "id": "P25",
@@ -1532,7 +1676,9 @@
    },
    "situacao": "Sem relatório",
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Astorga",
+   "cor_municipio": "#ffd54f"
   },
   {
    "id": "P26",
@@ -1555,7 +1701,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Maringá",
+   "cor_municipio": "#4fc3f7"
   },
   {
    "id": "P27",
@@ -1578,7 +1726,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Maringá",
+   "cor_municipio": "#4fc3f7"
   },
   {
    "id": "P28",
@@ -1601,7 +1751,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Maringá",
+   "cor_municipio": "#4fc3f7"
   },
   {
    "id": "P29",
@@ -1624,7 +1776,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Maringá",
+   "cor_municipio": "#4fc3f7"
   },
   {
    "id": "P30",
@@ -1647,7 +1801,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Maringá",
+   "cor_municipio": "#4fc3f7"
   },
   {
    "id": "P31",
@@ -1670,7 +1826,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Maringá",
+   "cor_municipio": "#4fc3f7"
   },
   {
    "id": "P32",
@@ -1693,7 +1851,9 @@
     }
    ],
    "adequacoes": [],
-   "etapa": "2ª etapa (2025)"
+   "etapa": "2ª etapa (2025)",
+   "municipio_mapa": "Astorga",
+   "cor_municipio": "#ffd54f"
   }
  ],
  "programa": {
@@ -1814,5 +1974,6 @@
    "2025",
    "2026"
   ]
- }
+ },
+ "cores_por_municipio": true
 }

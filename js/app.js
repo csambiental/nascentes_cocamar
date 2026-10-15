@@ -114,6 +114,23 @@ function renderResumo() {
 let filtroFazendas = '';
 let filtroGrupo = '';
 let filtroEtapa = '';
+// Cores das áreas: 'municipio' (uma cor por município) ou 'situacao' (cor da situação)
+let modoCor = 'situacao';
+const corMapa = (f) => (modoCor === 'municipio' && f.cor_municipio) ? f.cor_municipio : f.cor;
+function corMunicipios(c) { return modoCor === 'municipio' ? ['coalesce', ['get', 'cor'], c.cor] : '#ffffff'; }
+function aplicarCores() {
+    if (!map.isStyleLoaded()) return;
+    fazendas.forEach(f => {
+        if (map.getLayer(`${f.id}-fill`)) map.setPaintProperty(`${f.id}-fill`, 'fill-color', corMapa(f));
+        if (map.getLayer(`${f.id}-line`)) map.setPaintProperty(`${f.id}-line`, 'line-color', corMapa(f));
+    });
+    camadas.filter(c => c.destaque).forEach(c => {
+        const cor = corMunicipios(c);
+        if (map.getLayer(`cam-${c.id}`)) map.setPaintProperty(`cam-${c.id}`, 'line-color', cor);
+        if (map.getLayer(`cam-${c.id}-fill`)) map.setPaintProperty(`cam-${c.id}-fill`, 'fill-color', cor);
+        if (map.getLayer(`cam-${c.id}-nome`)) map.setPaintProperty(`cam-${c.id}-nome`, 'text-color', cor);
+    });
+}
 const ehPonto = (id) => geojsons[id]?.features?.[0]?.geometry?.type === 'Point';
 function naEtapa(f) {
     const cfg = dadosGerais.filtro_etapa;
@@ -270,7 +287,7 @@ function renderLegenda() {
     const itens = [];
     if (dadosGerais.agrupar_por) {
         const g = dadosGerais.agrupar_por;
-        itens.push(`<div class="lg-group">${esc(g.titulo)}</div>`);
+        itens.push(`<div class="lg-group">${esc(g.titulo)}${modoCor === 'municipio' ? ' <span class="lg-n">(cor na lista · clique p/ filtrar)</span>' : ''}</div>`);
         Object.entries(g.cores).forEach(([k, cor]) => {
             const n = fazendas.filter(f => naEtapa(f) && f[g.campo] === k).length;
             if (n) itens.push(`<button type="button" class="lg-item lg-filtro" data-grupo="${esc(k)}"><i class="lg-area" style="border-color:${cor};background:${cor}55"></i>${esc(k)} (${n})</button>`);
@@ -298,8 +315,9 @@ function renderLegenda() {
             const curto = etapaCurta();
             const feats = ((camadasData[c.id] || {}).features || []).filter(f => !curto || String(f.properties.etapas).includes(curto))
                 .sort((a, b) => a.properties.nome.localeCompare(b.properties.nome, 'pt-BR'));
-            itens.push(`<div class="lg-group"><i class="lg-line" style="border-color:${c.cor}"></i>${esc(c.nome)} (${feats.length})</div>` +
-                `<div class="lg-muns">${feats.map(f => `<button type="button" class="lg-item lg-leaf lg-mun" data-mun="${esc(f.properties.nome)}" title="Aproximar em ${esc(f.properties.nome)}">${esc(f.properties.nome)} <span class="lg-n">${f.properties.propriedades}</span></button>`).join('')}</div>`);
+            const porMun = modoCor === 'municipio';
+            itens.push(`<div class="lg-group">${porMun ? '' : '<i class="lg-line" style="border-color:#ffffff"></i>'}${esc(c.nome)} (${feats.length})</div>` +
+                `<div class="lg-muns">${feats.map(f => `<button type="button" class="lg-item lg-leaf lg-mun" data-mun="${esc(f.properties.nome)}" title="Aproximar em ${esc(f.properties.nome)}">${porMun ? `<i class="lg-area" style="border-color:${f.properties.cor};background:${f.properties.cor}55"></i>` : ''}<span class="lg-mun-nome">${esc(f.properties.nome)}</span> <span class="lg-n">${f.properties.propriedades}</span></button>`).join('')}</div>`);
         } else {
             itens.push(`<div class="lg-item"><i class="${c.tipo === 'fill' ? 'lg-sq' : 'lg-dot'}" style="background:${c.cor}"></i>${esc(c.nome)}</div>`);
         }
@@ -408,7 +426,7 @@ function adicionarCamadas() {
         map.addLayer({
             id: `${f.id}-fill`, type: 'fill', source: f.id,
             layout: { visibility: mostrarPreenchimento ? 'visible' : 'none' },
-            paint: { 'fill-color': f.cor, 'fill-opacity': 0.18 }
+            paint: { 'fill-color': corMapa(f), 'fill-opacity': 0.18 }
         });
         map.addLayer({
             id: `${f.id}-halo`, type: 'line', source: f.id,
@@ -416,7 +434,7 @@ function adicionarCamadas() {
         });
         map.addLayer({
             id: `${f.id}-line`, type: 'line', source: f.id,
-            paint: { 'line-color': f.cor, 'line-width': 2.5 }
+            paint: { 'line-color': corMapa(f), 'line-width': 2.5 }
         });
     });
     // Camadas extras definidas em data/fazendas.json -> "camadas"
@@ -427,16 +445,16 @@ function adicionarCamadas() {
         if (c.tipo === 'line' && c.destaque) {
             // Municípios em destaque: preenchimento leve, contorno com halo e nome no centro
             const antes = fazendas.map(f => `${f.id}-fill`).find(id => map.getLayer(id));
-            map.addLayer({ id: `cam-${c.id}-fill`, type: 'fill', source: `cam-${c.id}`, paint: { 'fill-color': c.cor, 'fill-opacity': 0.07 } }, antes);
+            map.addLayer({ id: `cam-${c.id}-fill`, type: 'fill', source: `cam-${c.id}`, paint: { 'fill-color': corMunicipios(c), 'fill-opacity': 0.08 } }, antes);
             map.addLayer({ id: `cam-${c.id}-halo`, type: 'line', source: `cam-${c.id}`, paint: { 'line-color': '#000000', 'line-width': 5, 'line-opacity': 0.45 } }, antes);
-            map.addLayer({ id: `cam-${c.id}`, type: 'line', source: `cam-${c.id}`, paint: { 'line-color': c.cor, 'line-width': 2.4 } }, antes);
+            map.addLayer({ id: `cam-${c.id}`, type: 'line', source: `cam-${c.id}`, paint: { 'line-color': corMunicipios(c), 'line-width': 2.4 } }, antes);
             const centros = { type: 'FeatureCollection', features: g.features.map(f => ({ type: 'Feature', properties: f.properties, geometry: turf.pointOnFeature(f).geometry })) };
             map.addSource(`cam-${c.id}-centros`, { type: 'geojson', data: centros });
             try {
                 map.addLayer({ id: `cam-${c.id}-nome`, type: 'symbol', source: `cam-${c.id}-centros`, maxzoom: 13,
                     layout: { 'text-field': ['upcase', ['get', 'nome']], 'text-size': ['interpolate', ['linear'], ['zoom'], 8, 11, 12, 15], 'text-letter-spacing': 0.08,
                               'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'], 'text-max-width': 8 },
-                    paint: { 'text-color': c.cor, 'text-halo-color': '#000000', 'text-halo-width': 1.6 } });
+                    paint: { 'text-color': corMunicipios(c), 'text-halo-color': '#000000', 'text-halo-width': 1.6 } });
             } catch (err) { console.warn('Nomes dos municípios indisponíveis', err); }
             return;
         }
@@ -684,6 +702,19 @@ async function iniciar() {
     }));
     renderResumo();
     renderFiltroEtapa();
+    if (dados.cores_por_municipio) {
+        modoCor = 'municipio';
+        const seg = document.getElementById('modoCor');
+        if (seg) {
+            seg.hidden = false;
+            seg.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+                modoCor = b.dataset.modo;
+                seg.querySelectorAll('button').forEach(o => o.classList.toggle('active', o === b));
+                aplicarCores();
+                renderLegenda();
+            }));
+        }
+    }
     renderFazendas();
     renderLegenda();
     renderPrazos(dados.prazos);

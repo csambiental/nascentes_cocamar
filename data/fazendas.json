@@ -8,19 +8,18 @@
  "resumo": [
   {
    "valor": "32",
-   "rotulo": "propriedades"
+   "rotulo": "propriedades visitadas"
   },
   {
-   "valor": "2.765",
-   "rotulo": "hectares"
+   "valor": "5",
+   "rotulo": "com nascente recuperada"
   },
   {
-   "valor": "49",
-   "rotulo": "nascentes visitadas"
+   "valor": "8",
+   "rotulo": "aptas, aguardando execução"
   }
  ],
  "lista_titulo": "Propriedades dos cooperados",
- "legenda_agrupada": "Propriedades dos cooperados",
  "camadas": [
   {
    "id": "municipios",
@@ -31,18 +30,14 @@
   },
   {
    "id": "nascentes",
-   "nome": "Nascentes",
+   "nome": "Nascentes recuperadas",
    "arquivo": "data/nascentes.geojson",
    "tipo": "circle",
    "cor_por": "situacao",
    "cores": {
-    "Obra realizada": "#2e9e5b",
-    "Obra a confirmar": "#4fc3f7"
+    "Recuperada (solo-cimento)": "#2e9e5b"
    },
-   "campos": [
-    "Propriedade",
-    "Situação da obra"
-   ],
+   "campos": [],
    "rotulo": false
   }
  ],
@@ -50,144 +45,232 @@
   {
    "id": "P01",
    "arquivo": "data/propriedades/P01.geojson",
-   "nome": "Ana – Astorga",
+   "nome": "Ana Cristina Londero Benetti – Astorga",
    "car": "PR-4102109-D3D56471100A47B089F2D5935811B745",
    "area_ha": 251.27,
-   "cor": "#ffd54f",
+   "cor": "#9aa0a6",
    "info": {
     "Município": "Astorga",
-    "Nascentes visitadas": "1"
+    "Situação": "Não apta ao solo-cimento",
+    "Resultado da visita": "Solo-cimento não é suficiente; recomendado barramento (fora do escopo)."
    },
+   "situacao": "Não apta ao solo-cimento",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/ana_cristina_londero_benetti.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P02",
    "arquivo": "data/propriedades/P02.geojson",
-   "nome": "Antônio – Maringá",
+   "nome": "Antonio Marcos Casarotto – Maringá",
    "car": "Não informado",
    "area_ha": 13.32,
-   "cor": "#ffd54f",
+   "cor": "#9aa0a6",
    "info": {
     "Município": "Maringá",
-    "Nascentes visitadas": "2"
+    "Situação": "Não apta ao solo-cimento",
+    "Resultado da visita": "Duas nascentes: uma difusa com assoreamento e outra com muitas raízes (visita 08/05/2025)."
    },
+   "situacao": "Não apta ao solo-cimento",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/antonio_marcos_casarotto.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P03",
    "arquivo": "data/propriedades/P03.geojson",
-   "nome": "Antonio – Pitangueiras",
+   "nome": "Antônio Navarro Sanches – Pitangueiras",
    "car": "PR-4119657-83BD70884F394B829603887F85F5401E",
    "area_ha": 36.18,
-   "cor": "#ffd54f",
+   "cor": "#e0a100",
    "info": {
     "Município": "Pitangueiras",
-    "Nascentes visitadas": "1"
+    "Situação": "Apta – aguardando execução",
+    "Resultado da visita": "Duas nascentes aptas ao solo-cimento; segue para aprovação."
    },
+   "situacao": "Apta – aguardando execução",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/antonio_navarro_sanches.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P04",
    "arquivo": "data/propriedades/P04.geojson",
-   "nome": "Cláudio – Maringá",
+   "nome": "Claudio Balan – Maringá",
    "car": "PR-4115200-29739B9336774DDDA25EEC129482956B",
    "area_ha": 30.32,
-   "cor": "#ffd54f",
+   "cor": "#42a5f5",
    "info": {
     "Município": "Maringá",
-    "Nascentes visitadas": "3"
+    "Situação": "Nova visita necessária",
+    "Resultado da visita": "Uma nascente com proteção parcial; nova visita com o proprietário."
    },
+   "situacao": "Nova visita necessária",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/claudio_balan.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P05",
    "arquivo": "data/propriedades/P05.geojson",
-   "nome": "Clayton – Município não informado",
+   "nome": "Clayton Tondato de Carli",
    "car": "PR-4102109-1E9606371CAD4D8298D31EA91CD899B2",
    "area_ha": 8.86,
-   "cor": "#ffd54f",
+   "cor": "#9aa0a6",
    "info": {
     "Município": "Município não informado",
-    "Nascentes visitadas": "2"
+    "Situação": "Não apta ao solo-cimento",
+    "Resultado da visita": "Duas nascentes com assoreamento avançado junto à estrada."
    },
+   "situacao": "Não apta ao solo-cimento",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/clayton_tondato_de_carli.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P06",
    "arquivo": "data/propriedades/P06.geojson",
-   "nome": "Ergio – Pitangueiras",
+   "nome": "Ergio Messias dos Santos – Pitangueiras",
    "car": "PR-4119657-F39E47F725B64C66A172176C90736EE3",
    "area_ha": 21.95,
-   "cor": "#ffd54f",
+   "cor": "#e0a100",
    "info": {
     "Município": "Pitangueiras",
-    "Nascentes visitadas": "0"
+    "Situação": "Apta – aguardando execução",
+    "Resultado da visita": "Uma nascente apta ao solo-cimento; segue para aprovação."
    },
+   "situacao": "Apta – aguardando execução",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/ergio_messias_dos_santos.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P07",
    "arquivo": "data/propriedades/P07.geojson",
-   "nome": "Evaldo – Maringá",
+   "nome": "Evaldo Alfredo Bartmann – Maringá",
    "car": "Não informado",
    "area_ha": 24.35,
-   "cor": "#ffd54f",
+   "cor": "#2e9e5b",
    "info": {
     "Município": "Maringá",
-    "Nascentes visitadas": "2"
+    "Situação": "Nascente recuperada",
+    "Resultado da visita": "Solo-cimento executado em 1 das 2 nascentes, em 03/07/2025."
    },
+   "situacao": "Nascente recuperada",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/evaldo_alfredo_bartmann.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P08",
    "arquivo": "data/propriedades/P08.geojson",
-   "nome": "Frederico – Astorga",
+   "nome": "Frederico Camargo Anchieta – Astorga",
    "car": "PR-4102109-0CE1573F1ECF44BC8FAED42E662D6045",
    "area_ha": 717.82,
-   "cor": "#ffd54f",
+   "cor": "#e0a100",
    "info": {
     "Município": "Astorga",
-    "Nascentes visitadas": "2"
+    "Situação": "Apta – aguardando execução",
+    "Resultado da visita": "Duas nascentes aptas ao solo-cimento; segue para aprovação."
    },
+   "situacao": "Apta – aguardando execução",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/frederico_camargo_anchieta.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P09",
    "arquivo": "data/propriedades/P09.geojson",
-   "nome": "Gustavo – Maringá",
+   "nome": "Gustavo Galvani de Lima – Maringá",
    "car": "PR-4115200-8727BD79B1254D70B2A4E45B7AA276D2",
    "area_ha": 41.16,
-   "cor": "#ffd54f",
+   "cor": "#9aa0a6",
    "info": {
     "Município": "Maringá",
-    "Nascentes visitadas": "1"
+    "Situação": "Não apta ao solo-cimento",
+    "Resultado da visita": "Nascente difusa na rocha; APP preservada (visita 24/04/2025)."
    },
+   "situacao": "Não apta ao solo-cimento",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/gustavo_galvani_de_lima.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P10",
    "arquivo": "data/propriedades/P10.geojson",
-   "nome": "Grevíleas – Município não informado",
+   "nome": "Horta Comunitária Grevíleas",
    "car": "Não informado",
    "area_ha": 3.18,
-   "cor": "#ffd54f",
+   "cor": "#2e9e5b",
    "info": {
     "Município": "Município não informado",
-    "Nascentes visitadas": "1"
+    "Situação": "Nascente recuperada",
+    "Resultado da visita": "7 nascentes, 6 protegidas com solo-cimento; APP preservada (visita 18/09/2025)."
    },
+   "situacao": "Nascente recuperada",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/horta_comunitaria_grevileas.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P11",
    "arquivo": "data/propriedades/P11.geojson",
-   "nome": "Jairo – Maringá",
-   "car": "Não informado",
+   "nome": "Jairo Alexandre Rosseto – Maringá",
+   "car": "PR-4115200-985E86B4D87D4221BBD51F4C61F75BD9",
    "area_ha": 8.43,
-   "cor": "#ffd54f",
+   "cor": "#9aa0a6",
    "info": {
     "Município": "Maringá",
-    "Nascentes visitadas": "1"
+    "Situação": "Não apta ao solo-cimento",
+    "Resultado da visita": "Nascentes com erosão e raízes; APP preservada (visita 08/05/2025)."
    },
+   "situacao": "Não apta ao solo-cimento",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/jairo_alexandre_rosseto.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
@@ -196,24 +279,40 @@
    "nome": "João Climaco – Nossa Senhora das Graças",
    "car": "PR-4116406-18BAD0721D324210A490049445F4E727",
    "area_ha": 379.52,
-   "cor": "#ffd54f",
+   "cor": "#9aa0a6",
    "info": {
     "Município": "Nossa Senhora das Graças",
-    "Nascentes visitadas": "1"
+    "Situação": "Não apta ao solo-cimento",
+    "Resultado da visita": "Nascente difusa em área de banhado."
    },
+   "situacao": "Não apta ao solo-cimento",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/joao_climaco.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P13",
    "arquivo": "data/propriedades/P13.geojson",
-   "nome": "Joel – Jaguapitã",
+   "nome": "Joel Brito Tomaz – Jaguapitã",
    "car": "PR-4111902-38E655AE3ABF43C89FC7E0C70C7283C5",
    "area_ha": 57.79,
-   "cor": "#ffd54f",
+   "cor": "#9aa0a6",
    "info": {
     "Município": "Jaguapitã",
-    "Nascentes visitadas": "1"
+    "Situação": "Não apta ao solo-cimento",
+    "Resultado da visita": "Nascente difusa em área de banhado."
    },
+   "situacao": "Não apta ao solo-cimento",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/joel_brito_tomaz.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
@@ -222,37 +321,61 @@
    "nome": "Kazuo Furukita – Floraí",
    "car": "PR-4107801-4DFC7605DFFB4EB1B54086D8BAA00F8A",
    "area_ha": 13.04,
-   "cor": "#ffd54f",
+   "cor": "#e0a100",
    "info": {
     "Município": "Floraí",
-    "Nascentes visitadas": "4"
+    "Situação": "Apta – aguardando execução",
+    "Resultado da visita": "Plano de Recuperação de Área Degradada (PRAD) da APP, com cercamento."
    },
+   "situacao": "Apta – aguardando execução",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/kazuo_furukita.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P15",
    "arquivo": "data/propriedades/P15.geojson",
-   "nome": "Laércio – Maringá",
-   "car": "Não informado",
+   "nome": "Laércio Bortolo – Maringá",
+   "car": "PR-4115200-4DFE9543A81F4769A720B2E5278BFF88",
    "area_ha": 24.22,
-   "cor": "#ffd54f",
+   "cor": "#9aa0a6",
    "info": {
     "Município": "Maringá",
-    "Nascentes visitadas": "1"
+    "Situação": "Não apta ao solo-cimento",
+    "Resultado da visita": "Uma nascente com estrutura de concreto e outra difusa."
    },
+   "situacao": "Não apta ao solo-cimento",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/laercio_bortolo.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P16",
    "arquivo": "data/propriedades/P16.geojson",
-   "nome": "Lairtro – Jaguapitã",
+   "nome": "Lairtro Tonini Bortolassi – Jaguapitã",
    "car": "PR-4111902-87CC7F4B4D9B4CB4925FC7E657515DB8",
    "area_ha": 90.47,
-   "cor": "#ffd54f",
+   "cor": "#42a5f5",
    "info": {
     "Município": "Jaguapitã",
-    "Nascentes visitadas": "1"
+    "Situação": "Nova visita necessária",
+    "Resultado da visita": "Ponto de afloramento não identificado; produtor fará limpeza para nova visita."
    },
+   "situacao": "Nova visita necessária",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/lairtro_tonini_bortolassi.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
@@ -261,102 +384,166 @@
    "nome": "Leandro Sgorlon – Pitangueiras",
    "car": "PR-4119657-5C054227AA9A4563B06CAF079D69C6B9",
    "area_ha": 36.38,
-   "cor": "#ffd54f",
+   "cor": "#e0a100",
    "info": {
     "Município": "Pitangueiras",
-    "Nascentes visitadas": "1"
+    "Situação": "Apta – aguardando execução",
+    "Resultado da visita": "Revitalização da estrutura de concreto existente (limpeza, desassoreamento e tampa)."
    },
+   "situacao": "Apta – aguardando execução",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/leandro_sgorlon.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P18",
    "arquivo": "data/propriedades/P18.geojson",
-   "nome": "Leonor – Maringá",
+   "nome": "Leonor Galuch – Maringá",
    "car": "PR-4115200-6E0AF97C31B44B9DB35C50E92605C006",
    "area_ha": 14.2,
-   "cor": "#ffd54f",
+   "cor": "#e0a100",
    "info": {
     "Município": "Maringá",
-    "Nascentes visitadas": "1"
+    "Situação": "Apta – aguardando execução",
+    "Resultado da visita": "Nascente de alta vazão apta ao solo-cimento (visita 08/05/2025)."
    },
+   "situacao": "Apta – aguardando execução",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/leonor_galuch.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P19",
    "arquivo": "data/propriedades/P19.geojson",
-   "nome": "Luiz Carlos – Maringá",
-   "car": "Não informado",
+   "nome": "Luis Carlos Balan – Maringá",
+   "car": "PR-4115200-A584E8615E9C4148B511DD2425F4BE46",
    "area_ha": 21.15,
-   "cor": "#ffd54f",
+   "cor": "#9aa0a6",
    "info": {
     "Município": "Maringá",
-    "Nascentes visitadas": "3"
+    "Situação": "Não apta ao solo-cimento",
+    "Resultado da visita": "Uma nascente difusa e outra já protegida por estrutura existente."
    },
+   "situacao": "Não apta ao solo-cimento",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/luis_carlos_balan.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P20",
    "arquivo": "data/propriedades/P20.geojson",
-   "nome": "Maria Filomena – Maringá",
+   "nome": "Maria Filomena Perin de Lima – Maringá",
    "car": "Não informado",
    "area_ha": 48.42,
-   "cor": "#ffd54f",
+   "cor": "#e0a100",
    "info": {
     "Município": "Maringá",
-    "Nascentes visitadas": "1"
+    "Situação": "Apta – aguardando execução",
+    "Resultado da visita": "Nascente apta ao solo-cimento; segue para aprovação."
    },
+   "situacao": "Apta – aguardando execução",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/maria_filomena_perin_de_lima.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P21",
    "arquivo": "data/propriedades/P21.geojson",
-   "nome": "Maria Marega – Maringá",
+   "nome": "Maria Aparecida Marega – Maringá",
    "car": "PR-4115200-4E5AE5FE74B841919CF9C04341E89F77",
    "area_ha": 30.01,
-   "cor": "#ffd54f",
+   "cor": "#e0a100",
    "info": {
     "Município": "Maringá",
-    "Nascentes visitadas": "2"
+    "Situação": "Apta – aguardando execução",
+    "Resultado da visita": "Nascente apta ao solo-cimento; segue para aprovação."
    },
+   "situacao": "Apta – aguardando execução",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/maria_aparecida_marega.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P22",
    "arquivo": "data/propriedades/P22.geojson",
-   "nome": "Mauro – Astorga",
+   "nome": "Mauro Sérgio Poeiras de Assunção – Astorga",
    "car": "PR-4102109-EDD9D5F700064F4F85AE6A8A9ADF5295",
    "area_ha": 553.5,
-   "cor": "#ffd54f",
+   "cor": "#9aa0a6",
    "info": {
     "Município": "Astorga",
-    "Nascentes visitadas": "2"
+    "Situação": "Não apta ao solo-cimento",
+    "Resultado da visita": "Nascentes já protegidas por estruturas antigas; limpar o reservatório."
    },
+   "situacao": "Não apta ao solo-cimento",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/mauro_sergio_poeiras_de_assuncao.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P23",
    "arquivo": "data/propriedades/P23.geojson",
    "nome": "Nazareno Maróstica – Ourizona",
-   "car": "Não informado",
+   "car": "PR-4117404-1377D074B0514D28A37CC78CB0737697",
    "area_ha": 121.05,
-   "cor": "#ffd54f",
+   "cor": "#2e9e5b",
    "info": {
     "Município": "Ourizona",
-    "Nascentes visitadas": "2"
+    "Situação": "Nascente recuperada",
+    "Resultado da visita": "Solo-cimento executado nas 2 nascentes (visita 14/08/2025)."
    },
+   "situacao": "Nascente recuperada",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/nazareno_marostica.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P24",
    "arquivo": "data/propriedades/P24.geojson",
-   "nome": "Orivaldo – Maringá",
-   "car": "Não informado",
+   "nome": "Orivaldo Sbrana – Maringá",
+   "car": "PR-4115200-B9889C90978D4C96BBD86CF1B928224B",
    "area_ha": 14.53,
-   "cor": "#ffd54f",
+   "cor": "#9aa0a6",
    "info": {
     "Município": "Maringá",
-    "Nascentes visitadas": "1"
+    "Situação": "Não apta ao solo-cimento",
+    "Resultado da visita": "Nascente difusa (visita 17/07/2025)."
    },
+   "situacao": "Não apta ao solo-cimento",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/orivaldo_sbrana.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
@@ -365,102 +552,159 @@
    "nome": "Paulo – Astorga",
    "car": "PR-4102109-63BFB2980FDE45539221505676935AE1",
    "area_ha": 27.94,
-   "cor": "#ffd54f",
+   "cor": "#ffffff",
    "info": {
     "Município": "Astorga",
-    "Nascentes visitadas": "0"
+    "Situação": "Relatório não localizado"
    },
+   "situacao": "Sem relatório",
    "adequacoes": []
   },
   {
    "id": "P26",
    "arquivo": "data/propriedades/P26.geojson",
-   "nome": "Pedro – Maringá",
+   "nome": "Pedro Pereira da Conceição Silva – Maringá",
    "car": "PR-4115200-E22BA71592244F89BF7C39EBDC6E00A9",
    "area_ha": 25.28,
-   "cor": "#ffd54f",
+   "cor": "#9aa0a6",
    "info": {
     "Município": "Maringá",
-    "Nascentes visitadas": "2"
+    "Situação": "Não apta ao solo-cimento",
+    "Resultado da visita": "Olho d’água com caixa de proteção existente (visita 24/07/2025)."
    },
+   "situacao": "Não apta ao solo-cimento",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/pedro_pereira_da_conceicao_silva.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P27",
    "arquivo": "data/propriedades/P27.geojson",
-   "nome": "Pedro – Município não informado",
+   "nome": "Pedro Pereira da Conceição Silva",
    "car": "Não informado",
    "area_ha": 22.3,
-   "cor": "#ffd54f",
+   "cor": "#9aa0a6",
    "info": {
     "Município": "Município não informado",
-    "Nascentes visitadas": "1"
+    "Situação": "Não apta ao solo-cimento",
+    "Resultado da visita": "Segunda propriedade visitada em 24/07/2025."
    },
+   "situacao": "Não apta ao solo-cimento",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/pedro_pereira_da_conceicao_silva.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P28",
    "arquivo": "data/propriedades/P28.geojson",
-   "nome": "Tadeus – Maringá",
-   "car": "Não informado",
+   "nome": "Tadeus Francisco Bastiani – Maringá",
+   "car": "PR-4115200-25D93C37C3864D808940C7EA5FEBCEB7",
    "area_ha": 24.22,
-   "cor": "#ffd54f",
+   "cor": "#2e9e5b",
    "info": {
     "Município": "Maringá",
-    "Nascentes visitadas": "1"
+    "Situação": "Nascente recuperada",
+    "Resultado da visita": "Solo-cimento executado nas nascentes 1 e 2 (visita 07/08/2025); APP pede restauração."
    },
+   "situacao": "Nascente recuperada",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/tadeus_francisco_bastiani.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P29",
    "arquivo": "data/propriedades/P29.geojson",
-   "nome": "Valdevino – Maringá",
-   "car": "Não informado",
+   "nome": "Valdevino Moreira Guedes – Maringá",
+   "car": "PR-4115200-EB3D92BD130E474F9D78849A303DBE9C",
    "area_ha": 24.14,
-   "cor": "#ffd54f",
+   "cor": "#9aa0a6",
    "info": {
     "Município": "Maringá",
-    "Nascentes visitadas": "1"
+    "Situação": "Não apta ao solo-cimento",
+    "Resultado da visita": "Ponto de afloramento não identificado em área de banhado."
    },
+   "situacao": "Não apta ao solo-cimento",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/valdevino_moreira_guedes.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P30",
    "arquivo": "data/propriedades/P30.geojson",
-   "nome": "Alayrton – Maringá",
-   "car": "Não informado",
+   "nome": "Alayrton Rodrigues de Lima – Maringá",
+   "car": "PR-4115200-E56B86F6541E4FC38D9EE76F98F65AC7",
    "area_ha": 2.09,
-   "cor": "#ffd54f",
+   "cor": "#2e9e5b",
    "info": {
     "Município": "Maringá",
-    "Nascentes visitadas": "5"
+    "Situação": "Nascente recuperada",
+    "Resultado da visita": "3 propriedades e 8 nascentes visitadas; solo-cimento aplicado em 6."
    },
+   "situacao": "Nascente recuperada",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/alayrton_rodrigues_de_lima.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P31",
    "arquivo": "data/propriedades/P31.geojson",
-   "nome": "Inez Bisca – Maringá",
-   "car": "Não informado",
+   "nome": "Inez Bisca Miguel – Maringá",
+   "car": "PR-4115200-DFEF7229137345FF9B7F50139339CAD3",
    "area_ha": 20.15,
-   "cor": "#ffd54f",
+   "cor": "#9aa0a6",
    "info": {
     "Município": "Maringá",
-    "Nascentes visitadas": "1"
+    "Situação": "Não apta ao solo-cimento",
+    "Resultado da visita": "Olho d’água com caixa de proteção existente (visita 24/07/2025)."
    },
+   "situacao": "Não apta ao solo-cimento",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/inez_bisca_miguel.pdf"
+    }
+   ],
    "adequacoes": []
   },
   {
    "id": "P32",
    "arquivo": "data/propriedades/P32.geojson",
-   "nome": "Paulo – Astorga",
+   "nome": "Paulo Afonso Furchini – Astorga",
    "car": "PR-4102109-F518604D652240EEA73D66CA30CB763B",
    "area_ha": 57.59,
-   "cor": "#ffd54f",
+   "cor": "#42a5f5",
    "info": {
     "Município": "Astorga",
-    "Nascentes visitadas": "1"
+    "Situação": "Nova visita necessária",
+    "Resultado da visita": "Curso d’água canalizado; após remoção do encanamento, nova visita."
    },
+   "situacao": "Nova visita necessária",
+   "documentos": [
+    {
+     "titulo": "Relatório de visita (2025)",
+     "arquivo": "docs/relatorios/paulo_afonso_furchini.pdf"
+    }
+   ],
    "adequacoes": []
   }
  ],
@@ -469,8 +713,8 @@
   "texto": "Identificação, diagnóstico e recuperação de nascentes em propriedades de cooperados nas bacias dos rios Ivaí e Pirapó, com a técnica de proteção solo-cimento. A adesão dos produtores é voluntária.",
   "etapas": [
    {
-    "nome": "1ª e 2ª etapas",
-    "texto": "– 2024 e 2025 · propriedades mostradas no mapa"
+    "nome": "2ª etapa (2025)",
+    "texto": "– 31 relatórios de visita: 5 propriedades com nascentes recuperadas, 8 aptas aguardando execução, 3 com nova visita e 15 não aptas ao método."
    },
    {
     "nome": "3ª etapa",
@@ -542,5 +786,16 @@
     ]
    }
   ]
+ },
+ "agrupar_por": {
+  "campo": "situacao",
+  "titulo": "Situação das propriedades",
+  "cores": {
+   "Nascente recuperada": "#2e9e5b",
+   "Apta – aguardando execução": "#e0a100",
+   "Nova visita necessária": "#42a5f5",
+   "Não apta ao solo-cimento": "#9aa0a6",
+   "Sem relatório": "#ffffff"
+  }
  }
 }

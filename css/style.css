@@ -365,3 +365,9 @@ table.ind tr.pos td { color: #1d6b3e; font-weight: 600; }
 .uso strong { text-align: right; }
 .fonte { display: block; font-size: .68rem; color: var(--texto-suave); margin-top: 4px; }
 #cardPrograma .doc-btn { margin-bottom: 4px; }
+
+.lg-filtro { cursor: pointer; border-radius: 4px; padding: 3px 4px; margin-left: -4px; }
+.lg-filtro:hover { background: #f1f8f3; }
+.lg-filtro.ativo { background: #e3f4ea; font-weight: 700; }
+.farm-body dd { word-break: normal; overflow-wrap: anywhere; }
+.farm-body dd.mono { word-break: break-all; }

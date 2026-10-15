@@ -112,12 +112,16 @@ function renderResumo() {
 }
 
 let filtroFazendas = '';
+let filtroGrupo = '';
 const semAcento = (t) => String(t).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 function renderFazendas() {
     const el = document.getElementById('farmList');
     const busca = document.getElementById('farmSearch');
     if (busca) busca.hidden = fazendas.length <= 8;
-    el.innerHTML = fazendas.filter(f => !filtroFazendas || semAcento(f.nome + ' ' + Object.values(f.info || {}).join(' ')).includes(filtroFazendas)).map(f => {
+    const campoGrupo = dadosGerais.agrupar_por?.campo;
+    el.innerHTML = fazendas
+        .filter(f => !filtroGrupo || f[campoGrupo] === filtroGrupo)
+        .filter(f => !filtroFazendas || semAcento(f.nome + ' ' + Object.values(f.info || {}).join(' ')).includes(filtroFazendas)).map(f => {
         const cont = contarStatus(f.adequacoes);
         const aberta = selecionada === f.id;
         const itens = f.adequacoes.map(a => {
@@ -212,7 +216,14 @@ function renderLegenda() {
     const el = document.getElementById('legend');
     if (!el) return;
     const itens = [];
-    if (dadosGerais.legenda_agrupada) {
+    if (dadosGerais.agrupar_por) {
+        const g = dadosGerais.agrupar_por;
+        itens.push(`<div class="lg-group">${esc(g.titulo)}</div>`);
+        Object.entries(g.cores).forEach(([k, cor]) => {
+            const n = fazendas.filter(f => f[g.campo] === k).length;
+            if (n) itens.push(`<button type="button" class="lg-item lg-filtro" data-grupo="${esc(k)}"><i class="lg-area" style="border-color:${cor};background:${cor}55"></i>${esc(k)} (${n})</button>`);
+        });
+    } else if (dadosGerais.legenda_agrupada) {
         const cor = fazendas[0]?.cor || '#ffd54f';
         itens.push(`<div class="lg-item"><i class="lg-area" style="border-color:${cor};background:${cor}33"></i>${esc(dadosGerais.legenda_agrupada)} (${fazendas.length})</div>`);
     } else {
@@ -243,6 +254,14 @@ function renderLegenda() {
     const aberta = window.matchMedia('(min-width: 801px)').matches ? ' open' : '';
     el.innerHTML = `<details${aberta}><summary>Legenda</summary>${itens.join('')}</details>`;
     el.querySelectorAll('.lg-doc').forEach(b => b.addEventListener('click', () => abrirDocumento(b.dataset.titulo, b.dataset.arquivo)));
+    // Clique num grupo da legenda filtra a lista de propriedades
+    el.querySelectorAll('.lg-filtro').forEach(b => b.addEventListener('click', () => {
+        const ativo = b.classList.toggle('ativo');
+        el.querySelectorAll('.lg-filtro').forEach(o => { if (o !== b) o.classList.remove('ativo'); });
+        filtroGrupo = ativo ? b.dataset.grupo : '';
+        renderFazendas();
+        document.getElementById('farmList').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }));
 }
 
 // ---------- informações do programa ----------

@@ -390,3 +390,13 @@ table.ind tr.pos td { color: #1d6b3e; font-weight: 600; }
 .lg-mun { align-items: center; }
 .lg-mun .lg-area { width: 14px; height: 10px; }
 .lg-mun-nome { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* ---------- camadas opcionais (bacias) ---------- */
+.camadas-opc { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.camadas-opc[hidden] { display: none; }
+.opc-titulo { width: 100%; font-size: .78rem; color: var(--texto-suave); }
+.opc-btn { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--borda); background: var(--painel); border-radius: 999px; padding: 6px 12px; font: inherit; font-size: .82rem; cursor: pointer; }
+.opc-btn i { width: 16px; border-top: 3px solid; display: inline-block; }
+.opc-btn.ativo { background: var(--verde); border-color: var(--verde); color: #fff; }
+.opc-btn.carregando { opacity: .6; cursor: progress; }
+.opc-btn.erro { border-color: #c62828; }

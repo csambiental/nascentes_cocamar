@@ -31,6 +31,11 @@ def esri_para_shape(geom):
     g = MultiPolygon(polys) if len(polys) > 1 else (polys[0] if polys else None)
     return g.buffer(0) if g is not None else None
 
+import re
+def nome_bacia(n):
+    n = re.sub(r'^CBH\s+', '', n or ''); n = re.sub(r'^(do|dos|da)\s+', '', n)
+    return n[:1].upper() + n[1:]
+
 def salvar(feats, campos, arquivo, tol):
     out = []
     for f in feats:
@@ -38,6 +43,7 @@ def salvar(feats, campos, arquivo, tol):
         if g is None or g.is_empty: continue
         g = g.simplify(tol, preserve_topology=True)
         props = {novo: f['attributes'].get(velho) for novo, velho in campos.items()}
+        if 'nome' in props: props['nome'] = nome_bacia(props['nome'])
         out.append({'type': 'Feature', 'properties': props, 'geometry': mapping(g)})
     def arred(o):
         if isinstance(o, float): return round(o, 5)

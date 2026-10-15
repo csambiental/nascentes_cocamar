@@ -1975,5 +1975,28 @@
    "2026"
   ]
  },
- "cores_por_municipio": true
+ "cores_por_municipio": true,
+ "camadas_opcionais": [
+  {
+   "id": "bacias",
+   "nome": "Bacias hidrográficas (PR)",
+   "arquivo": "data/bacias/bacias_parana.geojson",
+   "cor": "#29b6f6",
+   "largura": 2.6,
+   "halo": true,
+   "preenchimento": 0.05,
+   "rotulo_campo": "nome",
+   "rotulo_tamanho": 13,
+   "fonte": "ANA/SNIRH – unidades estaduais de gestão"
+  },
+  {
+   "id": "microbacias",
+   "nome": "Microbacias",
+   "arquivo": "data/bacias/microbacias_regiao.geojson",
+   "cor": "#b2ebf2",
+   "largura": 1,
+   "opacidade": 0.85,
+   "fonte": "ANA/SNIRH – base ottocodificada"
+  }
+ ]
 }

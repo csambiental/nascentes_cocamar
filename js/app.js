@@ -114,6 +114,57 @@ function renderResumo() {
 let filtroFazendas = '';
 let filtroGrupo = '';
 let filtroEtapa = '';
+// ---------- camadas opcionais (botão liga/desliga): bacias, microbacias ----------
+const opcionaisData = {};
+const opcionaisAtivas = new Set();
+function antesDasFazendas() { return fazendas.map(f => `${f.id}-fill`).find(id => map.getLayer(id)); }
+function desenharOpcional(o) {
+    const g = opcionaisData[o.id];
+    if (!g || map.getSource(`op-${o.id}`)) return;
+    const antes = antesDasFazendas();
+    map.addSource(`op-${o.id}`, { type: 'geojson', data: g });
+    if (o.preenchimento) map.addLayer({ id: `op-${o.id}-fill`, type: 'fill', source: `op-${o.id}`, paint: { 'fill-color': o.cor, 'fill-opacity': o.preenchimento } }, antes);
+    if (o.halo) map.addLayer({ id: `op-${o.id}-halo`, type: 'line', source: `op-${o.id}`, paint: { 'line-color': '#000000', 'line-width': (o.largura || 1.5) + 2.5, 'line-opacity': 0.4 } }, antes);
+    map.addLayer({ id: `op-${o.id}`, type: 'line', source: `op-${o.id}`,
+        paint: { 'line-color': o.cor, 'line-width': o.largura || 1.5, 'line-opacity': o.opacidade ?? 0.95, ...(o.tracejado ? { 'line-dasharray': o.tracejado } : {}) } }, antes);
+    if (o.rotulo_campo) try {
+        const pts = { type: 'FeatureCollection', features: g.features.filter(f => f.properties[o.rotulo_campo]).map(f => ({ type: 'Feature', properties: f.properties, geometry: turf.pointOnFeature(f).geometry })) };
+        map.addSource(`op-${o.id}-pts`, { type: 'geojson', data: pts });
+        map.addLayer({ id: `op-${o.id}-nome`, type: 'symbol', source: `op-${o.id}-pts`, minzoom: o.rotulo_minzoom || 0,
+            layout: { 'text-field': ['get', o.rotulo_campo], 'text-size': o.rotulo_tamanho || 12, 'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'], 'text-max-width': 9 },
+            paint: { 'text-color': o.cor, 'text-halo-color': '#000000', 'text-halo-width': 1.5 } });
+    } catch (err) { console.warn('Rótulos indisponíveis', err); }
+}
+function removerOpcional(o) {
+    [`op-${o.id}-nome`, `op-${o.id}`, `op-${o.id}-halo`, `op-${o.id}-fill`].forEach(id => { if (map.getLayer(id)) map.removeLayer(id); });
+    [`op-${o.id}-pts`, `op-${o.id}`].forEach(id => { if (map.getSource(id)) map.removeSource(id); });
+}
+function renderOpcionais() {
+    const lista = dadosGerais.camadas_opcionais || [];
+    const el = document.getElementById('camadasOpcionais');
+    if (!el || !lista.length) return;
+    el.hidden = false;
+    el.innerHTML = '<span class="opc-titulo">Camadas</span>' + lista.map(o =>
+        `<button type="button" class="opc-btn" data-id="${esc(o.id)}" aria-pressed="false" title="${esc(o.fonte || '')}"><i style="border-color:${o.cor}"></i>${esc(o.nome)}</button>`).join('');
+    el.querySelectorAll('.opc-btn').forEach(b => b.addEventListener('click', async () => {
+        const o = lista.find(x => x.id === b.dataset.id);
+        if (opcionaisAtivas.has(o.id)) {
+            opcionaisAtivas.delete(o.id); removerOpcional(o);
+        } else {
+            b.classList.add('carregando');
+            try {
+                if (!opcionaisData[o.id]) opcionaisData[o.id] = await (await fetch(o.arquivo, { cache: 'no-cache' })).json();
+                opcionaisAtivas.add(o.id); desenharOpcional(o);
+            } catch (err) { console.error(err); alertaCamada(b); }
+            b.classList.remove('carregando');
+        }
+        const on = opcionaisAtivas.has(o.id);
+        b.classList.toggle('ativo', on); b.setAttribute('aria-pressed', on);
+        renderLegenda();
+    }));
+}
+function alertaCamada(b) { b.title = 'Camada indisponível no momento'; b.classList.add('erro'); }
+
 // Cores das áreas: 'municipio' (uma cor por município) ou 'situacao' (cor da situação)
 let modoCor = 'situacao';
 const corMapa = (f) => (modoCor === 'municipio' && f.cor_municipio) ? f.cor_municipio : f.cor;
@@ -322,6 +373,8 @@ function renderLegenda() {
             itens.push(`<div class="lg-item"><i class="${c.tipo === 'fill' ? 'lg-sq' : 'lg-dot'}" style="background:${c.cor}"></i>${esc(c.nome)}</div>`);
         }
     });
+    (dadosGerais.camadas_opcionais || []).filter(o => opcionaisAtivas.has(o.id)).forEach(o =>
+        itens.push(`<div class="lg-item" title="Fonte: ${esc(o.fonte || '')}"><i class="lg-line" style="border-color:${o.cor}"></i>${esc(o.nome)}</div>`));
     fazendas.forEach(f => (f.pontos || []).forEach(p => {
         const conteudo = `<i class="lg-ring" style="border-color:${f.cor}"></i>${esc(p.nome)}`;
         itens.push(p.documento
@@ -527,6 +580,7 @@ function adicionarCamadas() {
     } catch (err) {
         console.warn('Rótulos não disponíveis neste estilo de mapa', err);
     }
+    (dadosGerais.camadas_opcionais || []).filter(o => opcionaisAtivas.has(o.id)).forEach(desenharOpcional);
     destacarSelecionada();
     aplicarFiltroMapa();
 }
@@ -702,6 +756,7 @@ async function iniciar() {
     }));
     renderResumo();
     renderFiltroEtapa();
+    renderOpcionais();
     if (dados.cores_por_municipio) {
         modoCor = 'municipio';
         const seg = document.getElementById('modoCor');

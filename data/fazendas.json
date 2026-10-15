@@ -23,10 +23,11 @@
  "camadas": [
   {
    "id": "municipios",
-   "nome": "Limites municipais",
+   "nome": "Municípios atendidos",
    "arquivo": "data/municipios.geojson",
    "tipo": "line",
-   "cor": "#ffffff"
+   "cor": "#ffd54f",
+   "destaque": true
   },
   {
    "id": "nascentes",

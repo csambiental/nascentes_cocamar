@@ -376,3 +376,10 @@ table.ind tr.pos td { color: #1d6b3e; font-weight: 600; }
 .etapas { margin-bottom: 8px; }
 .etapas button { font-size: .8rem; padding: 6px 4px; }
 .etapas[hidden] { display: none; }
+
+/* ---------- municípios em destaque ---------- */
+.lg-line { display: inline-block; width: 16px; height: 0; border-top: 3px solid; margin-right: 6px; vertical-align: middle; box-shadow: 0 0 0 1px rgba(0,0,0,.35); }
+.lg-muns { display: grid; grid-template-columns: 1fr 1fr; gap: 0 8px; max-height: 190px; overflow-y: auto; }
+.lg-mun { cursor: pointer; border: 0; background: none; font: inherit; text-align: left; padding: 2px 4px; border-radius: 4px; display: flex; justify-content: space-between; gap: 6px; }
+.lg-mun:hover { background: #f1f8f3; }
+.lg-n { color: var(--texto-suave); font-size: .72rem; }

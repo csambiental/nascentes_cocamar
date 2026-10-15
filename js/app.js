@@ -154,6 +154,15 @@ function aplicarFiltroMapa() {
         if (map.getLayer(id) && (camadasData[c.id]?.features || []).some(x => x.properties[cfg.campo])) map.setFilter(id, filtro);
     }));
     if (map.getLayer('rotulos')) map.setFilter('rotulos', filtro);
+    const curto = filtroEtapa ? (cfg.rotulos || cfg.opcoes)[cfg.opcoes.indexOf(filtroEtapa)] : '';
+    camadas.filter(c => c.destaque).forEach(c => {
+        const fm = curto ? ['in', curto, ['get', 'etapas']] : null;
+        ['', '-fill', '-halo', '-nome'].forEach(suf => { if (map.getLayer(`cam-${c.id}${suf}`)) map.setFilter(`cam-${c.id}${suf}`, fm); });
+    });
+}
+function etapaCurta() {
+    const cfg = dadosGerais.filtro_etapa;
+    return cfg && filtroEtapa ? (cfg.rotulos || cfg.opcoes)[cfg.opcoes.indexOf(filtroEtapa)] : '';
 }
 const semAcento = (t) => String(t).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 function renderFazendas() {
@@ -285,6 +294,12 @@ function renderLegenda() {
                 return `<div class="lg-item lg-sub"><i class="${c.tipo === 'fill' ? 'lg-sq' : 'lg-dot'}" style="background:${cor}"></i>${esc(k)} (${grupo.length})</div>${lista}`;
             }).join('');
             itens.push(`<div class="lg-group">${esc(c.nome)}</div>${sub}`);
+        } else if (c.destaque) {
+            const curto = etapaCurta();
+            const feats = ((camadasData[c.id] || {}).features || []).filter(f => !curto || String(f.properties.etapas).includes(curto))
+                .sort((a, b) => a.properties.nome.localeCompare(b.properties.nome, 'pt-BR'));
+            itens.push(`<div class="lg-group"><i class="lg-line" style="border-color:${c.cor}"></i>${esc(c.nome)} (${feats.length})</div>` +
+                `<div class="lg-muns">${feats.map(f => `<button type="button" class="lg-item lg-leaf lg-mun" data-mun="${esc(f.properties.nome)}" title="Aproximar em ${esc(f.properties.nome)}">${esc(f.properties.nome)} <span class="lg-n">${f.properties.propriedades}</span></button>`).join('')}</div>`);
         } else {
             itens.push(`<div class="lg-item"><i class="${c.tipo === 'fill' ? 'lg-sq' : 'lg-dot'}" style="background:${c.cor}"></i>${esc(c.nome)}</div>`);
         }
@@ -298,6 +313,11 @@ function renderLegenda() {
     const aberta = window.matchMedia('(min-width: 801px)').matches ? ' open' : '';
     el.innerHTML = `<details${aberta}><summary>Legenda</summary>${itens.join('')}</details>`;
     el.querySelectorAll('.lg-doc').forEach(b => b.addEventListener('click', () => abrirDocumento(b.dataset.titulo, b.dataset.arquivo)));
+    el.querySelectorAll('.lg-mun').forEach(b => b.addEventListener('click', () => {
+        const c = camadas.find(x => x.destaque);
+        const f = (camadasData[c.id]?.features || []).find(x => x.properties.nome === b.dataset.mun);
+        if (f) map.fitBounds(boundsDe(f), { padding: 40, duration: 900 });
+    }));
     // Clique num grupo da legenda filtra a lista de propriedades
     el.querySelectorAll('.lg-filtro').forEach(b => b.addEventListener('click', () => {
         const ativo = b.classList.toggle('ativo');
@@ -404,6 +424,22 @@ function adicionarCamadas() {
         const g = camadasData[c.id];
         if (!g || map.getSource(`cam-${c.id}`)) return;
         map.addSource(`cam-${c.id}`, { type: 'geojson', data: g });
+        if (c.tipo === 'line' && c.destaque) {
+            // Municípios em destaque: preenchimento leve, contorno com halo e nome no centro
+            const antes = fazendas.map(f => `${f.id}-fill`).find(id => map.getLayer(id));
+            map.addLayer({ id: `cam-${c.id}-fill`, type: 'fill', source: `cam-${c.id}`, paint: { 'fill-color': c.cor, 'fill-opacity': 0.07 } }, antes);
+            map.addLayer({ id: `cam-${c.id}-halo`, type: 'line', source: `cam-${c.id}`, paint: { 'line-color': '#000000', 'line-width': 5, 'line-opacity': 0.45 } }, antes);
+            map.addLayer({ id: `cam-${c.id}`, type: 'line', source: `cam-${c.id}`, paint: { 'line-color': c.cor, 'line-width': 2.4 } }, antes);
+            const centros = { type: 'FeatureCollection', features: g.features.map(f => ({ type: 'Feature', properties: f.properties, geometry: turf.pointOnFeature(f).geometry })) };
+            map.addSource(`cam-${c.id}-centros`, { type: 'geojson', data: centros });
+            try {
+                map.addLayer({ id: `cam-${c.id}-nome`, type: 'symbol', source: `cam-${c.id}-centros`, maxzoom: 13,
+                    layout: { 'text-field': ['upcase', ['get', 'nome']], 'text-size': ['interpolate', ['linear'], ['zoom'], 8, 11, 12, 15], 'text-letter-spacing': 0.08,
+                              'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'], 'text-max-width': 8 },
+                    paint: { 'text-color': c.cor, 'text-halo-color': '#000000', 'text-halo-width': 1.6 } });
+            } catch (err) { console.warn('Nomes dos municípios indisponíveis', err); }
+            return;
+        }
         if (c.tipo === 'line') {
             map.addLayer({ id: `cam-${c.id}`, type: 'line', source: `cam-${c.id}`, paint: { 'line-color': c.cor, 'line-width': 1.5, 'line-opacity': 0.8, 'line-dasharray': [3, 2] } });
             return;

@@ -400,3 +400,28 @@ table.ind tr.pos td { color: #1d6b3e; font-weight: 600; }
 .opc-btn.ativo { background: var(--verde); border-color: var(--verde); color: #fff; }
 .opc-btn.carregando { opacity: .6; cursor: progress; }
 .opc-btn.erro { border-color: #c62828; }
+
+/* ---------- painel de camadas ---------- */
+.camadas-lista { display: flex; flex-direction: column; gap: 2px; margin-bottom: 10px; }
+.camadas-lista[hidden] { display: none; }
+.camada-sub { font-size: .74rem; font-weight: 600; color: var(--texto-suave); margin: 8px 0 2px; text-transform: uppercase; letter-spacing: .04em; }
+.camada-row { display: flex; align-items: center; gap: 10px; width: 100%; border: 0; background: none; font: inherit; font-size: .86rem; color: var(--texto-suave); padding: 6px 4px; border-radius: 6px; cursor: pointer; text-align: left; }
+.camada-row:hover { background: #f1f5f2; }
+.camada-row.ativo { color: var(--texto); }
+.camada-row:not(.ativo) i { opacity: .35; }
+.camada-nome { flex: 1; }
+.chave { width: 32px; height: 18px; border-radius: 999px; background: #cfd8d2; position: relative; flex: 0 0 32px; transition: background .15s; }
+.chave::after { content: ''; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.3); transition: left .15s; }
+.camada-row.ativo .chave { background: var(--verde); }
+.camada-row.ativo .chave::after { left: 16px; }
+.camada-row.carregando { opacity: .6; cursor: progress; }
+.ic-dot { width: 12px; height: 12px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,.25); flex: 0 0 12px; }
+.ic-area { width: 16px; height: 12px; border: 2px solid; border-radius: 3px; flex: 0 0 16px; }
+.ic-line { width: 16px; border-top: 3px solid; flex: 0 0 16px; }
+.ic-texto { font-style: normal; font-weight: 700; font-size: .78rem; width: 16px; flex: 0 0 16px; color: var(--texto); }
+/* cartões recolhíveis */
+.card-titulo { cursor: pointer; display: flex; align-items: center; justify-content: space-between; user-select: none; }
+.card-titulo::after { content: '▾'; font-size: .9rem; color: var(--texto-suave); transition: transform .15s; }
+.card.fechado .card-titulo { margin-bottom: 0; }
+.card.fechado .card-titulo::after { transform: rotate(-90deg); }
+.card.fechado > :not(.card-titulo) { display: none !important; }

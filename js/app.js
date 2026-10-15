@@ -24,6 +24,8 @@ let camadas = [];       // camadas extras (pivôs, represas...)
 const camadasData = {};
 let selecionada = null;
 let mostrarPreenchimento = true;
+const ocultas = new Set(); // camadas base desligadas pelo usuário
+const ligada = (id) => !ocultas.has(id);
 
 // Imagem de satélite mais recente: Esri World Imagery (Vantor/Maxar, ago/2025, 0,34 m na região)
 const ESTILO_ESRI = {
@@ -139,14 +141,39 @@ function removerOpcional(o) {
     [`op-${o.id}-nome`, `op-${o.id}`, `op-${o.id}-halo`, `op-${o.id}-fill`].forEach(id => { if (map.getLayer(id)) map.removeLayer(id); });
     [`op-${o.id}-pts`, `op-${o.id}`].forEach(id => { if (map.getSource(id)) map.removeSource(id); });
 }
+function camadasBase() {
+    const corProp = Object.values(dadosGerais.agrupar_por?.cores || {})[0] || fazendas[0]?.cor || '#ffd54f';
+    const base = [];
+    if (fazendas.length) base.push({ id: 'propriedades', nome: 'Áreas das propriedades', cor: corProp, icone: 'area' },
+                                    { id: 'preenchimento', nome: 'Preenchimento das áreas', cor: corProp, icone: 'fill' });
+    camadas.forEach(c => base.push({ id: c.id, nome: c.nome, icone: c.tipo === 'circle' ? 'dot' : (c.tipo === 'fill' ? 'fill' : 'line'),
+        cor: c.cores ? Object.values(c.cores)[0] : c.cor }));
+    base.push({ id: 'nomes', nome: 'Nomes no mapa', icone: 'texto', cor: '#1d2a22' });
+    return base;
+}
+function iconeCamada(o) {
+    if (o.icone === 'dot') return `<i class="ic-dot" style="background:${o.cor}"></i>`;
+    if (o.icone === 'fill' || o.icone === 'area') return `<i class="ic-area${o.icone === 'fill' ? ' cheia' : ''}" style="border-color:${o.cor};background:${o.cor}${o.icone === 'fill' ? '88' : '22'}"></i>`;
+    if (o.icone === 'texto') return '<i class="ic-texto">Aa</i>';
+    return `<i class="ic-line" style="border-color:${o.cor}"></i>`;
+}
 function renderOpcionais() {
     const lista = dadosGerais.camadas_opcionais || [];
     const el = document.getElementById('camadasOpcionais');
-    if (!el || !lista.length) return;
+    if (!el) return;
     el.hidden = false;
-    el.innerHTML = '<span class="opc-titulo">Camadas</span>' + lista.map(o =>
-        `<button type="button" class="opc-btn" data-id="${esc(o.id)}" aria-pressed="false" title="${esc(o.fonte || '')}"><i style="border-color:${o.cor}"></i>${esc(o.nome)}</button>`).join('');
-    el.querySelectorAll('.opc-btn').forEach(b => b.addEventListener('click', async () => {
+    const linha = (o, tipo, on) => `<button type="button" class="camada-row${on ? ' ativo' : ''}" data-tipo="${tipo}" data-id="${esc(o.id)}" aria-pressed="${on}" title="${esc(o.fonte ? 'Fonte: ' + o.fonte : '')}">
+        ${iconeCamada(o)}<span class="camada-nome">${esc(o.nome)}</span><span class="chave" aria-hidden="true"></span></button>`;
+    el.innerHTML = camadasBase().map(o => linha(o, 'base', ligada(o.id))).join('') +
+        (lista.length ? `<div class="camada-sub">Hidrografia</div>` + lista.map(o => linha({ ...o, icone: 'line' }, 'opc', opcionaisAtivas.has(o.id))).join('') : '');
+    el.querySelectorAll('.camada-row[data-tipo=base]').forEach(b => b.addEventListener('click', () => {
+        const id = b.dataset.id;
+        if (ocultas.has(id)) ocultas.delete(id); else ocultas.add(id);
+        const on = ligada(id);
+        b.classList.toggle('ativo', on); b.setAttribute('aria-pressed', on);
+        aplicarFiltroMapa(); aplicarVisibilidadeCamadas(); renderLegenda();
+    }));
+    el.querySelectorAll('.camada-row[data-tipo=opc]').forEach(b => b.addEventListener('click', async () => {
         const o = lista.find(x => x.id === b.dataset.id);
         if (opcionaisAtivas.has(o.id)) {
             opcionaisAtivas.delete(o.id); removerOpcional(o);
@@ -154,7 +181,7 @@ function renderOpcionais() {
             b.classList.add('carregando');
             try {
                 if (!opcionaisData[o.id]) opcionaisData[o.id] = await (await fetch(o.arquivo, { cache: 'no-cache' })).json();
-                opcionaisAtivas.add(o.id); desenharOpcional(o);
+                opcionaisAtivas.add(o.id); desenharOpcional(o); aplicarVisibilidadeCamadas();
             } catch (err) { console.error(err); alertaCamada(b); }
             b.classList.remove('carregando');
         }
@@ -170,7 +197,7 @@ let modoCor = 'situacao';
 const corMapa = (f) => (modoCor === 'municipio' && f.cor_municipio) ? f.cor_municipio : f.cor;
 function corMunicipios(c) { return modoCor === 'municipio' ? ['coalesce', ['get', 'cor'], c.cor] : '#ffffff'; }
 function aplicarCores() {
-    if (!map.isStyleLoaded()) return;
+    if (!map.style) return;
     fazendas.forEach(f => {
         if (map.getLayer(`${f.id}-fill`)) map.setPaintProperty(`${f.id}-fill`, 'fill-color', corMapa(f));
         if (map.getLayer(`${f.id}-line`)) map.setPaintProperty(`${f.id}-line`, 'line-color', corMapa(f));
@@ -206,12 +233,12 @@ function renderFiltroEtapa() {
     }));
 }
 function aplicarFiltroMapa() {
-    if (!map.isStyleLoaded()) return;
+    if (!map.style) return;
     fazendas.forEach(f => {
         const vis = naEtapa(f);
         ['fill', 'halo', 'line'].forEach(t => {
             const id = `${f.id}-${t}`;
-            if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', vis && (t !== 'fill' || mostrarPreenchimento) ? 'visible' : 'none');
+            if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', vis && ligada('propriedades') && (t !== 'fill' || (mostrarPreenchimento && ligada('preenchimento'))) ? 'visible' : 'none');
         });
     });
     const cfg = dadosGerais.filtro_etapa;
@@ -227,6 +254,17 @@ function aplicarFiltroMapa() {
         const fm = curto ? ['in', curto, ['get', 'etapas']] : null;
         ['', '-fill', '-halo', '-nome'].forEach(suf => { if (map.getLayer(`cam-${c.id}${suf}`)) map.setFilter(`cam-${c.id}${suf}`, fm); });
     });
+}
+function aplicarVisibilidadeCamadas() {
+    if (!map.style) return;
+    const vis = (on) => on ? 'visible' : 'none';
+    camadas.forEach(c => ['', '-fill', '-halo', '-line', '-label'].forEach(suf => {
+        const id = `cam-${c.id}${suf}`;
+        if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', vis(ligada(c.id)));
+    }));
+    camadas.forEach(c => { if (map.getLayer(`cam-${c.id}-nome`)) map.setLayoutProperty(`cam-${c.id}-nome`, 'visibility', vis(ligada(c.id) && ligada('nomes'))); });
+    if (map.getLayer('rotulos')) map.setLayoutProperty('rotulos', 'visibility', vis(ligada('nomes') && ligada('propriedades')));
+    (dadosGerais.camadas_opcionais || []).forEach(o => { if (map.getLayer(`op-${o.id}-nome`)) map.setLayoutProperty(`op-${o.id}-nome`, 'visibility', vis(ligada('nomes'))); });
 }
 function etapaCurta() {
     const cfg = dadosGerais.filtro_etapa;
@@ -336,7 +374,7 @@ function renderLegenda() {
     const el = document.getElementById('legend');
     if (!el) return;
     const itens = [];
-    if (dadosGerais.agrupar_por) {
+    if (dadosGerais.agrupar_por && ligada('propriedades')) {
         const g = dadosGerais.agrupar_por;
         itens.push(`<div class="lg-group">${esc(g.titulo)}${modoCor === 'municipio' ? ' <span class="lg-n">(cor na lista · clique p/ filtrar)</span>' : ''}</div>`);
         Object.entries(g.cores).forEach(([k, cor]) => {
@@ -349,7 +387,7 @@ function renderLegenda() {
     } else {
         fazendas.forEach(f => itens.push(`<div class="lg-item"><i class="lg-area" style="border-color:${f.cor};background:${f.cor}33"></i>${esc(f.nome)}</div>`));
     }
-    camadas.forEach(c => {
+    camadas.filter(c => ligada(c.id)).forEach(c => {
         if (c.cor_por && c.cores) {
             const feats = (camadasData[c.id] || {}).features || [];
             const sub = Object.entries(c.cores).map(([k, cor]) => {
@@ -583,6 +621,7 @@ function adicionarCamadas() {
     (dadosGerais.camadas_opcionais || []).filter(o => opcionaisAtivas.has(o.id)).forEach(desenharOpcional);
     destacarSelecionada();
     aplicarFiltroMapa();
+    aplicarVisibilidadeCamadas();
 }
 
 function destacarSelecionada() {
@@ -691,13 +730,13 @@ map.on('mousemove', (e) => {
 map.on('style.load', () => { if (fazendas.length) adicionarCamadas(); });
 
 // ---------- controles ----------
-document.querySelectorAll('.segmented button').forEach(btn => {
+document.querySelectorAll('button[data-style]').forEach(btn => {
     btn.addEventListener('click', () => {
-        document.querySelectorAll('.segmented button').forEach(b => b.classList.toggle('active', b === btn));
+        document.querySelectorAll('[data-style]').forEach(b => b.classList.toggle('active', b === btn));
         map.setStyle(ESTILOS[btn.dataset.style] || btn.dataset.style);
     });
 });
-document.getElementById('toggleFill').addEventListener('change', (e) => {
+document.getElementById('toggleFill')?.addEventListener('change', (e) => {
     mostrarPreenchimento = e.target.checked;
     fazendas.forEach(f => {
         if (map.getLayer(`${f.id}-fill`)) map.setLayoutProperty(`${f.id}-fill`, 'visibility', mostrarPreenchimento && naEtapa(f) ? 'visible' : 'none');
@@ -773,6 +812,7 @@ async function iniciar() {
     renderFazendas();
     renderLegenda();
     renderPrazos(dados.prazos);
+    prepararCartoes();
     const pronto = () => { adicionarCamadas(); enquadrarTodas(); };
     if (map.isStyleLoaded()) pronto(); else map.once('load', pronto);
 }
@@ -782,3 +822,29 @@ document.getElementById('farmSearch')?.addEventListener('input', (e) => {
     filtroFazendas = semAcento(e.target.value.trim());
     renderFazendas();
 });
+
+// ---------- cartões do painel recolhíveis ----------
+function prepararCartoes() {
+    let salvos = {};
+    try { salvos = JSON.parse(localStorage.getItem('cartoesFechados') || '{}'); } catch (e) {}
+    document.querySelectorAll('.sidebar .card').forEach((card, i) => {
+        const h = card.querySelector(':scope > h2');
+        if (!h || h.dataset.recolhe) return;
+        const chave = card.id || h.textContent.trim();
+        h.dataset.recolhe = '1';
+        h.classList.add('card-titulo');
+        h.setAttribute('role', 'button'); h.tabIndex = 0;
+        const alternar = () => {
+            const fechado = card.classList.toggle('fechado');
+            h.setAttribute('aria-expanded', !fechado);
+            salvos[chave] = fechado;
+            try { localStorage.setItem('cartoesFechados', JSON.stringify(salvos)); } catch (e) {}
+        };
+        h.addEventListener('click', alternar);
+        h.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); alternar(); } });
+        if (salvos[chave]) card.classList.add('fechado');
+        h.setAttribute('aria-expanded', !card.classList.contains('fechado'));
+    });
+}
+setTimeout(prepararCartoes, 0);
+window.addEventListener('load', () => setTimeout(prepararCartoes, 500));

@@ -1,4 +1,4 @@
-"""Rios catalogados (BHO 2017 1:50.000 – ANA) por bacia hidrográfica do PR e nomes das microbacias.
+"""Rios catalogados (BHO 2017 – base 1:250.000 / ottobacias 5k – ANA) por bacia hidrográfica do PR e nomes das microbacias.
 Executado pelo GitHub Actions; grava em data/bacias/."""
 import json, re, unicodedata, urllib.request, urllib.parse
 from collections import defaultdict
@@ -6,7 +6,7 @@ from shapely.geometry import shape, mapping, LineString, MultiLineString
 from shapely.ops import linemerge, unary_union
 from shapely.strtree import STRtree
 
-URL = 'https://www.snirh.gov.br/arcgis/rest/services/SPR/BHO2017_50K_TRECHODRENAGEM/FeatureServer/0'
+URL = 'https://www.snirh.gov.br/arcgis/rest/services/SPR/BHO2017_5K_TRECHODRENAGEM/FeatureServer/0'
 
 def consulta(params):
     feats, offset = [], 0
@@ -46,6 +46,11 @@ arvore = STRtree(bgeo)
 # 1) Rios com nome (ordem de Strahler >= 3) em todo o Paraná, agrupados por bacia
 indice = []
 import traceback, sys
+try:
+    for w in ['1=1', 'NUSTRAHLER >= 3', "NORIOCOMP IS NOT NULL AND NORIOCOMP <> ' '"]:
+        q = urllib.parse.urlencode({'where': w, 'geometry': '-52.2,-23.5,-51.8,-23.2', 'geometryType': 'esriGeometryEnvelope', 'inSR': '4326', 'returnCountOnly': 'true', 'f': 'json'})
+        print('DIAG', w, urllib.request.urlopen(URL + '/query?' + q, timeout=120).read()[:200], flush=True)
+except Exception as e: print('DIAG erro', e)
 for b, g in zip(bacias, bgeo):
   try:
     minx, miny, maxx, maxy = g.bounds
@@ -65,7 +70,8 @@ for b, g in zip(bacias, bgeo):
         meta[k] = (max(ant[0], a.get('NUSTRAHLER') or 0), a.get('DEDOMINIAL') or ant[1])
     out = []
     for (cod, nome), lns in grupos.items():
-        g2 = linemerge(unary_union(lns)).simplify(0.0004, preserve_topology=False)
+        u = unary_union(lns)
+        g2 = (linemerge(u) if u.geom_type == 'MultiLineString' else u).simplify(0.0004, preserve_topology=False)
         if g2.is_empty: continue
         ordem, dom = meta[(cod, nome)]
         out.append({'type': 'Feature', 'properties': {'nome': nome, 'ordem': ordem, 'dominio': dom, 'bacia': b['properties']['nome']},

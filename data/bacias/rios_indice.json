@@ -1,0 +1,17 @@
+[
+ {
+  "bacia": "Paraná III",
+  "arquivo": "data/bacias/rios_parana_iii.geojson",
+  "rios": 3
+ },
+ {
+  "bacia": "Baixo Ivaí e Paraná I",
+  "arquivo": "data/bacias/rios_baixo_ivai_e_parana_i.geojson",
+  "rios": 2
+ },
+ {
+  "bacia": "Norte Pioneiro",
+  "arquivo": "data/bacias/rios_norte_pioneiro.geojson",
+  "rios": 5
+ }
+]

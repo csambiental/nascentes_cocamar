@@ -1,15 +1,15 @@
 DIAG 1=1 b'{"count":113}'
 DIAG NUSTRAHLER >= 3 b'{"count":22}'
 DIAG NORIOCOMP IS NOT NULL AND NORIOCOMP <> ' ' b'{"count":103}'
-data/bacias/rios_parana_iii.geojson 234 trechos -> 6 rios
-data/bacias/rios_rios_piquiri_e_parana_ii.geojson 303 trechos -> 10 rios
-data/bacias/rios_rios_pirapo_paranapanema_3_e_paranapanema_4.geojson 587 trechos -> 35 rios
-data/bacias/rios_litoranea.geojson 108 trechos -> 20 rios
-data/bacias/rios_alto_ivai.geojson 423 trechos -> 16 rios
-data/bacias/rios_baixo_ivai_e_parana_i.geojson 226 trechos -> 2 rios
-data/bacias/rios_baixo_iguacu.geojson 903 trechos -> 70 rios
-data/bacias/rios_rio_jordao.geojson 192 trechos -> 19 rios
-data/bacias/rios_alto_iguacu_e_afluentes_do_alto_ribeira.geojson 833 trechos -> 34 rios
-data/bacias/rios_norte_pioneiro.geojson 879 trechos -> 54 rios
-data/bacias/rios_rio_tibagi.geojson 776 trechos -> 63 rios
+data/bacias/rios_parana_iii.geojson 568 trechos -> 46 rios
+data/bacias/rios_rios_piquiri_e_parana_ii.geojson 858 trechos -> 155 rios
+data/bacias/rios_rios_pirapo_paranapanema_3_e_paranapanema_4.geojson 906 trechos -> 232 rios
+data/bacias/rios_litoranea.geojson 533 trechos -> 221 rios
+data/bacias/rios_alto_ivai.geojson 740 trechos -> 123 rios
+data/bacias/rios_baixo_ivai_e_parana_i.geojson 723 trechos -> 100 rios
+data/bacias/rios_baixo_iguacu.geojson 939 trechos -> 187 rios
+data/bacias/rios_rio_jordao.geojson 611 trechos -> 152 rios
+data/bacias/rios_alto_iguacu_e_afluentes_do_alto_ribeira.geojson 892 trechos -> 172 rios
+data/bacias/rios_norte_pioneiro.geojson 854 trechos -> 171 rios
+data/bacias/rios_rio_tibagi.geojson 737 trechos -> 164 rios
 microbacias com nome: 836 de 913

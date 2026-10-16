@@ -457,3 +457,11 @@ table.ind tr.pos td { color: #1d6b3e; font-weight: 600; }
 #fotoAnt { left: 10px; } #fotoProx { right: 10px; }
 .foto-dialog footer { justify-content: space-between; font-size: .85rem; }
 .foto-dialog footer .btn { color: #fff; border-color: #fff; background: transparent; text-decoration: none; padding: 6px 10px; }
+
+.camada-grupo { border-radius: 6px; }
+.camada-grupo > summary { display: flex; align-items: center; gap: 10px; padding: 6px 4px; cursor: pointer; font-size: .86rem; list-style: none; border-radius: 6px; }
+.camada-grupo > summary::-webkit-details-marker { display: none; }
+.camada-grupo > summary::after { content: '▸'; color: var(--texto-suave); }
+.camada-grupo[open] > summary::after { content: '▾'; }
+.camada-grupo > summary:hover { background: #f1f5f2; }
+.camada-grupo .camada-row { padding-left: 20px; font-size: .82rem; }

@@ -15,7 +15,7 @@ jobs:
         with: { python-version: '3.12' }
       - run: pip install shapely
       - run: python tools/baixar_bacias.py
-      - run: python tools/baixar_rios.py
+      - run: python tools/baixar_rios.py > data/bacias/_log_rios.txt 2>&1 || true
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

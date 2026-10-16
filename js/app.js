@@ -127,9 +127,20 @@ function desenharOpcional(o) {
     map.addSource(`op-${o.id}`, { type: 'geojson', data: g });
     if (o.preenchimento) map.addLayer({ id: `op-${o.id}-fill`, type: 'fill', source: `op-${o.id}`, paint: { 'fill-color': o.cor, 'fill-opacity': o.preenchimento } }, antes);
     if (o.halo) map.addLayer({ id: `op-${o.id}-halo`, type: 'line', source: `op-${o.id}`, paint: { 'line-color': '#000000', 'line-width': (o.largura || 1.5) + 2.5, 'line-opacity': 0.4 } }, antes);
+    if (o.clicavel && o.geometria !== 'linha') map.addLayer({ id: `op-${o.id}-hit`, type: 'fill', source: `op-${o.id}`, paint: { 'fill-color': '#000000', 'fill-opacity': 0.01 } }, antes);
+    const largura = o.geometria === 'linha'
+        ? ['interpolate', ['linear'], ['coalesce', ['get', 'ordem'], 3], 3, 1.2, 5, 2.2, 7, 3.6, 9, 5]
+        : (o.largura || 1.5);
     map.addLayer({ id: `op-${o.id}`, type: 'line', source: `op-${o.id}`,
-        paint: { 'line-color': o.cor, 'line-width': o.largura || 1.5, 'line-opacity': o.opacidade ?? 0.95, ...(o.tracejado ? { 'line-dasharray': o.tracejado } : {}) } }, antes);
-    if (o.rotulo_campo) try {
+        layout: { 'line-join': 'round', 'line-cap': 'round' },
+        paint: { 'line-color': o.cor, 'line-width': largura, 'line-opacity': o.opacidade ?? 0.95, ...(o.tracejado ? { 'line-dasharray': o.tracejado } : {}) } }, antes);
+    if (o.geometria === 'linha' && o.rotulo_campo) try {
+        map.addLayer({ id: `op-${o.id}-nome`, type: 'symbol', source: `op-${o.id}`, minzoom: o.rotulo_minzoom || 9,
+            layout: { 'symbol-placement': 'line', 'text-field': ['get', o.rotulo_campo], 'text-size': 11.5, 'symbol-spacing': 350,
+                      'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'], 'text-letter-spacing': 0.03 },
+            paint: { 'text-color': '#e1f5fe', 'text-halo-color': '#01579b', 'text-halo-width': 1.4 } });
+    } catch (err) { console.warn('Nomes dos rios indisponíveis', err); }
+    else if (o.rotulo_campo) try {
         const pts = { type: 'FeatureCollection', features: g.features.filter(f => f.properties[o.rotulo_campo]).map(f => ({ type: 'Feature', properties: f.properties, geometry: turf.pointOnFeature(f).geometry })) };
         map.addSource(`op-${o.id}-pts`, { type: 'geojson', data: pts });
         map.addLayer({ id: `op-${o.id}-nome`, type: 'symbol', source: `op-${o.id}-pts`, minzoom: o.rotulo_minzoom || 0,
@@ -138,7 +149,7 @@ function desenharOpcional(o) {
     } catch (err) { console.warn('Rótulos indisponíveis', err); }
 }
 function removerOpcional(o) {
-    [`op-${o.id}-nome`, `op-${o.id}`, `op-${o.id}-halo`, `op-${o.id}-fill`].forEach(id => { if (map.getLayer(id)) map.removeLayer(id); });
+    [`op-${o.id}-nome`, `op-${o.id}`, `op-${o.id}-halo`, `op-${o.id}-fill`, `op-${o.id}-hit`].forEach(id => { if (map.getLayer(id)) map.removeLayer(id); });
     [`op-${o.id}-pts`, `op-${o.id}`].forEach(id => { if (map.getSource(id)) map.removeSource(id); });
 }
 function camadasBase() {
@@ -164,8 +175,16 @@ function renderOpcionais() {
     el.hidden = false;
     const linha = (o, tipo, on) => `<button type="button" class="camada-row${on ? ' ativo' : ''}" data-tipo="${tipo}" data-id="${esc(o.id)}" aria-pressed="${on}" title="${esc(o.fonte ? 'Fonte: ' + o.fonte : '')}">
         ${iconeCamada(o)}<span class="camada-nome">${esc(o.nome)}</span><span class="chave" aria-hidden="true"></span></button>`;
+    const soltas = lista.filter(o => !o.grupo);
+    const grupos = [...new Set(lista.filter(o => o.grupo).map(o => o.grupo))];
     el.innerHTML = camadasBase().map(o => linha(o, 'base', ligada(o.id))).join('') +
-        (lista.length ? `<div class="camada-sub">Hidrografia</div>` + lista.map(o => linha({ ...o, icone: 'line' }, 'opc', opcionaisAtivas.has(o.id))).join('') : '');
+        (lista.length ? `<div class="camada-sub">Hidrografia</div>` + soltas.map(o => linha({ ...o, icone: 'line' }, 'opc', opcionaisAtivas.has(o.id))).join('') +
+            grupos.map(g => {
+                const itens = lista.filter(o => o.grupo === g);
+                const ativos = itens.filter(o => opcionaisAtivas.has(o.id)).length;
+                return `<details class="camada-grupo"${ativos ? ' open' : ''}><summary>${iconeCamada({ icone: 'line', cor: itens[0].cor })}<span class="camada-nome">${esc(g)}</span><span class="lg-n">${ativos ? `${ativos} ligada${ativos > 1 ? 's' : ''}` : `${itens.length} bacias`}</span></summary>
+                    ${itens.map(o => linha({ ...o, icone: 'line' }, 'opc', opcionaisAtivas.has(o.id))).join('')}</details>`;
+            }).join('') : '');
     el.querySelectorAll('.camada-row[data-tipo=base]').forEach(b => b.addEventListener('click', () => {
         const id = b.dataset.id;
         if (ocultas.has(id)) ocultas.delete(id); else ocultas.add(id);
@@ -187,10 +206,36 @@ function renderOpcionais() {
         }
         const on = opcionaisAtivas.has(o.id);
         b.classList.toggle('ativo', on); b.setAttribute('aria-pressed', on);
+        if (on && o.enquadrar && opcionaisData[o.id]) map.fitBounds(boundsDe(opcionaisData[o.id]), { padding: 40, duration: 900 });
+        const grp = b.closest('.camada-grupo');
+        if (grp) { const n = grp.querySelectorAll('.camada-row.ativo').length; grp.querySelector('summary .lg-n').textContent = n ? `${n} ligada${n > 1 ? 's' : ''}` : `${grp.querySelectorAll('.camada-row').length} bacias`; }
         renderLegenda();
     }));
 }
 function alertaCamada(b) { b.title = 'Camada indisponível no momento'; b.classList.add('erro'); }
+
+function popupOpcional(e) {
+    const lista = (dadosGerais.camadas_opcionais || []).filter(o => opcionaisAtivas.has(o.id) && o.clicavel);
+    const ids = lista.flatMap(o => [`op-${o.id}-hit`, `op-${o.id}`]).filter(id => map.getLayer(id));
+    if (!ids.length) return;
+    const caixa = [[e.point.x - 4, e.point.y - 4], [e.point.x + 4, e.point.y + 4]];
+    const hit = map.queryRenderedFeatures(caixa, { layers: ids });
+    if (!hit.length) return;
+    // prioriza rios (linhas) sobre áreas
+    const h = hit.find(x => x.layer.type === 'line' && x.source.startsWith('op-rios')) || hit[0];
+    const p = h.properties;
+    const linhas = [];
+    if (p.rio && p.nome !== p.rio) linhas.push(['Curso d’água', p.rio]);
+    if (p.bacia) linhas.push(['Bacia hidrográfica', p.bacia]);
+    if (p.area_km2) linhas.push(['Área', `${fmt(p.area_km2, 2)} km²`]);
+    if (p.ordem) linhas.push(['Ordem (Strahler)', p.ordem]);
+    if (p.dominio) linhas.push(['Domínio', p.dominio === 'E' ? 'Estadual' : (p.dominio === 'U' ? 'Federal' : p.dominio)]);
+    if (p.cobacia) linhas.push(['Código Otto', p.cobacia]);
+    if (p.regiao_hidrografica) linhas.push(['Região hidrográfica', p.regiao_hidrografica]);
+    new mapboxgl.Popup({ maxWidth: '300px' }).setLngLat(e.lngLat)
+        .setHTML(`<div class="popup"><h3>${esc(p.nome || 'Sem nome')}</h3><dl class="popup-dl">${linhas.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>
+            <p class="popup-hint">Fonte: ANA – Base Hidrográfica Ottocodificada</p></div>`).addTo(map);
+}
 
 // Cores das áreas: 'municipio' (uma cor por município) ou 'situacao' (cor da situação)
 let modoCor = 'situacao';
@@ -477,7 +522,11 @@ function renderLegenda() {
             itens.push(`<div class="lg-item"><i class="${c.tipo === 'fill' ? 'lg-sq' : 'lg-dot'}" style="background:${c.cor}"></i>${esc(c.nome)}</div>`);
         }
     });
-    (dadosGerais.camadas_opcionais || []).filter(o => opcionaisAtivas.has(o.id)).forEach(o =>
+    const opsAtivas = (dadosGerais.camadas_opcionais || []).filter(o => opcionaisAtivas.has(o.id));
+    const gruposAtivos = [...new Set(opsAtivas.filter(o => o.grupo).map(o => o.grupo))];
+    gruposAtivos.forEach(g => { const it = opsAtivas.filter(o => o.grupo === g);
+        itens.push(`<div class="lg-item"><i class="lg-line" style="border-color:${it[0].cor}"></i>${esc(g)}: ${it.map(o => esc(o.nome)).join(', ')}</div>`); });
+    opsAtivas.filter(o => !o.grupo).forEach(o =>
         itens.push(`<div class="lg-item" title="Fonte: ${esc(o.fonte || '')}"><i class="lg-line" style="border-color:${o.cor}"></i>${esc(o.nome)}</div>`));
     fazendas.forEach(f => (f.pontos || []).forEach(p => {
         const conteudo = `<i class="lg-ring" style="border-color:${f.cor}"></i>${esc(p.nome)}`;
@@ -784,7 +833,7 @@ map.on('click', (e) => {
         const f = fazendas.find(f => geojsons[f.id] && !ehPonto(f.id) && naEtapa(f) && turf.booleanPointInPolygon(pt, geojsons[f.id].features[0]));
         id = f ? f.id : null;
     }
-    if (!id) return;
+    if (!id || !ligada('propriedades')) { popupOpcional(e); return; }
     const f = fazendas.find(x => x.id === id);
     new mapboxgl.Popup({ maxWidth: '300px' }).setLngLat(e.lngLat).setHTML(popupHtml(f)).addTo(map);
     selecionarFazenda(id, false);

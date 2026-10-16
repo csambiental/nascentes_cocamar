@@ -19,7 +19,8 @@ def consulta(params):
                 d = json.load(urllib.request.urlopen(req, timeout=240)); break
             except Exception as e:
                 if tent == 3: raise
-        if 'error' in d: raise SystemExit(json.dumps(d))
+        if 'error' in d:
+            print('ERRO na consulta', json.dumps(params)[:300], json.dumps(d)[:600], flush=True); raise SystemExit(1)
         feats += d.get('features', [])
         if not d.get('exceededTransferLimit') or not d.get('features'): return feats
         offset += len(d['features'])
@@ -44,7 +45,9 @@ arvore = STRtree(bgeo)
 
 # 1) Rios com nome (ordem de Strahler >= 3) em todo o Paraná, agrupados por bacia
 indice = []
+import traceback, sys
 for b, g in zip(bacias, bgeo):
+  try:
     minx, miny, maxx, maxy = g.bounds
     feats = consulta({'where': "NORIOCOMP IS NOT NULL AND NORIOCOMP <> ' ' AND NUSTRAHLER >= 3",
                       'geometry': f'{minx},{miny},{maxx},{maxy}', 'geometryType': 'esriGeometryEnvelope', 'inSR': '4326',
@@ -58,7 +61,8 @@ for b, g in zip(bacias, bgeo):
         if not gp.intersects(ln.interpolate(0.5, normalized=True)): continue
         k = (a.get('COCURSODAG') or nome, nome)
         grupos[k].append(ln)
-        meta[k] = max(meta.get(k, 0), a.get('NUSTRAHLER') or 0), a.get('DEDOMINIAL') or ''
+        ant = meta.get(k, (0, ''))
+        meta[k] = (max(ant[0], a.get('NUSTRAHLER') or 0), a.get('DEDOMINIAL') or ant[1])
     out = []
     for (cod, nome), lns in grupos.items():
         g2 = linemerge(unary_union(lns)).simplify(0.0004, preserve_topology=False)
@@ -69,7 +73,9 @@ for b, g in zip(bacias, bgeo):
     arq = f"data/bacias/rios_{slug(b['properties']['nome'])}.geojson"
     json.dump(arred({'type': 'FeatureCollection', 'features': out}), open(arq, 'w'), ensure_ascii=False, separators=(',', ':'))
     indice.append({'bacia': b['properties']['nome'], 'arquivo': arq, 'rios': len(out)})
-    print(arq, len(feats), 'trechos ->', len(out), 'rios')
+    print(arq, len(feats), 'trechos ->', len(out), 'rios', flush=True)
+  except BaseException:
+    traceback.print_exc(); sys.stdout.flush()
 json.dump(indice, open('data/bacias/rios_indice.json', 'w'), ensure_ascii=False, indent=1)
 
 # 2) Nomes das microbacias: rio do trecho com o mesmo código Otto (COBACIA) + bacia de gestão

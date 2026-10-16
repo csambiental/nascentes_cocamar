@@ -2,7 +2,27 @@
  {
   "bacia": "Paraná III",
   "arquivo": "data/bacias/rios_parana_iii.geojson",
-  "rios": 3
+  "rios": 6
+ },
+ {
+  "bacia": "Rios Piquiri e Paraná II",
+  "arquivo": "data/bacias/rios_rios_piquiri_e_parana_ii.geojson",
+  "rios": 10
+ },
+ {
+  "bacia": "Rios Pirapó, Paranapanema 3 e Paranapanema 4",
+  "arquivo": "data/bacias/rios_rios_pirapo_paranapanema_3_e_paranapanema_4.geojson",
+  "rios": 35
+ },
+ {
+  "bacia": "Litorânea",
+  "arquivo": "data/bacias/rios_litoranea.geojson",
+  "rios": 20
+ },
+ {
+  "bacia": "Alto Ivaí",
+  "arquivo": "data/bacias/rios_alto_ivai.geojson",
+  "rios": 16
  },
  {
   "bacia": "Baixo Ivaí e Paraná I",
@@ -10,8 +30,28 @@
   "rios": 2
  },
  {
+  "bacia": "Baixo Iguaçu",
+  "arquivo": "data/bacias/rios_baixo_iguacu.geojson",
+  "rios": 70
+ },
+ {
+  "bacia": "Rio Jordão",
+  "arquivo": "data/bacias/rios_rio_jordao.geojson",
+  "rios": 19
+ },
+ {
+  "bacia": "Alto Iguaçu e Afluentes do Alto Ribeira",
+  "arquivo": "data/bacias/rios_alto_iguacu_e_afluentes_do_alto_ribeira.geojson",
+  "rios": 34
+ },
+ {
   "bacia": "Norte Pioneiro",
   "arquivo": "data/bacias/rios_norte_pioneiro.geojson",
-  "rios": 5
+  "rios": 54
+ },
+ {
+  "bacia": "Rio Tibagi",
+  "arquivo": "data/bacias/rios_rio_tibagi.geojson",
+  "rios": 63
  }
 ]

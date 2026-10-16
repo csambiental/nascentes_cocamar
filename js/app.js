@@ -500,7 +500,9 @@ function renderLegenda() {
     const el = document.getElementById('legend');
     if (!el) return;
     const itens = [];
-    if (dadosGerais.agrupar_por && ligada('propriedades')) {
+    if (dadosGerais.agrupar_por && !ligada('propriedades')) {
+        // propriedades ocultas: nada a mostrar desse grupo
+    } else if (dadosGerais.agrupar_por) {
         const g = dadosGerais.agrupar_por;
         itens.push(`<div class="lg-group">${esc(g.titulo)}${modoCor === 'municipio' ? ' <span class="lg-n">(cor na lista · clique p/ filtrar)</span>' : ''}</div>`);
         Object.entries(g.cores).forEach(([k, cor]) => {

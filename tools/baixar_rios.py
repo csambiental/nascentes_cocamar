@@ -43,7 +43,7 @@ bacias = json.load(open('data/bacias/bacias_parana.geojson'))['features']
 bgeo = [shape(b['geometry']) for b in bacias]
 arvore = STRtree(bgeo)
 
-# 1) Rios com nome (ordem de Strahler >= 3) em todo o Paraná, agrupados por bacia
+# 1) Rios com nome (todos os cursos catalogados) em todo o Paraná, agrupados por bacia
 indice = []
 import traceback, sys
 try:
@@ -54,7 +54,7 @@ except Exception as e: print('DIAG erro', e)
 for b, g in zip(bacias, bgeo):
   try:
     minx, miny, maxx, maxy = g.bounds
-    feats = consulta({'where': "NORIOCOMP IS NOT NULL AND NORIOCOMP <> ' ' AND NUSTRAHLER >= 3",
+    feats = consulta({'where': "NORIOCOMP IS NOT NULL AND NORIOCOMP <> ' '",
                       'geometry': f'{minx},{miny},{maxx},{maxy}', 'geometryType': 'esriGeometryEnvelope', 'inSR': '4326',
                       'spatialRel': 'esriSpatialRelIntersects', 'outFields': 'NORIOCOMP,COCURSODAG,NUSTRAHLER,DEDOMINIAL'})
     grupos = defaultdict(list); meta = {}

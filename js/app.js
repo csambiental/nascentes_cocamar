@@ -378,12 +378,27 @@ function renderFazendas() {
 
 // ---------- visualizador de documentos ----------
 const docDialog = document.getElementById('docDialog');
-function abrirDocumento(titulo, arquivo) {
+function abrirDocumento(titulo, arquivo, opcoes = {}) {
     document.getElementById('docTitle').textContent = titulo;
-    document.getElementById('docFrame').src = arquivo;
+    document.getElementById('docFrame').src = opcoes.embed || arquivo;
     document.getElementById('docOpen').href = arquivo;
+    document.getElementById('docOpen').textContent = opcoes.abrirTexto || 'Abrir em nova aba';
     document.getElementById('docDownload').href = arquivo;
+    document.getElementById('docDownload').style.display = opcoes.semDownload ? 'none' : '';
+    docDialog.classList.toggle('largo', !!opcoes.largo);
     docDialog.showModal();
+}
+// Painel de indicadores externo (ex.: Looker Studio)
+function renderIndicadoresExternos() {
+    const ext = dadosGerais.painel_externo;
+    const card = document.querySelector('.sidebar .card');
+    if (!ext || !card || document.getElementById('btnPainelExterno')) return;
+    const b = document.createElement('button');
+    b.type = 'button'; b.id = 'btnPainelExterno'; b.className = 'btn btn-externo';
+    b.innerHTML = `📊 ${esc(ext.botao || 'Ver painel de indicadores')}`;
+    b.addEventListener('click', () => abrirDocumento(ext.titulo || 'Painel de indicadores', ext.url,
+        { embed: ext.embed, semDownload: true, largo: true, abrirTexto: ext.abrir_texto || 'Abrir em nova aba' }));
+    card.appendChild(b);
 }
 document.getElementById('docClose').addEventListener('click', () => docDialog.close());
 docDialog.addEventListener('click', (e) => { if (e.target === docDialog) docDialog.close(); });
@@ -916,6 +931,7 @@ async function iniciar() {
     }));
     renderResumo();
     renderFiltroEtapa();
+    renderIndicadoresExternos();
     renderOpcionais();
     if (dados.cores_por_municipio) {
         modoCor = 'municipio';

@@ -465,3 +465,7 @@ table.ind tr.pos td { color: #1d6b3e; font-weight: 600; }
 .camada-grupo[open] > summary::after { content: '▾'; }
 .camada-grupo > summary:hover { background: #f1f5f2; }
 .camada-grupo .camada-row { padding-left: 20px; font-size: .82rem; }
+
+.btn-externo { width: 100%; margin-top: 12px; font-weight: 600; }
+.doc-dialog.largo { width: min(1400px, 98vw); height: 94vh; }
+.doc-dialog.largo iframe { background: #fff; }

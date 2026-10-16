@@ -3229,5 +3229,12 @@
    "opacidade": 0.85,
    "fonte": "ANA/SNIRH – base ottocodificada"
   }
- ]
+ ],
+ "painel_externo": {
+  "botao": "Painel de indicadores (Looker Studio)",
+  "titulo": "Projeto Conservação de Nascentes – Looker Studio",
+  "url": "https://lookerstudio.google.com/reporting/30ceaac3-9825-4edb-9377-b8f518d97b20",
+  "embed": "https://lookerstudio.google.com/embed/reporting/30ceaac3-9825-4edb-9377-b8f518d97b20",
+  "abrir_texto": "Abrir no Looker Studio"
+ }
 }
